@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "learnhub-1a51d": {
+      "hosting": {
+        "app": [
+          "learnhub-1a51d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "learnhub-1a51d"
+  }
+}

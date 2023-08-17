@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
+
+ion-text.top-left-text {
+    font-family: 'Ysabeau Office', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--azul);
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50%;
+    padding-right: 180px;
+  }
+  
+  .fondo{
+  --background: url('../../assets/Fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  }
+  .content {
+    color: var(--azul);
+    font-size: 24px;
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 20px;
+  }
+  
+  .text-buton{
+    font-family: 'Ysabeau Office', sans-serif;
+    padding-bottom: 50px;
+    font-size: 15px;
+    padding-right: 183px;
+    font-weight: bold;
+    color: var(--azul);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .top-button{
+    font-weight: bold;
+    font-family: 'Ysabeau Office', sans-serif;
+    --background: var(--azul);
+    color: var(--blanco);
+    width:350px;
+    padding-bottom: 5px;
+    padding-top: 20px;
+  }
+
+  .bottom-button{
+    font-weight: bold;
+    font-family: 'Ysabeau Office', sans-serif;
+    padding-top: 10px;
+    color: var(--blanco);
+    --background: var(--azul);
+    width:350px;
+  }

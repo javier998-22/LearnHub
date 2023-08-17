@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
+
+.fondo{
+    --background: url('../../assets/FondoInputs.jpg') no-repeat center center fixed;
+    background-size: cover;
+    }
+ion-text.top-left-text{
+    font-family: 'Ysabeau Office', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--blanco);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    height:50%;
+    padding-right: 150px;
+  }
+
+.content {
+    color: var(--blanco);
+    padding-top: 230px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .inputL{
+    font-family: 'Ysabeau Office', sans-serif;
+  }
+
+.bottom-button{
+    font-weight: bold;
+    font-family: 'Ysabeau Office', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: var(--blanco);
+    --background: var(--azul);
+    width:350px;
+  }
+
+  .text-buton{
+    font-family: 'Ysabeau Office', sans-serif;
+    padding-top: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--blanco);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-left: 100px;
+  }
