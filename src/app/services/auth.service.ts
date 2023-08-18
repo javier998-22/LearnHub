@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut} from '@angular/fire/auth';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
+  
   constructor( 
     private afAuth: Auth
   ) { }
@@ -23,4 +24,8 @@ export class AuthService {
     return signOut(this.afAuth);
   }
 
+  getUid() {
+    return this.afAuth.currentUser?.uid;
+  }
+  
 }

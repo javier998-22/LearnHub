@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from './../services/auth.service';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { DataServiceService } from 'src/app/services/data-service.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class SignUpPage implements OnInit {
 
-  constructor(private auth: AuthService, public toastController: ToastController, private router: Router) { }
+  constructor(private auth: AuthService, public toastController: ToastController, private router: Router, private DataService: DataServiceService) { }
 
   newUserFields = {
     Name: '',
@@ -44,6 +45,7 @@ export class SignUpPage implements OnInit {
   else {
     this.Validmessage = 0
     await this.auth.register(this.newUserFields.Email, this.newUserFields.Password);
+    await this.DataService.createFirebaseUser(await this.auth.getUid(), this.newUserFields.Surname, this.newUserFields.Name, this.newUserFields.TypeUser)
     this.router.navigate(['/login'])
   }
   console.log(this.newUserFields.TypeUser);

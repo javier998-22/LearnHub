@@ -11,9 +11,9 @@
     <ion-input class="inputL" label="Password input" type="password" value="password" [(ngModel)]="newUserFields.Password"></ion-input>
     <ion-input class="inputL" label="Repetir Password" type="password" value="password" [(ngModel)]="newUserFields.ConfirmPassword"></ion-input>
       <ion-select label="Eleccion de usuario" [(ngModel)]="newUserFields.TypeUser">
-        <ion-select-option value="apple">Alumno</ion-select-option>
-        <ion-select-option value="banana">Profesor</ion-select-option>
+        <ion-select-option value="Alumno">Alumno</ion-select-option>
+        <ion-select-option value="Profesor">Profesor</ion-select-option>
       </ion-select>
-    <ion-button class="bottom-button" expand="block" (click)="CreateUser()" >Registrarme</ion-button>
+    <ion-button class="bottom-button" expand="block" (click)="CreateUser()">Registrarme</ion-button>
   </div>
 </ion-content>
