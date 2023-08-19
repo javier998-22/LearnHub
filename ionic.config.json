@@ -1,5 +1,7 @@
 {
   "name": "LearnHub",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

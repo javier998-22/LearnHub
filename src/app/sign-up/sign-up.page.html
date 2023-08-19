@@ -5,15 +5,15 @@
     </ion-text>
   </div>
   <div class="content">
-    <ion-input class="inputL" label="Nombre" placeholder="Nombre"  [(ngModel)]="newUserFields.Name"></ion-input>
-    <ion-input class="inputL" label="Apellido" placeholder="Apellido" [(ngModel)]="newUserFields.Surname"></ion-input>
-    <ion-input class="inputL" label="Email input" type="email" placeholder="email@domain.com" [(ngModel)]="newUserFields.Email"></ion-input>
-    <ion-input class="inputL" label="Password input" type="password" value="password" [(ngModel)]="newUserFields.Password"></ion-input>
-    <ion-input class="inputL" label="Repetir Password" type="password" value="password" [(ngModel)]="newUserFields.ConfirmPassword"></ion-input>
-      <ion-select label="Eleccion de usuario" [(ngModel)]="newUserFields.TypeUser">
-        <ion-select-option value="Alumno">Alumno</ion-select-option>
-        <ion-select-option value="Profesor">Profesor</ion-select-option>
-      </ion-select>
-    <ion-button class="bottom-button" expand="block" (click)="CreateUser()">Registrarme</ion-button>
+    <ion-input label="Nombre" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.Name"></ion-input>
+    <ion-input label="Apellido" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.Surname"></ion-input>
+    <ion-input label="Email" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.Email"></ion-input>
+    <ion-input label="Contrasena" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.Password"></ion-input>
+    <ion-input label="Confirme su contrasena" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.ConfirmPassword"></ion-input>
+    <ion-select label="Elegir Usuario" label-placement="end" fill="outline" [(ngModel)]="newUserFields.TypeUser">
+      <ion-select-option value="1">Alumno</ion-select-option>
+      <ion-select-option value="2">Profesor</ion-select-option>
+    </ion-select>
   </div>
+  <ion-button class="bottom-button" expand="block" (click)="CreateUser()">Registrarme</ion-button>
 </ion-content>

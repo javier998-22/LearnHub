@@ -20,14 +20,16 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  async btnEntrar() {
+  async Entrar() {
     if (this.loginForm.email == "") {
       this.presentToast("El campo de email esta incompleto");
     } else if (this.loginForm.password == "") {
       this.presentToast("El campo de contraseña esta incompleto");
     } else {
       await this.Auth.login(this.loginForm.email, this.loginForm.password)
+      this.router.navigate(['/home']);
     }
+    
   };
 
   async presentToast(message: string, duration?: number) {
