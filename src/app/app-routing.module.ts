@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./Pages/home/home.module').then( m => m.HomePageModule)
   },
+  {
+    path: 'home-profe',
+    loadChildren: () => import('./Pages/home-profe/home-profe.module').then( m => m.HomeProfePageModule)
+  },
+  {
+    path: 'home-admin',
+    loadChildren: () => import('./Pages/home-admin/home-admin.module').then( m => m.HomeAdminPageModule)
+  },
 ];
 
 @NgModule({
