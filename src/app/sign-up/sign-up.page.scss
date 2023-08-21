@@ -22,12 +22,14 @@
             margin:7px;
             font-weight: bold;
             color: var(--azul);
+            --highlight-color-valid: var(--azul);
         }
         ion-select{
             font-family: 'Ysabeau Office', sans-serif;
             margin: 7px;
             font-weight: bold;
             color: var(--azul);
+            --highlight-color-valid: var(--azul);
             ion-select-option{
                 font-family: 'Ysabeau Office', sans-serif;
                 font-weight: bold;

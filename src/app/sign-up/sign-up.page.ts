@@ -45,7 +45,7 @@ export class SignUpPage implements OnInit {
   else {
     this.Validmessage = 0
     await this.auth.register(this.newUserFields.Email, this.newUserFields.Password);
-    await this.DataService.createFirebaseUser(await this.auth.getUid(), this.newUserFields.Surname, this.newUserFields.Name, this.newUserFields.TypeUser)
+    await this.DataService.createFirebaseUser(await this.auth.getUid(), this.newUserFields.Surname, this.newUserFields.Name, this.newUserFields.TypeUser);
     this.router.navigate(['/login'])
   }
   console.log(this.newUserFields.TypeUser);

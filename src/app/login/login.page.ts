@@ -15,6 +15,8 @@ export class LoginPage implements OnInit {
     email: "",
     password: ""
   }
+
+  uid: any;
   constructor(private DataS: DataServiceService, private router: Router, private Auth: AuthService, public toastController: ToastController) { }
 
   ngOnInit() {
@@ -27,10 +29,23 @@ export class LoginPage implements OnInit {
       this.presentToast("El campo de contraseña esta incompleto");
     } else {
       await this.Auth.login(this.loginForm.email, this.loginForm.password)
-      this.router.navigate(['/home']);
+      .then(() => this.EntrarUsu())
+      .catch((e) => console.log(e.message));
     }
-    
   };
+
+  EntrarUsu(){
+    this.DataS.GetTipoUsu(this.Auth.getUid()).subscribe(event => this.uid = event);
+    let hideFooterTimeout = setTimeout(() => {
+      if (this.uid.tipo == 1) {
+        this.router.navigate(['/home-admin']);        
+      }else if (this.uid.tipo == 2) {      
+        this.router.navigate(['/home-profe']);
+      }else{ 
+        this.router.navigate(['/home']);
+      }
+    })
+  }
 
   async presentToast(message: string, duration?: number) {
     const toast = await this.toastController.create(

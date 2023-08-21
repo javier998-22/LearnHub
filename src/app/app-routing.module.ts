@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [
   {
@@ -21,15 +24,33 @@ const routes: Routes = [
   },
   {
     path: 'home',
+    canActivate : [AuthGuard],
+    data: {AuthGuardPipe : redirectUnauthorizedToLogin },
     loadChildren: () => import('./Pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'home-profe',
+    canActivate : [AuthGuard],
+    data: {AuthGuardPipe : redirectUnauthorizedToLogin },
     loadChildren: () => import('./Pages/home-profe/home-profe.module').then( m => m.HomeProfePageModule)
   },
   {
     path: 'home-admin',
+    canActivate : [AuthGuard],
+    data: {AuthGuardPipe : redirectUnauthorizedToLogin },
     loadChildren: () => import('./Pages/home-admin/home-admin.module').then( m => m.HomeAdminPageModule)
+  },
+  {
+    path: 'perfil-alum',
+    loadChildren: () => import('./Pages/perfil-alum/perfil-alum.module').then( m => m.PerfilAlumPageModule)
+  },
+  {
+    path: 'perfil-profe',
+    loadChildren: () => import('./Pages/perfil-profe/perfil-profe.module').then( m => m.PerfilProfePageModule)
+  },
+  {
+    path: 'perfil-admin',
+    loadChildren: () => import('./Pages/perfil-admin/perfil-admin.module').then( m => m.PerfilAdminPageModule)
   },
 ];
 

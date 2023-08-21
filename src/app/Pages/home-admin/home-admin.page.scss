@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
+.content{
+    --background: var(--blanco);
+}
+ion-footer{
+    
+    .toolbar{
+        --background: var(--blanco);
+        .button{
+            font-family: 'Ysabeau Office', sans-serif;
+            color: var(--azul);
+            font-weight: bold;
+            font-size: 12px;
+            --indicator-color : var(--azul)!important;
+            .icon{
+            color: var(--azul);
+            }
+        } 
+    }
+  
+}
