@@ -1,21 +1,42 @@
-<ion-content class="content" [fullscreen]="true">
-  hola alumno
+<ion-content class="fondo" [fullscreen]="true">
+  <div cards>
+    <div class="grid-full">
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <p>Asistencia</p>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card>
+            <p>Cualquier wea</p>
+          </ion-card>
+        </ion-col>
+        <ion-col class="col-bot">
+          <ion-card>
+            <p>Notas</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
 </ion-content>
-<ion-footer class="ion-no-border" transparent>
-  <ion-toolbar class="toolbar" >
-    <ion-segment scrollable="true" value="nose">      
-      <ion-segment-button class="button" value="Contenidos">
-        <ion-icon class="icon" name="book-outline"></ion-icon>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-segment>
+      <ion-segment-button value="Contenidos">
+        <ion-icon name="book-outline"></ion-icon>
         <ion-label>Contenidos</ion-label>
       </ion-segment-button>
 
-      <ion-segment-button class="button" value="Cursos">
-        <ion-icon class="icon" name="briefcase-outline"></ion-icon>
+      <ion-segment-button value="Cursos">
+        <ion-icon name="briefcase-outline"></ion-icon>
         <ion-label>Cursos</ion-label>
       </ion-segment-button>
-
-      <ion-segment-button class="button" value="Perfil">
-        <ion-icon class="icon" name="person-circle-outline"></ion-icon>
+     
+      <ion-segment-button value="Perfil" >
+        <ion-icon name="person-circle-outline"></ion-icon>
         <ion-label>Perfil</ion-label>
       </ion-segment-button>
     </ion-segment>

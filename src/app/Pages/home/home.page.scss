@@ -1,21 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
-.content{
-    --background: var(--blanco);
-}
-ion-footer{
-    
-    .toolbar{
-        --background: var(--blanco);
-        .button{
-            font-family: 'Ysabeau Office', sans-serif;
-            color: var(--azul);
-            font-weight: bold;
-            font-size: 12px;
-            --indicator-color : var(--azul)!important;
-            .icon{
-            color: var(--azul);
-            }
-        } 
+
+.fondo {
+  --background: var(--blanco);
+
+  [cards] {
+    .grid-full ion-col {
+      flex: 0 0 50%;
+      padding: 5px 0;
+      --background: var(--azul);
     }
-  
+
+    .row {
+      padding: 0;
+      --background: var(--azul);
+    }
+
+    .col {
+      padding: 5px 0;
+      --background: var(--azul);
+    }
+    .grid-full .col-bot{
+      flex: 0 0 100%;
+    }
+
+    .card {
+      margin: 0 0 0 12px;
+      padding: 14px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+      border-radius: 4px;
+
+    }
+    ion-card{
+      --background: var(--azul);
+      color: var(--blanco);
+      text-align: center;
+      font-family: 'Ysabeau Office', sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-weight: bold;
+
+    }
+  }
+}
+
+ion-footer {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+
+  ion-toolbar {
+    padding-top: 20px;
+    --background: transparent;
+    --ion-color-base: transparent !important;
+
+    ion-icon {
+      color: var(--azul);
+      size: 40px;
+      font-size: 20px;
+      padding: 0 0 0 0;
+      margin: 0 0 0 0;
+    }
+
+    ion-label {
+      font-weight: bold;
+      color: var(--azul);
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 12px;
+      text-transform: none;
+    }
+  }
 }

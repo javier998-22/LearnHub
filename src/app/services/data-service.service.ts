@@ -21,4 +21,9 @@ export class DataServiceService {
     const usuarios = doc(this.firestore, `Usuarios/${id}`);
     return docData(usuarios);
   }
+
+  getUsuario(id : string | undefined) {
+    const usuarios = doc(this.firestore, `Usuarios/${id}`);
+    return docData(usuarios);
+  }
 }
