@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
-.content{
+
+.fondo{
     --background: var(--blanco);
+    .bottom-button{
+        --background: var(--azul);
+        font-family: 'Ysabeau Office', sans-serif;
+        font-weight: bold;
+        color: var(--blanco);
+        margin-top: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 }
+
 ion-footer {
     --background: transparent;
     --ion-color-base: transparent !important;

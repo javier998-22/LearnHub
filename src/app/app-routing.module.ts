@@ -52,6 +52,14 @@ const routes: Routes = [
     path: 'perfil-admin',
     loadChildren: () => import('./Pages/perfil-admin/perfil-admin.module').then( m => m.PerfilAdminPageModule)
   },
+  {
+    path: 'cursos-profe',
+    loadChildren: () => import('./Pages/cursos-profe/cursos-profe.module').then( m => m.CursosProfePageModule)
+  },
+  {
+    path: 'form-curso',
+    loadChildren: () => import('./Pages/form-curso/form-curso.module').then( m => m.FormCursoPageModule)
+  },
 ];
 
 @NgModule({
