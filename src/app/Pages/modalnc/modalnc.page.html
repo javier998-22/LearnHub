@@ -2,8 +2,14 @@
   <ion-header class="ion-no-border">
     <ion-toolbar>
       <ion-buttons slot="end">
-        <ion-icon defaultHref="/cursos-profe" (click)="volver()" name="close-circle-outline" class="back-icon"></ion-icon>
+        <ion-icon defaultHref="/cursos-profe" (click)="volver()" name="chevron-down-outline" class="back-icon"></ion-icon>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
+  <div class="content">
+    <ion-input label="Sigla de curso" label-placement="end" fill="outline" placeholder="Enter text" ></ion-input>
+    <ion-input label="Ramo" label-placement="end" fill="outline" placeholder="Enter text" ></ion-input>
+    <ion-input label="Establecimiento" label-placement="end" fill="outline" placeholder="Enter text" ></ion-input>
+    <ion-button class="bottom-button" expand="block" >Crear Curso</ion-button>
+  </div>
 </ion-content>

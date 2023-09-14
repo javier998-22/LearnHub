@@ -10,5 +10,26 @@
             color: var(--azul);
         }
     }
+    .content{
+        margin-top: 50px;
+        margin-right: 70px;
+        margin-left: 70px;
+        ion-input{
+            font-family: 'Ysabeau Office', sans-serif;
+            margin:7px;
+            font-weight: bold;
+            color: var(--azul);
+            --highlight-color-valid: var(--azul);
+        }
+        .bottom-button{
+            --background: var(--azul);
+            font-family: 'Ysabeau Office', sans-serif;
+            font-weight: bold;
+            color: var(--blanco);
+            margin-top: 30px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
 
 }

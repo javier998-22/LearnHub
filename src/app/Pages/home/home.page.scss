@@ -3,6 +3,16 @@
 .fondo {
   --background: var(--blanco);
 
+  ion-toolbar{
+    --background: var(--blanco);
+    .back-icon{
+        height: 30px;
+        width: 30px;
+        margin-bottom: 20px;
+        color: var(--azul);
+    }
+}
+
   [cards] {
     .grid-full ion-col {
       flex: 0 0 50%;
