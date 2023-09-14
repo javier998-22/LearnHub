@@ -61,10 +61,10 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/form-curso/form-curso.module').then( m => m.FormCursoPageModule)
   },
   {
-    path: 'modalnc',
-    loadChildren: () => import('./Pages/modalnc/modalnc.module').then( m => m.ModalncPageModule)
+    path: 'recursos',
+    loadChildren: () => import('./Pages/recursos/recursos.module').then( m => m.RecursosPageModule)
   },
-];
+]
 
 @NgModule({
   imports: [
