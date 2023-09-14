@@ -8,9 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  constructor( 
-    private afAuth: Auth
-  ) { }
+  constructor( private afAuth: Auth) { }
   
   async register(email: string, password: string){
     const user = await createUserWithEmailAndPassword(this.afAuth, email, password);

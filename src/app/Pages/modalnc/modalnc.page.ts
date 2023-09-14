@@ -26,8 +26,10 @@ export class ModalncPage implements OnInit {
     this.router.navigate(['/cursos-profe']);
     await this.modalCtrl.dismiss();
   }
- async CrearCursito(){
-  await this.DataService.CrearCurso(await this.auth.getUid(), this.Curso.Establecimiento, this.Curso.Ramo, this.Curso.Sigla);
- }
+  async CrearCursito(){
+    await this.DataService.CrearCurso(await this.auth.getUid(), this.Curso.Establecimiento, this.Curso.Ramo, this.Curso.Sigla);
+    this.router.navigate(['/cursos-del-profe']);
+    await this.modalCtrl.dismiss();
+  }
 
 }

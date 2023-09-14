@@ -57,16 +57,16 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/cursos-profe/cursos-profe.module').then( m => m.CursosProfePageModule)
   },
   {
-    path: 'form-curso',
-    loadChildren: () => import('./Pages/form-curso/form-curso.module').then( m => m.FormCursoPageModule)
-  },
-  {
     path: 'recursos',
     loadChildren: () => import('./Pages/recursos/recursos.module').then( m => m.RecursosPageModule)
   },
   {
     path: 'modalnc',
     loadChildren: () => import('./Pages/modalnc/modalnc.module').then( m => m.ModalncPageModule)
+  },
+  {
+    path: 'cursos-del-profe',
+    loadChildren: () => import('./Pages/cursos-del-profe/cursos-del-profe.module').then( m => m.CursosDelProfePageModule)
   },
 ];
 
