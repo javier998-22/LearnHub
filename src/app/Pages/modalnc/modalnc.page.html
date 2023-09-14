@@ -7,9 +7,9 @@
     </ion-toolbar>
   </ion-header>
   <div class="content">
-    <ion-input label="Sigla de curso" label-placement="end" fill="outline" placeholder="Enter text" ></ion-input>
-    <ion-input label="Ramo" label-placement="end" fill="outline" placeholder="Enter text" ></ion-input>
-    <ion-input label="Establecimiento" label-placement="end" fill="outline" placeholder="Enter text" ></ion-input>
-    <ion-button class="bottom-button" expand="block" >Crear Curso</ion-button>
+    <ion-input label="Sigla de curso" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="Curso.Sigla"></ion-input>
+    <ion-input label="Ramo" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="Curso.Ramo"></ion-input>
+    <ion-input label="Establecimiento" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="Curso.Establecimiento"></ion-input>
+    <ion-button class="bottom-button" expand="block" (click)="CrearCursito()">Crear Curso</ion-button>
   </div>
 </ion-content>

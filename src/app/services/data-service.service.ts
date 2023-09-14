@@ -27,5 +27,10 @@ export class DataServiceService {
     return docData(usuarios);
   }
 
+  CrearCurso(id: string | undefined, Establecimiento: any, RamoCurso: any, SiglaCurso: any){
+    const cursos = collection(this.firestore, 'Cursos');
+    return setDoc(doc(cursos), {establecimiento: Establecimiento, ramoCurso: RamoCurso, siglaCurso: SiglaCurso, idProfe: id})
+  }
+
 
 }
