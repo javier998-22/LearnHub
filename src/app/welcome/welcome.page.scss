@@ -15,7 +15,7 @@ ion-text.top-left-text {
   }
   
   .fondo{
-  --background: url('../../assets/Fondo.jpg') no-repeat center center fixed;
+  --background: var(--blanco) no-repeat center center fixed;
   background-size: cover;
   }
   .content {

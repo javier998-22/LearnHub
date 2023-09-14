@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { ModalncPage} from '../modalnc/modalnc.page';
+
+
 
 @Component({
   selector: 'app-cursos-profe',
@@ -8,12 +12,17 @@ import { Router } from '@angular/router';
 })
 export class CursosProfePage implements OnInit {
 
-  constructor(private router : Router) { }
-
+  constructor(private router : Router,private modalController: ModalController) { }
+  
   ngOnInit() {
   }
-  IracCurso(){
-    this.router.navigate(['/form-curso']);
-    
+  
+  async abrirModal(){
+    const modal= await this.modalController.create({
+      component: ModalncPage,
+      cssClass:'myclass',
+    });
+    await modal.present();
   }
 }
+

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
-
+/*Empieza el contenido principal de la pagina*/
 .fondo{
     --background: var(--blanco);
-    .bottom-button{
+    .curso-button{
         --background: var(--azul);
         font-family: 'Ysabeau Office', sans-serif;
         font-weight: bold;
@@ -11,8 +11,10 @@
         margin-left: 50px;
         margin-right: 50px;
     }
+  /*Termina el contenido principal*/
+  /*Empieza el modal*/
 }
-
+/*Barra de navegacion*/ 
 ion-footer {
     --background: transparent;
     --ion-color-base: transparent !important;

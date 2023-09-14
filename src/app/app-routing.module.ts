@@ -60,6 +60,10 @@ const routes: Routes = [
     path: 'form-curso',
     loadChildren: () => import('./Pages/form-curso/form-curso.module').then( m => m.FormCursoPageModule)
   },
+  {
+    path: 'modalnc',
+    loadChildren: () => import('./Pages/modalnc/modalnc.module').then( m => m.ModalncPageModule)
+  },
 ];
 
 @NgModule({
