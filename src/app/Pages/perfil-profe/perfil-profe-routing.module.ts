@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PerfilProfePage } from './perfil-profe.page';
+import { PerfilProfePage } from './PerfilProfePage';
 
 const routes: Routes = [
   {

@@ -27,5 +27,9 @@ export class AuthService {
     return this.afAuth.currentUser?.uid;
   }
 
+  getEmail(){
+    return this.afAuth.currentUser?.email;
+  }
+
   
 }

@@ -64,10 +64,6 @@ const routes: Routes = [
     path: 'modalnc',
     loadChildren: () => import('./Pages/modalnc/modalnc.module').then( m => m.ModalncPageModule)
   },
-  {
-    path: 'cursos-del-profe',
-    loadChildren: () => import('./Pages/cursos-del-profe/cursos-del-profe.module').then( m => m.CursosDelProfePageModule)
-  },
 ];
 
 @NgModule({

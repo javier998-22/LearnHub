@@ -1,6 +1,10 @@
 <ion-content class="fondo" [fullscreen]="true">
+  <ion-list *ngFor="let item of curso;" >
+    <ion-item lines="full" style="--background:rgba(255, 255, 255, 0);">
+    </ion-item>
+  </ion-list>
   <ion-button class="curso-button" expand="block" (click)="abrirModal()">Crear un Curso</ion-button>
-</ion-content> 
+</ion-content>
 <ion-footer class="ion-no-border">
   <ion-toolbar>
     <ion-segment>
@@ -13,8 +17,8 @@
         <ion-icon name="briefcase-outline"></ion-icon>
         <ion-label>Cursos</ion-label>
       </ion-segment-button>
-     
-      <ion-segment-button value="Perfil" >
+
+      <ion-segment-button value="Perfil" (click)="IraPerfil()">
         <ion-icon name="person-circle-outline"></ion-icon>
         <ion-label>Perfil</ion-label>
       </ion-segment-button>

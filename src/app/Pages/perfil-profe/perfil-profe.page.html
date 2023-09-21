@@ -1,13 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>PerfilProfe</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-title size="large">PerfilProfe</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card class="Card-Profile">
+    <div class="DivImage">
+      <img class="image" alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    </div>
+    <ion-card-title class="Title-card">Hola {{uid.email}}</ion-card-title>
+  </ion-card>
+  <ion-card>
+
+  </ion-card>
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-segment scrollable="true" >     
+      <ion-segment-button value="Principal">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Principal</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="Contenidos">
+        <ion-icon name="book-outline"></ion-icon>
+        <ion-label>Contenidos</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="Cursos">
+        <ion-icon name="briefcase-outline"></ion-icon>
+        <ion-label>Cursos</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

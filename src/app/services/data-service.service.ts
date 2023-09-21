@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { deleteDoc, getDoc, setDoc, updateDoc, where, query, addDoc } from 'firebase/firestore';
 import { Firestore, collectionData, collection, doc, docData} from '@angular/fire/firestore';
-import { Auth, authState } from '@angular/fire/auth';
-import { AngularFireList } from '@angular/fire/compat/database'
 import { AuthService } from 'src/app/services/auth.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,7 @@ export class DataServiceService {
   uid = '';
   uiid: string | undefined;
   
-  constructor(private firestore: Firestore, private afAuth: Auth ,private atS: AuthService) { }
+  constructor(private firestore: Firestore,private atS: AuthService) { }
 
   createFirebaseUser(id: string | undefined, apellido: any,  nombre: any, tipo: any) {
     const usuario = collection(this.firestore, 'Usuarios');
@@ -24,7 +23,7 @@ export class DataServiceService {
     return docData(usuarios);
   }
 
-  getUsuario(id : string | undefined) {
+  getUsuarios(id : string | undefined) {
     const usuarios = doc(this.firestore, `Usuarios/${id}`);
     return docData(usuarios);
   }
@@ -38,9 +37,4 @@ export class DataServiceService {
     this.uiid = this.atS.getUid();
   }
 
-  getCursos(){
-    this.cargarId();
-    const cursos = collection(this.firestore, `Usuarios/${this.uiid}/Cursos`)
-    return collectionData(cursos);
-  }
 }

@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { PerfilProfePageRoutingModule } from './perfil-profe-routing.module';
 
-import { PerfilProfePage } from './perfil-profe.page';
+import { PerfilProfePage } from './PerfilProfePage';
 
 @NgModule({
   imports: [
