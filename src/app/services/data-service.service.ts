@@ -9,26 +9,21 @@ import { Observable } from 'rxjs';
 })
 export class DataServiceService {
   uid = '';
-  uiid: string | undefined;
+  uiid: any;
   
   constructor(private firestore: Firestore,private atS: AuthService) { }
 
-  createFirebaseUser(id: string | undefined, apellido: any,  nombre: any, tipo: any) {
+  createFirebaseUser(id: any, apellido: any,  nombre: any, tipo: any) {
     const usuario = collection(this.firestore, 'Usuarios');
     return setDoc(doc(usuario, id), { nombre: nombre, apellido: apellido, tipo: tipo })
   }
 
-  GetTipoUsu(id : string | undefined){
+  getUsuarios(id: any) {
     const usuarios = doc(this.firestore, `Usuarios/${id}`);
     return docData(usuarios);
   }
 
-  getUsuarios(id : string | undefined) {
-    const usuarios = doc(this.firestore, `Usuarios/${id}`);
-    return docData(usuarios);
-  }
-
-  CrearCurso(id: string | undefined, Establecimiento: any, RamoCurso: any, SiglaCurso: any){
+  CrearCurso(id: any, Establecimiento: any, RamoCurso: any, SiglaCurso: any){
     const cursos = collection(this.firestore, 'Cursos');
     return setDoc(doc(cursos), {establecimiento: Establecimiento, ramoCurso: RamoCurso, siglaCurso: SiglaCurso, idProfe: id})
   }

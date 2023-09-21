@@ -35,16 +35,18 @@ export class LoginPage implements OnInit {
   };
 
   EntrarUsu(){
-    this.DataS.GetTipoUsu(this.Auth.getUid()).subscribe(event => this.uid = event);
+    this.DataS.getUsuarios(this.Auth.getUid()).subscribe(event => this.uid = event);
     let hideFooterTimeout = setTimeout(() => {
       if (this.uid.tipo == 1) {
         this.router.navigate(['/home-admin']);        
       }else if (this.uid.tipo == 2) {      
         this.router.navigate(['/home-profe']);
+        console.log(this.uid.tipo);
       }else{ 
         this.router.navigate(['/home']);
+        console.log(this.uid.tipo);
       }
-    })
+    }, 2000)
   }
 
   async presentToast(message: string, duration?: number) {

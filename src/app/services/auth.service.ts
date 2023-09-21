@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, authState} from '@angular/fire/auth';
-import { map } from 'rxjs/operators';
+import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut} from '@angular/fire/auth';
 
 
 @Injectable({
@@ -12,7 +11,6 @@ export class AuthService {
   
   async register(email: string, password: string){
     const user = await createUserWithEmailAndPassword(this.afAuth, email, password);
-    return await signInWithEmailAndPassword(this.afAuth, email, password);
   }
 
   login(email: string, password: string){
