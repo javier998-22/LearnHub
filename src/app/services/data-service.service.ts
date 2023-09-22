@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataServiceService {
+  idProfe: any;
   uid = '';
   uiid: any;
   
@@ -30,6 +31,12 @@ export class DataServiceService {
 
   cargarId() {
     this.uiid = this.atS.getUid();
+  }
+
+  getCurso(id:any){
+    this.cargarId();
+    const curso = collection(this.firestore, `Cursos/`)
+    return collectionData(curso);
   }
 
 }

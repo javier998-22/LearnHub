@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { ModalncPage } from '../modalnc/modalnc.page';
 import { DataServiceService } from '../../services/data-service.service';
+import { AuthService } from '../../services/auth.service';
 
 
 
@@ -12,8 +13,22 @@ import { DataServiceService } from '../../services/data-service.service';
   styleUrls: ['./cursos-profe.page.scss'],
 })
 export class CursosProfePage implements OnInit {
-  curso: any ;
-  constructor(private router: Router, private modalController: ModalController, private dataS: DataServiceService) {
+  id: any;
+
+  curso: any = [{
+    establecimiento:'',
+    ramoCurso:'',
+    siglaCurso:'',
+  }];
+
+  actualIndex: any;
+
+  constructor(private router: Router, private modalController: ModalController, private dataS: DataServiceService, private atS: AuthService) {
+    this.dataS.getCurso(this.atS.getUid()).subscribe(res => { 
+      this.curso = res;
+      this.id = this.atS.getUid();
+      console.log(this.curso.ramoCurso)
+    })
   }
 
   ngOnInit() {

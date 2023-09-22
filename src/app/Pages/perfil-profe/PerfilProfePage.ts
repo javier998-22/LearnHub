@@ -19,7 +19,13 @@ export class PerfilProfePage implements OnInit {
     }
   ];
   
-  constructor(private dtS: DataServiceService, private atS: AuthService) {}
+  constructor(private dtS: DataServiceService, private atS: AuthService) {
+    this.dtS.getUsuarios(this.atS.getUid()).subscribe(res => {
+      this.uid = res;
+      this.id = this.atS.getUid();
+      this.uid.email = this.atS.getEmail();
+    })
+  }
 
   ngOnInit() {
   }
