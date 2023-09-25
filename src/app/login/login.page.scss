@@ -33,6 +33,9 @@
           font-weight: bold;
           color: var(--azul);
         }
+        ion-input::placeholder{
+          color: var(--azul);
+        }
         .bottom-button{
           --background: var(--azul);
           font-family: 'Ysabeau Office', sans-serif;
