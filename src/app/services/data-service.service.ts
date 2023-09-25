@@ -19,7 +19,7 @@ export class DataServiceService {
     return setDoc(doc(usuario, id), { nombre: nombre, apellido: apellido, tipo: tipo })
   }
 
-  getUsuarios(id: any) {
+  getUsuarios(id:any) {
     const usuarios = doc(this.firestore, `Usuarios/${id}`);
     return docData(usuarios);
   }
