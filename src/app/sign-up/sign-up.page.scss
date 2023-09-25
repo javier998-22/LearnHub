@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
 
 .fondo{
-    --background: var(--blanco);
-    background-size: cover;
-    ion-text.top-left-text{
-        font-family: 'Ysabeau Office', sans-serif;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        font-size: 50px;
-        font-weight: bold;
-        color: var(--azul);
-        display: flex;
-        justify-content: center;
-        height:50%;        
-    }
     ion-toolbar{
         --background: var(--blanco);
         .back-icon{
@@ -22,10 +10,22 @@
             color: var(--azul);
         }
     }
+    --background: var(--blanco);
+    background-size: cover;
+    ion-text.top-left-text{
+        font-family: 'Ysabeau Office', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--azul);
+        display: flex;
+        justify-content: center; 
+        padding-left: 10px;       
+    }
     .content{
-        margin-top: 50px;
-        margin-right: 70px;
-        margin-left: 70px;
+        margin-top: 20px;
+        margin-left: 17px;
+        margin-right: 30px;
         ion-input{
             font-family: 'Ysabeau Office', sans-serif;
             margin:7px;
@@ -45,17 +45,27 @@
                 color: var(--azul);
             }
         }
+        .bottom-button{
+            --background: var(--azul);
+            font-family: 'Ysabeau Office', sans-serif;
+            font-weight: bold;
+            color: var(--blanco);
+            margin-top: 15px;
+            width: 309px;
+            margin-left: 5px;
+            margin-right: 20px;
+        }
+        .text-buton{
+            font-family: 'Ysabeau Office', sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--azul);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 70px;
+            margin-right: 20px;
+            margin-left: 110px;
+            }
     }
-    .bottom-button{
-        --background: var(--azul);
-        font-family: 'Ysabeau Office', sans-serif;
-        font-weight: bold;
-        color: var(--blanco);
-        margin-top: 30px;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-
   }
 
 

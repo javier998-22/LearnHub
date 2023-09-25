@@ -3,6 +3,15 @@
 .fondo{
     --background: var(--blanco);
     background-size: cover;
+    ion-toolbar{
+      --background: var(--blanco);
+      .back-icon{
+          height: 30px;
+          width: 30px;
+          margin-bottom: 20px;
+          color: var(--azul);
+      }
+    }
       ion-text.top-left-text{
         font-family: 'Ysabeau Office', sans-serif;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -13,18 +22,9 @@
         height:70%;
 
       }
-      ion-toolbar{
-        --background: var(--blanco);
-        .back-icon{
-            height: 30px;
-            width: 30px;
-            margin-bottom: 20px;
-            color: var(--azul);
-        }
-      }
       .content {
         color: var(--blanco);
-        margin-top: 40px;
+        margin-top: 20px;
         margin-left: 30px;
         margin-right: 30px;
         ion-input{
@@ -32,9 +32,7 @@
           margin-top:7px;
           font-weight: bold;
           color: var(--azul);
-        }
-        ion-input::placeholder{
-          color: var(--azul);
+          --highlight-color-valid: var(--azul);
         }
         .bottom-button{
           --background: var(--azul);
@@ -43,7 +41,6 @@
           color: var(--blanco);
           margin-top: 30px;
           }
-            
           .text-buton{
           font-family: 'Ysabeau Office', sans-serif;
           font-size: 15px;

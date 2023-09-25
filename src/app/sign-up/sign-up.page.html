@@ -6,19 +6,20 @@
   
   <div>
     <ion-text class="top-left-text">
-      Registro
+      Ingresa tus datos para registrar tu cuenta en nuestra app
     </ion-text>
   </div>
   <div class="content">
-    <ion-input label="Nombre" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.Name"></ion-input>
-    <ion-input label="Apellido" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.Surname"></ion-input>
-    <ion-input label="Email" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.Email"></ion-input>
-    <ion-input type="password" label="Contrasena" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.Password"></ion-input>
-    <ion-input type="password" label="Confirme su contrasena" label-placement="end" fill="outline" placeholder="Enter text" [(ngModel)]="newUserFields.ConfirmPassword"></ion-input>
-    <ion-select label="Elegir Usuario" label-placement="end" fill="outline" [(ngModel)]="newUserFields.TypeUser">
+    <ion-input label="Nombre" label-placement="start" fill="outline" [(ngModel)]="newUserFields.Name"></ion-input>
+    <ion-input label="Apellido" label-placement="start" fill="outline"  [(ngModel)]="newUserFields.Surname"></ion-input>
+    <ion-input label="Email" label-placement="start" fill="outline" [(ngModel)]="newUserFields.Email"></ion-input>
+    <ion-input type="password" label="Contrasena" label-placement="start" fill="outline"  [(ngModel)]="newUserFields.Password"></ion-input>
+    <ion-input type="password" label="Confirme su contrasena" label-placement="start" fill="outline" [(ngModel)]="newUserFields.ConfirmPassword"></ion-input>
+    <ion-select label="Elegir Usuario" label-placement="start" fill="outline" [(ngModel)]="newUserFields.TypeUser">
       <ion-select-option value="3">Alumno</ion-select-option>
       <ion-select-option value="2">Profesor</ion-select-option>
     </ion-select>
+    <ion-button class="bottom-button" expand="block" (click)="CreateUser()">Registrarme</ion-button>
+    <a class="text-buton" href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fdata&ec=GAlAFw&hl=es&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1829143074%3A1695659558083049&theme=glif">No tienes email?</a>
   </div>
-  <ion-button class="bottom-button" expand="block" (click)="CreateUser()">Registrarme</ion-button>
 </ion-content>
