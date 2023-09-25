@@ -15,6 +15,15 @@
         height:50%;
         padding-right: 150px;
       }
+      ion-toolbar{
+        --background: var(--blanco);
+        .back-icon{
+            height: 30px;
+            width: 30px;
+            margin-bottom: 20px;
+            color: var(--azul);
+        }
+      }
       .content {
         color: var(--blanco);
         margin-top: 240px;

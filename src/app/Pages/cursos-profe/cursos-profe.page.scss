@@ -3,12 +3,19 @@
 /*Empieza el contenido principal de la pagina*/
 .fondo {
   --background: var(--blanco);
-
+  ion-toolbar{
+    --background: var(--blanco);
+    .back-icon{
+        height: 30px;
+        width: 30px;
+        margin-bottom: 20px;
+        color: var(--azul);
+    }
+  }
   .Card-Profile {
     --background: var(--azul);
     box-shadow: 0px 0px 5px black;
   }
-
   .curso-button {
     --background: var(--azul);
     font-family: 'Ysabeau Office', sans-serif;
@@ -19,11 +26,8 @@
     margin-right: 50px;
   }
 
-  /*Termina el contenido principal*/
-  /*Empieza el modal*/
-}
 
-/*Barra de navegacion*/
+}
 ion-footer {
   --background: transparent;
   --ion-color-base: transparent !important;
