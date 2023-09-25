@@ -41,16 +41,8 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/home-admin/home-admin.module').then( m => m.HomeAdminPageModule)
   },
   {
-    path: 'perfil-alum',
-    loadChildren: () => import('./Pages/perfil-alum/perfil-alum.module').then( m => m.PerfilAlumPageModule)
-  },
-  {
     path: 'perfil-profe',
     loadChildren: () => import('./Pages/perfil-profe/perfil-profe.module').then( m => m.PerfilProfePageModule)
-  },
-  {
-    path: 'perfil-admin',
-    loadChildren: () => import('./Pages/perfil-admin/perfil-admin.module').then( m => m.PerfilAdminPageModule)
   },
   {
     path: 'cursos-profe',
@@ -63,6 +55,10 @@ const routes: Routes = [
   {
     path: 'modalnc',
     loadChildren: () => import('./Pages/modalnc/modalnc.module').then( m => m.ModalncPageModule)
+  },
+  {
+    path: 'cursos-a',
+    loadChildren: () => import('./Pages/cursos-a/cursos-a.module').then( m => m.CursosAPageModule)
   },
 ];
 
