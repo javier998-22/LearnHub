@@ -19,4 +19,7 @@ export class HomeProfePage implements OnInit {
   IrACursos(){
     this.router.navigate(['/cursos-profe']);
   }
+  IraPerfil(){
+    this.router.navigate(['/perfil-profe']);
+  }
 }
