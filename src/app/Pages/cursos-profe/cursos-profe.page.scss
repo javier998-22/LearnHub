@@ -12,21 +12,15 @@
         color: var(--azul);
     }
   }
-  .Card-Profile {
-    --background: var(--azul);
-    box-shadow: 0px 0px 5px black;
-  }
   .curso-button {
     --background: var(--azul);
     font-family: 'Ysabeau Office', sans-serif;
     font-weight: bold;
     color: var(--blanco);
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 50px;
     margin-right: 50px;
   }
-
-
 }
 ion-footer {
   --background: transparent;

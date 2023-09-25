@@ -10,10 +10,21 @@
             color: var(--azul);
         }
     }
+    .div-text{
+        padding-left: 10px;
+        ion-text.top-left-text{
+            font-family: 'Ysabeau Office', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--azul);
+            height:80%;
+          }
+    }
     .content{
-        margin-top: 50px;
-        margin-right: 70px;
-        margin-left: 70px;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
         ion-input{
             font-family: 'Ysabeau Office', sans-serif;
             margin:7px;
@@ -26,9 +37,9 @@
             font-family: 'Ysabeau Office', sans-serif;
             font-weight: bold;
             color: var(--blanco);
-            margin-top: 30px;
-            margin-left: 50px;
-            margin-right: 50px;
+            margin-top: 10px;
+            width: 299px;
+            padding-left: 3px;
         }
     }
 
