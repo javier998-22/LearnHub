@@ -1,4 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
+
 .content{
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: bold;
+    color: var(--blanco);
     --background: var(--blanco);
-    
+    ion-datetime{
+        margin-top: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 7px;
+        --background: var(--azul);
+        font-family: 'Ysabeau Office', sans-serif;
+        font-weight: bold;
+        color: var(--blanco);
+        --title-color: var(--blanco);
+    }
 }
