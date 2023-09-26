@@ -60,6 +60,14 @@ const routes: Routes = [
     path: 'cursos-a',
     loadChildren: () => import('./Pages/cursos-a/cursos-a.module').then( m => m.CursosAPageModule)
   },
+  {
+    path: 'horario-clases',
+    loadChildren: () => import('./Pages/horario-clases/horario-clases.module').then( m => m.HorarioClasesPageModule)
+  },
+  {
+    path: 'horario-ev',
+    loadChildren: () => import('./Pages/horario-ev/horario-ev.module').then( m => m.HorarioEvPageModule)
+  },
 ];
 
 @NgModule({

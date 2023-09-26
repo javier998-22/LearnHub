@@ -34,4 +34,10 @@ export class PerfilProfePage implements OnInit {
     this.atS.logout();
     this.router.navigate(['/login']);
   }
+  IraCalev(){
+    this.router.navigate(['/horario-ev']);
+  }
+  IraCaCla(){
+    this.router.navigate(['/horario-clases']);
+  }
 }
