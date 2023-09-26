@@ -50,10 +50,13 @@
             font-family: 'Ysabeau Office', sans-serif;
             font-weight: bold;
             color: var(--blanco);
-            margin-top: 15px;
+            margin-top: 50px;
             width: 309px;
-            margin-left: 5px;
-            margin-right: 20px;
+            margin-left: 100px;
+            margin-right: 5px;
+            display: flex;
+            justify-content: center; 
+            padding-left: 10px; 
         }
         .text-buton{
             font-family: 'Ysabeau Office', sans-serif;
@@ -61,9 +64,12 @@
             font-weight: bold;
             color: var(--azul);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-top: 70px;
-            margin-right: 20px;
+            margin-top: 15px;
+            margin-right: 100px;
             margin-left: 110px;
+            display: flex;
+            justify-content: center; 
+            padding-left: 10px; 
             }
     }
   }
