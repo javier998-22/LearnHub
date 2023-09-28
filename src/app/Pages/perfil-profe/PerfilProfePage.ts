@@ -42,5 +42,8 @@ export class PerfilProfePage implements OnInit {
   IraCaCla(){
     this.router.navigate(['/horario-clases']);
   }
+  IraMod(){
+    this.router.navigate(['/mod-perfil'])
+  }
 }
 

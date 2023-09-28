@@ -68,6 +68,10 @@ const routes: Routes = [
     path: 'horario-ev',
     loadChildren: () => import('./Pages/horario-ev/horario-ev.module').then( m => m.HorarioEvPageModule)
   },
+  {
+    path: 'mod-perfil',
+    loadChildren: () => import('./Pages/mod-perfil/mod-perfil.module').then( m => m.ModPerfilPageModule)
+  },
 ];
 
 @NgModule({
