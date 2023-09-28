@@ -44,7 +44,6 @@ export class LoginPage implements OnInit {
         console.log(this.uid.tipo);
       }else{ 
         this.router.navigate(['/home']);
-        console.log(this.uid.tipo);
       }
     }, 2000)
   }

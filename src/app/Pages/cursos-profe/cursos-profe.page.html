@@ -4,6 +4,9 @@
     </ion-toolbar>
   </ion-header>
   <ion-button class="curso-button" expand="block" (click)="abrirModal()">Crear un Curso</ion-button>
+  <div *ngFor="let curso of Listacursos">
+    <a>{{Listacursos.establecimiento}}</a>
+  </div>
 </ion-content>
 <ion-footer class="ion-no-border">
   <ion-toolbar>

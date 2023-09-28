@@ -15,19 +15,12 @@ import { AuthService } from '../../services/auth.service';
 export class CursosProfePage implements OnInit {
   id: any;
 
-  curso: any = [{
-    establecimiento:'',
-    ramoCurso:'',
-    siglaCurso:'',
-  }];
-
-  actualIndex: any;
+  Listacursos: any;
 
   constructor(private router: Router, private modalController: ModalController, private dataS: DataServiceService, private atS: AuthService) {
-    this.dataS.getCurso(this.atS.getUid()).subscribe(res => { 
-      this.curso = res;
-      this.id = this.atS.getUid();
-      console.log(this.curso.ramoCurso)
+    this.dataS.getCurso().subscribe(res => { 
+      this.Listacursos = res;
+      console.log(this.Listacursos.establecimiento);
     })
   }
 

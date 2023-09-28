@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { deleteDoc, getDoc, setDoc, updateDoc, where, query, addDoc } from 'firebase/firestore';
-import { Firestore, collectionData, collection, doc, docData} from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, doc, docData, documentId} from '@angular/fire/firestore';
 import { AuthService } from 'src/app/services/auth.service';
 import { Observable } from 'rxjs';
 
@@ -33,9 +33,10 @@ export class DataServiceService {
     this.uiid = this.atS.getUid();
   }
 
-  getCurso(id:any){
+
+  getCurso(){
     this.cargarId();
-    const curso = collection(this.firestore, `Cursos/`)
+    const curso = collection(this.firestore, `Usuarios/${this.uiid}/Cursos`)
     return collectionData(curso);
   }
 
