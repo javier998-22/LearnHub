@@ -36,5 +36,11 @@ export class PerfilProfePage implements OnInit {
   }
   IraCursos(){
     this.router.navigate(['/cursos-profe']);
+  }IraCalev(){
+    this.router.navigate(['/horario-ev']);
+  }
+  IraCaCla(){
+    this.router.navigate(['/horario-clases']);
   }
 }
+
