@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { ToastController } from '@ionic/angular';
 import { DataServiceService } from 'src/app/services/data-service.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginPage implements OnInit {
   }
 
   uid: any;
-  constructor(private DataS: DataServiceService, private router: Router, private Auth: AuthService, public toastController: ToastController) { }
+  constructor(private DataS: DataServiceService, private router: Router, private Auth: AuthService, public toastController: ToastController, navCtrl:NavController) { }
 
   ngOnInit() {
   }
