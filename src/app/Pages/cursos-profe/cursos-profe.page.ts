@@ -4,7 +4,7 @@ import { ModalController } from '@ionic/angular';
 import { ModalncPage } from '../modalnc/modalnc.page';
 import { DataServiceService } from '../../services/data-service.service';
 import { AuthService } from '../../services/auth.service';
-
+import { NavController } from '@ionic/angular';
 
 
 @Component({
@@ -23,7 +23,7 @@ export class CursosProfePage implements OnInit {
 
   actualIndex: any;
 
-  constructor(private router: Router, private modalController: ModalController, private dataS: DataServiceService, private atS: AuthService) {
+  constructor(private router: Router, private modalController: ModalController, private dataS: DataServiceService, private atS: AuthService, navCtrl:NavController) {
     this.dataS.getCurso(this.atS.getUid()).subscribe(res => { 
       this.curso = res;
       this.id = this.atS.getUid();
@@ -44,5 +44,7 @@ export class CursosProfePage implements OnInit {
   IraPerfil(){
     this.router.navigate(['/perfil-profe']);
   }
+  IraCursos(){
+    this.router.navigate(['/cursos-profe']);
+  }
 }
-

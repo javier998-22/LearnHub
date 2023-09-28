@@ -34,4 +34,7 @@ export class PerfilProfePage implements OnInit {
     this.atS.logout();
     this.router.navigate(['/login']);
   }
+  IraCursos(){
+    this.router.navigate(['/cursos-profe']);
+  }
 }
