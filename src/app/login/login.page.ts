@@ -58,6 +58,10 @@ export class LoginPage implements OnInit {
     );
     toast.present();
   }
+
+  IraReset(){
+    this.router.navigate(['/reset-pass']);
+  }
 }
 
 

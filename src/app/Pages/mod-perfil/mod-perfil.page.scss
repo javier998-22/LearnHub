@@ -1,0 +1,55 @@
+.fondoM{
+    --background: var(--blanco);
+    ion-toolbar{
+        --background: var(--blanco);
+        .back-icon{
+            height: 30px;
+            width: 30px;
+            margin-bottom: 20px;
+            color: var(--azul);
+        }
+    }
+    .div-text{
+        padding-left: 10px;
+        ion-text.top-left-text{
+            font-family: 'Ysabeau Office', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--azul);
+            height:80%;
+          }
+    }
+    .content{
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        ion-item{
+            --background: var(--azul);
+            ion-input{
+                font-family: 'Ysabeau Office', sans-serif;
+                margin:7px;
+                font-weight: bold;
+                color: var(--blanco);
+                --highlight-color-valid: var(--azul);
+            }
+            ion-label{
+                font-family: 'Ysabeau Office', sans-serif;
+                margin:7px;
+                font-weight: bold;
+                color: var(--blanco);
+                --highlight-color-valid: var(--azul);
+            }
+        }
+        .bottom-button{
+            --background: var(--azul);
+            font-family: 'Ysabeau Office', sans-serif;
+            font-weight: bold;
+            color: var(--blanco);
+            margin-top: 10px;
+            width: 299px;
+            padding-left: 3px;
+        }
+    }
+
+}

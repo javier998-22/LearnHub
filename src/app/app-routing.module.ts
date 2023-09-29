@@ -71,7 +71,11 @@ const routes: Routes = [
   {
     path: 'mod-perfil',
     loadChildren: () => import('./Pages/mod-perfil/mod-perfil.module').then( m => m.ModPerfilPageModule)
+  },  {
+    path: 'reset-pass',
+    loadChildren: () => import('./Pages/reset-pass/reset-pass.module').then( m => m.ResetPassPageModule)
   },
+
 ];
 
 @NgModule({

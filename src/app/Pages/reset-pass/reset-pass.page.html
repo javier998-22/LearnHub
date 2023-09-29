@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  <div>
+    <ion-text class="top-left-text">
+      Ingresa tu email para la recuperacion de contrasena
+    </ion-text>
+  </div>
+  <div class="content">    
+    <ion-input label="Email" label-placement="start" fill="outline" [(ngModel)]="Email.email" expand="block"></ion-input>
+    <ion-button class="bottom-button" expand="block" (click)="reset()">Recuperar</ion-button>
+  </div>
+</ion-content>

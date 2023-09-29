@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
-
 .fondo{
     --background: var(--blanco);
     background-size: cover;
@@ -46,21 +44,15 @@
           align-items:center;
           justify-content: center;
           }
-
+          .text-buton{
+          font-family: 'Ysabeau Office', sans-serif;
+          font-size: 15px;
+          font-weight: bold;
+          color: var(--azul);
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          margin-top: 70px;
+          margin-right: 20px;
+          margin-left: 165px;
+          }
       }
-      .text-buton{
-        font-family: 'Ysabeau Office', sans-serif;
-        font-size: 15px;
-        font-weight: bold;
-        color: var(--azul);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin-top: 500px;
-        margin-right: 20px;
-        margin-left: 165px;
-        }
     }
-    
-
-
-
-

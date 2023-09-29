@@ -40,4 +40,11 @@ export class DataServiceService {
     return collectionData(curso);
   }
 
+  async Updateuser(campo: any, valor: any, id: any){
+    const usuario = doc(this.firestore, 'Usuarios', id)
+    await updateDoc(usuario,{
+      [campo]:valor
+    })
+  }
+
 }

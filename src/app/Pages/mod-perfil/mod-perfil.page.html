@@ -1,13 +1,34 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>ModPerfil</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content class="fondoM">
+  <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-title size="large">ModPerfil</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div class="div-text">
+    <ion-text class="top-left-text">
+      Modifica el dato de tu usuario que desees
+    </ion-text>
+  </div>
+  <div class="content">
+    <ion-item>
+      <ion-label class="textdisable" position="relative">Nombre: &nbsp;</ion-label>
+      <ion-input disabled>{{uid.nombre}}</ion-input>
+      <ion-buttons slot="end" color=primary (click)="alerta('nombre')">
+        <ion-icon name="create"></ion-icon>
+      </ion-buttons>
+    </ion-item>
+    <ion-item>
+      <ion-label class="textdisable" position="relative">Apellido: &nbsp;</ion-label>
+      <ion-input disabled>{{uid.apellido}}</ion-input>
+      <ion-buttons slot="end" color=primary (click)="alerta('apellido')">
+        <ion-icon name="create"></ion-icon>
+      </ion-buttons>
+    </ion-item>
+    <ion-item>
+      <ion-label class="textdisable" position="relative">Contraseña:</ion-label>
+      <ion-input disabled></ion-input>
+      <ion-buttons slot="end" color=primary >
+        <ion-icon name="create" color="black "></ion-icon>
+      </ion-buttons>
+    </ion-item>
+  </div>
 </ion-content>
