@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
-
+.fondo {
+    --background: var(--blanco);
+    ion-toolbar{
+      --background: var(--blanco);
+      .back-icon{
+          height: 30px;
+          width: 30px;
+          margin-bottom: 20px;
+          color: var(--azul);
+      }
+    }
+}
 .content{
     font-family: 'Ysabeau Office', sans-serif;
     font-weight: bold;
@@ -16,4 +27,6 @@
         color: var(--blanco);
         --title-color: var(--blanco);
     }
+    
+    
 }

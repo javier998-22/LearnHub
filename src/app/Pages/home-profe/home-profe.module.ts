@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { HomeProfePageRoutingModule } from './home-profe-routing.module';
-
 import { HomeProfePage } from './home-profe.page';
 
 @NgModule({
@@ -15,6 +12,6 @@ import { HomeProfePage } from './home-profe.page';
     IonicModule,
     HomeProfePageRoutingModule
   ],
-  declarations: [HomeProfePage]
+  declarations: [HomeProfePage],
 })
 export class HomeProfePageModule {}

@@ -40,4 +40,7 @@ export class CursosProfePage implements OnInit {
   IraCursos(){
     this.router.navigate(['/cursos-profe']);
   }
+  IraHome(){
+    this.router.navigate(['/home-profe'])
+  }
 }

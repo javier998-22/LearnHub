@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from './../../services/data-service.service';
 import { AuthService } from '../../services/auth.service';
 import { AlertController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mod-perfil',
@@ -19,7 +21,7 @@ export class ModPerfilPage implements OnInit {
   ];
   email ='';
 
-  constructor(private DataS: DataServiceService, private Auth: AuthService,public Alerta: AlertController) {
+  constructor(private DataS: DataServiceService, private Auth: AuthService,public Alerta: AlertController, modalCtrl: ModalController, router: Router) {
     this.DataS.getUsuarios(this.Auth.getUid()).subscribe(res => {
       this.uid = res;
       this.id = this.Auth.getUid();
@@ -28,8 +30,10 @@ export class ModPerfilPage implements OnInit {
    }
 
   ngOnInit() {
+    
   }
 
+  
   alerta(titulo: string){
     this.presentAlert(titulo, "Desea Modificar?");
   }
@@ -58,6 +62,6 @@ export class ModPerfilPage implements OnInit {
       }]
     })
     await alert.present();
+
   }
 }
-
