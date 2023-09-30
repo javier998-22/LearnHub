@@ -24,6 +24,11 @@ export class DataServiceService {
     return docData(usuarios);
   }
 
+  GetAllUsers(id:any){
+    const usuarios = doc(this.firestore, `Usuarios`);
+    return docData(usuarios);
+  }
+
   CrearCurso(id: any, Establecimiento: any, RamoCurso: any, SiglaCurso: any){
     const cursos = collection(this.firestore, 'Cursos');
     return setDoc(doc(cursos), {establecimiento: Establecimiento, ramoCurso: RamoCurso, siglaCurso: SiglaCurso, idProfe: id})
@@ -57,7 +62,7 @@ export class DataServiceService {
       promptLabelPhoto: 'Selecciona una imagen',
       promptLabelPicture: 'Toma una foto'
     });
-
+    
   };
 
 }

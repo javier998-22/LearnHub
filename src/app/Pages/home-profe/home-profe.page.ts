@@ -23,4 +23,7 @@ export class HomeProfePage implements OnInit {
   IraPerfil(){
     this.router.navigate(['/perfil-profe']);
   }
+  IraChat(){
+    this.router.navigate(['/usuarios-chat']);
+  }
 }
