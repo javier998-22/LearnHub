@@ -75,6 +75,10 @@ const routes: Routes = [
     path: 'reset-pass',
     loadChildren: () => import('./Pages/reset-pass/reset-pass.module').then( m => m.ResetPassPageModule)
   },
+  {
+    path: 'usuarios-chat',
+    loadChildren: () => import('./Pages/usuarios-chat/usuarios-chat.module').then( m => m.UsuariosChatPageModule)
+  },
 
 ];
 

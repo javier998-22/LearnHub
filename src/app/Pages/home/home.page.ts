@@ -18,4 +18,7 @@ export class HomePage implements OnInit {
   IraCursos(){
     this.router.navigate(['cursos-a']);
   }
+  IraChat(){
+    this.router.navigate(['/usuarios-chat']);
+  }
 }
