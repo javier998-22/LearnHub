@@ -3,7 +3,7 @@ import { deleteDoc, getDoc, setDoc, updateDoc, where, query, addDoc } from 'fire
 import { Firestore, collectionData, collection, doc, docData, documentId} from '@angular/fire/firestore';
 import { AuthService } from 'src/app/services/auth.service';
 import { Observable } from 'rxjs';
-
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 @Injectable({
   providedIn: 'root'
 })
@@ -46,5 +46,18 @@ export class DataServiceService {
       [campo]:valor
     })
   }
+
+    async takePicture(promptLabelHeader: string){
+    return await Camera.getPhoto({
+      quality: 90,
+      allowEditing: true,
+      resultType: CameraResultType.DataUrl,
+      source: CameraSource.Prompt,
+      promptLabelHeader,
+      promptLabelPhoto: 'Selecciona una imagen',
+      promptLabelPicture: 'Toma una foto'
+    });
+
+  };
 
 }

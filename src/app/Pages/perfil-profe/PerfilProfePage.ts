@@ -18,7 +18,9 @@ export class PerfilProfePage implements OnInit {
     email: '',
     }
   ];
-  
+
+  image: any;
+ 
   constructor(private dtS: DataServiceService, private atS: AuthService,  private router: Router) {
     this.dtS.getUsuarios(this.atS.getUid()).subscribe(res => {
       this.uid = res;
@@ -28,6 +30,11 @@ export class PerfilProfePage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  async TakeImage(){
+    const dataUrl = (await this.dtS.takePicture('Imagen del perfil')).dataUrl;
+    this.image.setValue(dataUrl);
   }
 
   logout(){
