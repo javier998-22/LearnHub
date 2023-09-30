@@ -7,6 +7,8 @@
     <ion-avatar *ngIf="image">
       <img [src]="image"/>
     </ion-avatar>
+
+    <ion-icon *ngIf="!image" name="image-outline"></ion-icon>
     <ion-card-title class="Title-card">Hola {{uid.nombre}} {{uid.apellido}}</ion-card-title>
   </ion-card>
   <ion-card class="Card-list">
