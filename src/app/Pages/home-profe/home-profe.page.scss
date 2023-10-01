@@ -1,11 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
+
 .content{
     --background: var(--blanco);
 }
+.swiper-container{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card-Profile{
+  --background: var(--azul);
+  box-shadow: 0px 0px 5px black;        
+  .DivImage{
+      margin-top: 50px;
+      margin-left: 160px;
+      margin-bottom: 20px;
+      .image {
+          box-shadow: 2px 2px 2px black;
+          height: 60px; 
+          width: 60px; 
+          border: 2px solid #fff;
+          border-radius: 50%;
+          display: inline-block;
+          margin-left: auto;
+          margin-right: auto;
+      }
+     }
+    }
+    
+.Title-card{
+  text-align: center;
+  font-family: 'Ysabeau Office', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.subtitle-card{
+  text-align: center;
+  font-family: 'Ysabeau Office', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+.Card-Content{
+  text-align: center;
+  font-family: 'Ysabeau Office', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
 ion-footer {
     --background: transparent;
     --ion-color-base: transparent !important;
-  
+   
     ion-toolbar {
       padding-top: 20px;
       --background: transparent;
@@ -28,4 +86,5 @@ ion-footer {
         text-transform: none;
       }
     }
+
   }
