@@ -1,6 +1,9 @@
 <ion-content class="content" [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header class="fondo">
     <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-icon defaultHref="/horario-clases" (click)="volver()" name="chevron-down-outline" class="back-icon"></ion-icon>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <ion-datetime></ion-datetime>

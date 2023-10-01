@@ -52,5 +52,8 @@ export class PerfilProfePage implements OnInit {
   IraMod(){
     this.router.navigate(['/mod-perfil'])
   }
+  IraHome(){
+    this.router.navigate(['/home-profe'])
+  }
 }
 
