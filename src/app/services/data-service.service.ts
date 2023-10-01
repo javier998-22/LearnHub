@@ -41,8 +41,10 @@ export class DataServiceService {
 
   getCurso(){
     this.cargarId();
-    const curso = collection(this.firestore, `Usuarios/${this.uiid}/Cursos`)
-    return collectionData(curso);
+    const curso = collection(this.firestore, `Cursos`)
+    const q = query(curso, where('idProfe', '==' , this.uiid))
+    return collectionData(q);
+  
   }
 
   async Updateuser(campo: any, valor: any, id: any){
@@ -66,3 +68,5 @@ export class DataServiceService {
   };
 
 }
+
+

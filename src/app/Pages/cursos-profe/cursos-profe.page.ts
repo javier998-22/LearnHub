@@ -20,7 +20,7 @@ export class CursosProfePage implements OnInit {
   constructor(private router: Router, private modalController: ModalController, private dataS: DataServiceService, private atS: AuthService, navCtrl:NavController) {
     this.dataS.getCurso().subscribe(res => { 
       this.Listacursos = res;
-      console.log(this.Listacursos.establecimiento);
+      console.log(this.Listacursos);
     })
   }
 
