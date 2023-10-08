@@ -12,7 +12,6 @@ ion-text.top-left-text {
     align-items: center;
     justify-content: center;
     height:50%;
-    padding-right: 10px;
   }
   
   .fondo{
@@ -23,7 +22,6 @@ ion-text.top-left-text {
     color: var(--azul);
     font-size: 20px;
     padding-top: 100px;
-    padding-left: 20px;
     display: flex;
     flex-direction:column;
     align-items:center;
@@ -32,9 +30,7 @@ ion-text.top-left-text {
   
   .text-buton{
     font-family: 'Ysabeau Office', sans-serif;
-    padding-bottom: 40px;
     font-size: 18px;
-    padding-right: 10px;
     font-weight: bold;
     color: var(--azul);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -49,9 +45,7 @@ ion-text.top-left-text {
     font-family: 'Ysabeau Office', sans-serif;
     --background: var(--azul);
     color: var(--blanco);
-    width:350px;
-    padding-bottom: 5px;
-    padding-top: 1px;
+    width:90%;
    
   }
 
@@ -61,6 +55,6 @@ ion-text.top-left-text {
     padding-top: 10px;
     color: var(--blanco);
     --background: var(--azul);
-    width:350px;
+    width:90%;
    
   }

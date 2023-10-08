@@ -21,6 +21,17 @@
     margin-left: 50px;
     margin-right: 50px;
   }
+
+  ion-card{
+    --background: var(--azul);
+    ion-card-header{
+      .Title,.sub{
+        font-family: 'Ysabeau Office', sans-serif;
+        font-weight: bold;
+        color: var(--blanco);
+      }
+    }
+  }
 }
 ion-footer {
   --background: transparent;
