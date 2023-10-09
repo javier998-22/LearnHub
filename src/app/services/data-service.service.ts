@@ -44,7 +44,6 @@ export class DataServiceService {
     const curso = collection(this.firestore, `Cursos`)
     const q = query(curso, where('idProfe', '==' , this.uiid))
     return collectionData(q);
-  
   }
 
   async Updateuser(campo: any, valor: any, id: any){

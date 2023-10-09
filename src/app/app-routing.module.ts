@@ -79,6 +79,10 @@ const routes: Routes = [
     path: 'usuarios-chat',
     loadChildren: () => import('./Pages/usuarios-chat/usuarios-chat.module').then( m => m.UsuariosChatPageModule)
   },
+  {
+    path: 'modal-curso',
+    loadChildren: () => import('./Pages/modal-curso/modal-curso.module').then( m => m.ModalCursoPageModule)
+  },
 
 ];
 

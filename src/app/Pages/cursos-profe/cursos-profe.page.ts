@@ -5,6 +5,8 @@ import { ModalncPage } from '../modalnc/modalnc.page';
 import { DataServiceService } from '../../services/data-service.service';
 import { AuthService } from '../../services/auth.service';
 import { NavController } from '@ionic/angular';
+import { ModalCursoPage } from '../modal-curso/modal-curso.page';
+import { Cursos } from '../../services/modelos.service';
 
 
 @Component({
@@ -42,5 +44,17 @@ export class CursosProfePage implements OnInit {
   }
   IraHome(){
     this.router.navigate(['/home-profe'])
+  }
+
+
+  async abrirCurso(id: string){
+    const modal = await this.modalController.create({  
+      component: ModalCursoPage,
+      cssClass: 'myclass',
+      componentProps:{
+        cursos: id
+      }
+    });
+    await modal.present();
   }
 }
