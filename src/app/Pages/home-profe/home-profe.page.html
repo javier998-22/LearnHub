@@ -1,39 +1,48 @@
 <ion-content class="content" [fullscreen]="true">
-
-  <ion-card class="Card-Profile">
-  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-  <ion-card-header>
-    <ion-card-title class="Title-card">Recursos</ion-card-title>
-    <ion-card-subtitle class="subtitle-card">ver más</ion-card-subtitle>
-  </ion-card-header>
-  
-  <ion-card-content class="Card-Content">
-    Revisa todos los recursos que son utiles para tí.
-  </ion-card-content>
-</ion-card>
-<ion-card class="Card-Profile">
-  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-  <ion-card-header>
-    <ion-card-title class="Title-card">Horario</ion-card-title>
-    <ion-card-subtitle class="subtitle-card">Ver más</ion-card-subtitle>
-  </ion-card-header>
-
-  <ion-card-content class="Card-Content">
-   Revisa los horarios de Tus Cursos
-  </ion-card-content>
-</ion-card>
-<ion-card class="Card-Profile">
-  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-  <ion-card-header>
-    <ion-card-title class="Title-card">Asistencias </ion-card-title>
-    <ion-card-subtitle class="subtitle-card">Card Subtitle</ion-card-subtitle>
-  </ion-card-header>
-
-  <ion-card-content class="Card-Content">
-   Revisa los porcentajes de asistencias por los Cursos
-  </ion-card-content>
-</ion-card>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card class="Card-Profile">
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <ion-card-header>
+          <ion-card-title class="Title-card">Recursos</ion-card-title>
+          <ion-card-subtitle class="subtitle-card">ver más</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content class="Card-Content">
+          Revisa todos los recursos que son utiles para tí.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card class="Card-Profile">
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <ion-card-header>
+          <ion-card-title class="Title-card">Horario</ion-card-title>
+          <ion-card-subtitle class="subtitle-card">Ver más</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content class="Card-Content">
+         Revisa los horarios de Tus Cursos
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card class="Card-Profile">
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <ion-card-header>
+          <ion-card-title class="Title-card">Asistencias </ion-card-title>
+          <ion-card-subtitle class="subtitle-card">Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content class="Card-Content">
+         Revisa los porcentajes de asistencias por los Cursos
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
+
 <ion-footer class="ion-no-border">
   <ion-toolbar class="toolbar" >
     <ion-segment scrollable="true" value="nose">      
