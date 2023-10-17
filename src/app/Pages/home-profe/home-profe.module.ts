@@ -4,14 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HomeProfePageRoutingModule } from './home-profe-routing.module';
 import { HomeProfePage } from './home-profe.page';
+import {ChartEjemploComponent} from '../../components/chart-ejemplo/chart-ejemplo.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomeProfePageRoutingModule
+    HomeProfePageRoutingModule,
+    NgApexchartsModule
   ],
-  declarations: [HomeProfePage],
+  declarations: [HomeProfePage, ChartEjemploComponent],
 })
 export class HomeProfePageModule {}

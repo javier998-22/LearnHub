@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AuthGuardModule } from '@angular/fire/auth-guard';
 
@@ -18,16 +17,16 @@ import { provideMessaging, getMessaging } from '@angular/fire/messaging';
 import { providePerformance, getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig, getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage, getStorage } from '@angular/fire/storage';
-
-
+import { NgApexchartsModule } from 'ng-apexcharts';
+import {ChartEjemploComponent} from './components/chart-ejemplo/chart-ejemplo.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, provideFirebaseApp(() => initializeApp(environment.firebase)), 
   provideAnalytics(() => getAnalytics()), provideAuth(() => getAuth()), provideDatabase(() => getDatabase()), provideFirestore(() => 
   getFirestore()), provideFunctions(() => getFunctions()), provideMessaging(() => getMessaging()), providePerformance(() => getPerformance()), 
-  provideRemoteConfig(() => getRemoteConfig()), provideStorage(() => getStorage()), AuthGuardModule,],
+  provideRemoteConfig(() => getRemoteConfig()), provideStorage(() => getStorage()), AuthGuardModule, NgApexchartsModule,],
   
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy}, ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],
