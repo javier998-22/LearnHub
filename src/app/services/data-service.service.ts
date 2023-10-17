@@ -4,6 +4,7 @@ import { Firestore, collectionData, collection, doc, docData, documentId} from '
 import { AuthService } from 'src/app/services/auth.service';
 import { Observable } from 'rxjs';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { Cursos } from './modelos.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +12,7 @@ export class DataServiceService {
   idProfe: any;
   uid = '';
   uiid: any;
+  
   
   constructor(private firestore: Firestore,private atS: AuthService) { }
 
@@ -29,15 +31,20 @@ export class DataServiceService {
     return docData(usuarios);
   }
 
-  CrearCurso(id: any, Establecimiento: any, RamoCurso: any, SiglaCurso: any){
+  CrearCurso(idCurso: any, idProfe: any, Establecimiento: any, RamoCurso: any, SiglaCurso: any){
     const cursos = collection(this.firestore, 'Cursos');
-    return setDoc(doc(cursos), {establecimiento: Establecimiento, ramoCurso: RamoCurso, siglaCurso: SiglaCurso, idProfe: id})
+    return setDoc(doc(cursos, idCurso), {idCurso, establecimiento: Establecimiento, ramoCurso: RamoCurso, siglaCurso: SiglaCurso, idProfe: idProfe})
+  }
+
+  getCursoDetails(idCurso : string){
+    const cursos = doc(this.firestore, `Cursos/${idCurso}`);
+    return docData(cursos);
+    console.log(idCurso);
   }
 
   cargarId() {
     this.uiid = this.atS.getUid();
   }
-
 
   getCurso(){
     this.cargarId();
@@ -52,19 +59,6 @@ export class DataServiceService {
       [campo]:valor
     })
   }
-
-    async takePicture(promptLabelHeader: string){
-    return await Camera.getPhoto({
-      quality: 90,
-      allowEditing: true,
-      resultType: CameraResultType.DataUrl,
-      source: CameraSource.Prompt,
-      promptLabelHeader,
-      promptLabelPhoto: 'Selecciona una imagen',
-      promptLabelPicture: 'Toma una foto'
-    });
-    
-  };
 
 }
 

@@ -32,10 +32,7 @@ export class PerfilProfePage implements OnInit {
   ngOnInit() {
   }
 
-  async TakeImage(){
-    const dataUrl = (await this.dtS.takePicture('Imagen del perfil')).dataUrl;
-    this.image.setValue(dataUrl);
-  }
+
 
   logout(){
     this.atS.logout();
