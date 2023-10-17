@@ -71,7 +71,8 @@ const routes: Routes = [
   {
     path: 'mod-perfil',
     loadChildren: () => import('./Pages/mod-perfil/mod-perfil.module').then( m => m.ModPerfilPageModule)
-  },  {
+  },
+  {
     path: 'reset-pass',
     loadChildren: () => import('./Pages/reset-pass/reset-pass.module').then( m => m.ResetPassPageModule)
   },
@@ -80,7 +81,7 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/usuarios-chat/usuarios-chat.module').then( m => m.UsuariosChatPageModule)
   },
   {
-    path: 'modal-curso',
+    path: 'modal-curso/:idCurso',
     loadChildren: () => import('./Pages/modal-curso/modal-curso.module').then( m => m.ModalCursoPageModule)
   },
 

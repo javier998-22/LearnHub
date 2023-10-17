@@ -10,49 +10,35 @@
             margin-bottom: 20px;
             color: var(--azul);
         }
-    }
-    .Card-Profile{
-        --background: var(--azul);
-        box-shadow: 0px 0px 5px black;        
-        .DivImage{
-            margin-top: 50px;
-            margin-left: 160px;
-            margin-bottom: 20px;
-            .image {
-                box-shadow: 2px 2px 2px black;
-                height: 60px; 
-                width: 60px; 
-                border: 2px solid #fff;
-                border-radius: 50%;
-                display: inline-block;
-                margin-left: auto;
-                margin-right: auto;
-            } 
-        }
         .Title-card{
+            color: var(--azul);
             text-align: center;
             font-family: 'Ysabeau Office', sans-serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             font-weight: bold;
             font-size: 30px;
-            padding-bottom: 10px;
+            margin-top: 10%;
+            margin-left: 30%;
+            text-align: center;
         }
-    }
+    
+    }      
     .Card-list{
+        margin-top:40%;
         .list-card{
             padding-top: 0px;
             padding-bottom: 0px;
-            --background: var(--azul);
+            --background: var(--blanco);
             ion-item{
-                --background: var(--azul);
+                --background: var(--blanco);
                 ion-icon{
-                    color: var(--blanco);
+                    color: var(--azul);
                 }
                 ion-label{
                     font-family: 'Ysabeau Office', sans-serif;
                     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
                     font-weight: bold;
-                    color: var(--blanco);
+                    color: var(--azul);
                 }
             }
         }

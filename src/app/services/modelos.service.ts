@@ -1,5 +1,5 @@
 export interface Cursos{
-  id: string;
+  idCurso: string;
   establecimiento: string;
   idProfe: string;
   ramoCurso: string;

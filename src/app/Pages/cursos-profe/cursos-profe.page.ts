@@ -9,20 +9,19 @@ import { ModalCursoPage } from '../modal-curso/modal-curso.page';
 import { Cursos } from '../../services/modelos.service';
 
 
+
 @Component({
   selector: 'app-cursos-profe',
   templateUrl: './cursos-profe.page.html',
   styleUrls: ['./cursos-profe.page.scss'],
 })
 export class CursosProfePage implements OnInit {
-  id: any;
-
   Listacursos: any;
 
   constructor(private router: Router, private modalController: ModalController, private dataS: DataServiceService, private atS: AuthService, navCtrl:NavController) {
     this.dataS.getCurso().subscribe(res => { 
       this.Listacursos = res;
-      console.log(this.Listacursos);
+      console.log(this.Listacursos)
     })
   }
 
@@ -45,16 +44,8 @@ export class CursosProfePage implements OnInit {
   IraHome(){
     this.router.navigate(['/home-profe'])
   }
-
-
-  async abrirCurso(id: string){
-    const modal = await this.modalController.create({  
-      component: ModalCursoPage,
-      cssClass: 'myclass',
-      componentProps:{
-        cursos: id
-      }
-    });
-    await modal.present();
+  abrirCurso(){
+    this.router.navigate(['/modal-curso/this.Listacursos.idCurso'])
+    console.log(this.Listacursos.idCurso);
   }
 }
