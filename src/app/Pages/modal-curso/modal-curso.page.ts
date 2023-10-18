@@ -23,15 +23,9 @@ export class ModalCursoPage implements OnInit {
    }
 
   async ngOnInit() {
-    await this.getCursinho();
-    console.log(this.Listacursos.idCurso)
-  }
-
-  getCursinho(){
-    this.dataS.getCurso().subscribe(res => {
+    this.dataS.getCursoDetails(this.Listacursos.idCurso).subscribe(res => {
       this.Listacursos = res;
-    });
-    console.log(this.Listacursos.idCurso)
+      console.log(this.Listacursos.idCurso)
+    })
   }
-
 }

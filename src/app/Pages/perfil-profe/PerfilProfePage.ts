@@ -47,10 +47,13 @@ export class PerfilProfePage implements OnInit {
     this.router.navigate(['/horario-clases']);
   }
   IraMod(){
-    this.router.navigate(['/mod-perfil'])
+    this.router.navigate(['/mod-perfil']);
   }
   IraHome(){
-    this.router.navigate(['/home-profe'])
+    this.router.navigate(['/home-profe']);
+  }
+  IraMisNotas(){
+    this.router.navigate(['/notas-usuario']);
   }
 }
 

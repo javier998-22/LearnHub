@@ -3,7 +3,7 @@
     <ion-toolbar>
     </ion-toolbar>
   </ion-header>
-    <ion-card class="Card-Profile" *ngFor="let cursos of Listacursos" [routerLink]="['/modal-curso', Listacursos.idCurso]">
+    <ion-card class="Card-Profile" *ngFor="let cursos of Listacursos" routerLink="/modal-curso/{{Listacursos.idCurso}}">
       <ion-card-header>
         <ion-card-title class="Title">{{cursos.siglaCurso}}</ion-card-title>
         <ion-card-subtitle class="sub">{{cursos.ramoCurso}}</ion-card-subtitle>

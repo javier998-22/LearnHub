@@ -81,9 +81,13 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/usuarios-chat/usuarios-chat.module').then( m => m.UsuariosChatPageModule)
   },
   {
-    path: 'modal-curso/:idCurso',
+    path: 'modal-curso',
     loadChildren: () => import('./Pages/modal-curso/modal-curso.module').then( m => m.ModalCursoPageModule)
+  },  {
+    path: 'notas-usuario',
+    loadChildren: () => import('./Pages/notas-usuario/notas-usuario.module').then( m => m.NotasUsuarioPageModule)
   },
+
 
 ];
 

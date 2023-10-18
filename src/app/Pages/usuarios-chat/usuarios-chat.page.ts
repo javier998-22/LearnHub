@@ -12,15 +12,13 @@ export class UsuariosChatPage implements OnInit {
   
   id: any;
 
-  uid: any = [
-    {
-    nombre: '',
-    apellido: '',
-    email: '',
-    }
-  ];
+  uid: any;
 
-  constructor(private dtS: DataServiceService, private atS: AuthService,  private router: Router) { }
+  constructor(private dtS: DataServiceService, private atS: AuthService,  private router: Router) {
+    this.dtS.getAllUsers().subscribe(res => {
+      this.uid = res;
+    })
+   }
 
   ngOnInit() {
   }

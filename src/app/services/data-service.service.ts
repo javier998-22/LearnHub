@@ -12,6 +12,7 @@ export class DataServiceService {
   idProfe: any;
   uid = '';
   uiid: any;
+  idCurso: any;
   
   
   constructor(private firestore: Firestore,private atS: AuthService) { }
@@ -25,21 +26,18 @@ export class DataServiceService {
     const usuarios = doc(this.firestore, `Usuarios/${id}`);
     return docData(usuarios);
   }
-
-  GetAllUsers(id:any){
-    const usuarios = doc(this.firestore, `Usuarios`);
-    return docData(usuarios);
+  getAllUsers(){
+    const usu = collection(this.firestore, `Usuarios`);
+    return collectionData(usu);
   }
-
   CrearCurso(idCurso: any, idProfe: any, Establecimiento: any, RamoCurso: any, SiglaCurso: any){
     const cursos = collection(this.firestore, 'Cursos');
     return setDoc(doc(cursos, idCurso), {idCurso, establecimiento: Establecimiento, ramoCurso: RamoCurso, siglaCurso: SiglaCurso, idProfe: idProfe})
   }
 
-  getCursoDetails(idCurso : string){
-    const cursos = doc(this.firestore, `Cursos/${idCurso}`);
-    return docData(cursos);
-    console.log(idCurso);
+  getCursoDetails(idCurso: any){
+    const cursos = collection(this.firestore, `Cursos/${idCurso}`);
+    return collectionData(cursos);
   }
 
   cargarId() {

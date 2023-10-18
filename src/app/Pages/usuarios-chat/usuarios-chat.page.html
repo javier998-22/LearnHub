@@ -8,16 +8,8 @@
   </ion-header>
   <ion-list class="list-card" *ngFor="let items of uid">
     <ion-item detail>
-      <ion-avatar slot="start">
-        <img src="https://1.pravatar.cc/385" >
-      </ion-avatar>
       <ion-label>
-        {{uid.nombre}}
-        <p>
-          <ion-text>
-            message
-          </ion-text>
-        </p>
+          <ion-text>{{items.nombre}} {{items.apellido}} {{items.tipo}}</ion-text>
       </ion-label>
     </ion-item>
   </ion-list>
