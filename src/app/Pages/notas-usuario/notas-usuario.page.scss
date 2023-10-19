@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
+
+.fondo{
+    --background: var(--blanco);
+    ion-toolbar{
+        --background: var(--blanco);
+        .back-icon{
+            height: 30px;
+            width: 30px;
+            margin-bottom: 20px;
+            color: var(--azul);
+        }
+        .Title-card{
+            color: var(--azul);
+            text-align: center;
+            font-family: 'Ysabeau Office', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: 10%;
+            margin-left: 33%;
+        }
+    }
+
+    .Card-list{
+        margin-top:5%;
+        .sisi{
+            --background: var(--azul);
+            font-family: 'Ysabeau Office', sans-serif!important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)!important;
+            font-weight: bold !important;
+            color: var(--blanco)!important;
+            text-align: center;
+        }
+        .cont{
+            --background: var(--blanco);
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom:0px;
+            .list-card{
+                padding-top: 0px;
+                padding-bottom: 0px;
+                --background: var(--azul);
+                ion-item{
+                    --background: var(--azul);
+                    ion-label{
+                        font-family: 'Ysabeau Office', sans-serif;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                        font-weight: bold;
+                        color: var(--blanco);
+                    }
+                }
+            }
+
+        } 
+    }
+}

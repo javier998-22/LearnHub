@@ -87,6 +87,14 @@ const routes: Routes = [
     path: 'notas-usuario',
     loadChildren: () => import('./Pages/notas-usuario/notas-usuario.module').then( m => m.NotasUsuarioPageModule)
   },
+  {
+    path: 'chats',
+    loadChildren: () => import('./Pages/chats/chats.module').then( m => m.ChatsPageModule)
+  },
+  {
+    path: 'chat-c',
+    loadChildren: () => import('./Pages/chat-c/chat-c.module').then( m => m.ChatCPageModule)
+  },
 
 
 ];

@@ -11,13 +11,7 @@ import { Router } from '@angular/router';
 export class PerfilProfePage implements OnInit {
   id: any;
 
-  uid: any = [
-    {
-    nombre: '',
-    apellido: '',
-    email: '',
-    }
-  ];
+  uid: any;
 
   image: any;
  
