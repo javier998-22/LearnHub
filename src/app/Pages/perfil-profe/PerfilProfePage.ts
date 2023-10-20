@@ -30,7 +30,7 @@ export class PerfilProfePage implements OnInit {
 
   logout(){
     this.atS.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/welcome']);
   }
   IraCursos(){
     this.router.navigate(['/cursos-profe']);
