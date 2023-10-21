@@ -51,6 +51,13 @@ export class DataServiceService {
     return collectionData(q);
   }
 
+  GetCursoMarks(){
+    this.cargarId();
+    const curs = collection(this.firestore, `Cursos`)
+    const qa = query(curs, where('idAlumno', '==', this.uiid))
+    return collectionData(qa);
+  }
+
   async Updateuser(campo: any, valor: any, id: any){
     const usuario = doc(this.firestore, 'Usuarios', id)
     await updateDoc(usuario,{

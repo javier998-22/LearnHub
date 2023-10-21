@@ -1,0 +1,23 @@
+<ion-content class="content" [fullscreen]="true">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start" style="color:var(--azul)">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-text class="Title-card">Tus notas</ion-text>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list class="list-card">
+    <ion-item detail>
+      <ion-label>
+          <ion-text></ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom" class="fab">
+    <ion-fab-button (click)="irAusuC()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

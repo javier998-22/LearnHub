@@ -11,13 +11,7 @@ import { Router } from '@angular/router';
 export class PerfilProfePage implements OnInit {
   id: any;
 
-  uid: any = [
-    {
-    nombre: '',
-    apellido: '',
-    email: '',
-    }
-  ];
+  uid: any;
 
   image: any;
  
@@ -36,7 +30,7 @@ export class PerfilProfePage implements OnInit {
 
   logout(){
     this.atS.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/welcome']);
   }
   IraCursos(){
     this.router.navigate(['/cursos-profe']);

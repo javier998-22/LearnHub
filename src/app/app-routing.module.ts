@@ -88,6 +88,8 @@ const routes: Routes = [
     path: 'notas-usuario',
     loadChildren: () => import('./Pages/notas-usuario/notas-usuario.module').then( m => m.NotasUsuarioPageModule)
   },
+
+
 ];
 
 @NgModule({

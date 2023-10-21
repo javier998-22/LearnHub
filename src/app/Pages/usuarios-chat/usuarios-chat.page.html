@@ -9,14 +9,8 @@
   <ion-list class="list-card" *ngFor="let items of uid">
     <ion-item detail>
       <ion-label>
-          <ion-text>{{items.nombre}} {{items.apellido}} {{items.tipo}}</ion-text>
+          <ion-text>{{items.tipo}} {{items.nombre}} {{items.apellido}}</ion-text>
       </ion-label>
     </ion-item>
   </ion-list>
-
-  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
-    <ion-fab-button >
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>
