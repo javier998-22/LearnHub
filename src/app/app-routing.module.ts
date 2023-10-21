@@ -83,12 +83,11 @@ const routes: Routes = [
   {
     path: 'modal-curso',
     loadChildren: () => import('./Pages/modal-curso/modal-curso.module').then( m => m.ModalCursoPageModule)
-  },  {
+  },
+  {
     path: 'notas-usuario',
     loadChildren: () => import('./Pages/notas-usuario/notas-usuario.module').then( m => m.NotasUsuarioPageModule)
   },
-
-
 ];
 
 @NgModule({

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from './../../services/data-service.service';
-import { AuthService } from '../../services/auth.service';
 import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-mod-perfil',
@@ -13,29 +13,31 @@ import { Router } from '@angular/router';
 export class ModPerfilPage implements OnInit {
 
   id:any;
+
   uid: any = [
     {
     nombre: '',
     apellido: '',
     }
   ];
-  email ='';
 
-  constructor(private DataS: DataServiceService, private Auth: AuthService,public Alerta: AlertController, modalCtrl: ModalController, router: Router) {
+  constructor(private DataS: DataServiceService, private Auth: AuthService, public Alerta: AlertController, modalCtrl: ModalController, private router: Router) {
     this.DataS.getUsuarios(this.Auth.getUid()).subscribe(res => {
       this.uid = res;
       this.id = this.Auth.getUid();
-      this.uid.email = this.Auth.getEmail();
+      
     })
    }
 
   ngOnInit() {
-    
+
+  }
+  Irpagepass() {
+    this.router.navigate(['/reset-pass']);
   }
 
-  
   alerta(titulo: string){
-    this.presentAlert(titulo, "Desea Modificar?");
+    this.presentAlert(titulo, "Ya puedes modificar!");
   }
 
   async presentAlert(titulo:string, message: string){

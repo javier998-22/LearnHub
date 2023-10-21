@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ModPerfilPageRoutingModule } from './mod-perfil-routing.module';
@@ -13,8 +13,9 @@ import { ModPerfilPage } from './mod-perfil.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ModPerfilPageRoutingModule
+    ModPerfilPageRoutingModule,
   ],
-  declarations: [ModPerfilPage]
+  declarations: [ModPerfilPage],
 })
 export class ModPerfilPageModule {}
+
