@@ -87,7 +87,11 @@ const routes: Routes = [
   {
     path: 'notas-usuario',
     loadChildren: () => import('./Pages/notas-usuario/notas-usuario.module').then( m => m.NotasUsuarioPageModule)
+  },  {
+    path: 'prom-notas',
+    loadChildren: () => import('./Pages/prom-notas/prom-notas.module').then( m => m.PromNotasPageModule)
   },
+
 
 
 ];

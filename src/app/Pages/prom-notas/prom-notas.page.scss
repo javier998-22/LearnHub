@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
+
+
+
+.fondoM{
+    --background: var(--blanco);
+    ion-toolbar{
+        --background: var(--blanco);
+        .back-icon{
+            height: 30px;
+            width: 30px;
+            margin-bottom: 20px;
+            color: var(--azul);
+        }
+    }
+
+}
+
+.div-text{
+    padding-left: 10%;
+    ion-text.top-left-text{
+        font-family: 'Ysabeau Office', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--azul);
+        height:80%;
+      }
+}
+.content{
+    margin-left: 5%;
+    margin-right: 7%;
+    ion-input{
+        font-family: 'Ysabeau Office', sans-serif;
+        font-weight: bold;
+        color: var(--azul);
+        margin-top: 2%;
+        --highlight-color-valid: var(--azul);
+    }
+}
+.content {
+    color: var(--blanco);
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    ion-input{
+      font-family: 'Ysabeau Office', sans-serif;
+      margin-top:10px;
+      font-weight: bold;
+      color: var(--azul);
+      --highlight-color-valid: var(--azul);
+   
+    }
+    .bottom-button{
+      --background: var(--azul);
+      font-family: 'Ysabeau Office', sans-serif;
+      font-weight: bold;
+      color: var(--blanco);
+      margin-top: 10px;
+      display: flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content: center;
+      }
+      .text-buton{
+        font-family: 'Ysabeau Office', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: var(--azul);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-top: 500px;
+        margin-left: 25%;
+        }
+  }
+  .gen-prom{
+    font-weight: bold;
+    font-family: 'Ysabeau Office', sans-serif;
+    --background: var(--azul);
+    color: var(--blanco);
+    width:90%;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    size:default;
+    margin-left: 6%;
+    margin-top: 10%;
+    }
