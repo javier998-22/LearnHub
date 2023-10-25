@@ -10,7 +10,7 @@ import { Cursos } from './modelos.service';
 })
 export class DataServiceService {
   idProfe: any;
-  uid = '';
+  uid = 'any';
   uiid: any;
   idCurso: any;
   

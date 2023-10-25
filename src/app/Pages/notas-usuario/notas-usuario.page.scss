@@ -22,6 +22,19 @@
         }
     }
 
+    .text-buton{
+        font-weight: bold;
+        font-family: 'Ysabeau Office', sans-serif;
+        --background: var(--azul);
+        color: var(--blanco);
+        width:90%;
+        display: grid;
+        justify-content: center;
+        place-items: center;
+        size:default;
+        margin-left: 6%;
+        margin-top: 10%;
+    }
     .Card-list{
         margin-top:5%;
         .sisi{
@@ -51,6 +64,7 @@
                     }
                 }
             }
+            
 
         } 
     }

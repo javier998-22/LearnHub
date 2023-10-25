@@ -83,18 +83,15 @@ const routes: Routes = [
   {
     path: 'modal-curso',
     loadChildren: () => import('./Pages/modal-curso/modal-curso.module').then( m => m.ModalCursoPageModule)
-  },  {
+  },
+  {
     path: 'notas-usuario',
     loadChildren: () => import('./Pages/notas-usuario/notas-usuario.module').then( m => m.NotasUsuarioPageModule)
+  },  {
+    path: 'prom-notas',
+    loadChildren: () => import('./Pages/prom-notas/prom-notas.module').then( m => m.PromNotasPageModule)
   },
-  {
-    path: 'chats',
-    loadChildren: () => import('./Pages/chats/chats.module').then( m => m.ChatsPageModule)
-  },
-  {
-    path: 'chat-c',
-    loadChildren: () => import('./Pages/chat-c/chat-c.module').then( m => m.ChatCPageModule)
-  },
+
 
 
 ];

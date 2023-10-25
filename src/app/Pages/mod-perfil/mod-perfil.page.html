@@ -14,23 +14,23 @@
   <div class="content">
     <ion-item>
       <ion-label class="textdisable" position="relative">Nombre: &nbsp;</ion-label>
-      <ion-input disabled>{{uid.nombre}}</ion-input>
-      <ion-buttons slot="end" color=primary (click)="alerta('nombre')">
-        <ion-icon name="create"></ion-icon>
+      <ion-input label="Nombre" disabled>{{uid.nombre}}</ion-input>
+      <ion-buttons slot="end" color="primary" (click)="alerta('Nombre')">
+        <ion-icon name="sync-outline"></ion-icon>
       </ion-buttons>
     </ion-item>
     <ion-item>
       <ion-label class="textdisable" position="relative">Apellido: &nbsp;</ion-label>
-      <ion-input disabled>{{uid.apellido}}</ion-input>
-      <ion-buttons slot="end" color=primary (click)="alerta('apellido')">
-        <ion-icon name="create"></ion-icon>
+      <ion-input label="Apellido" disabled>{{uid.apellido}}</ion-input>
+      <ion-buttons slot="end" color=primary (click)="alerta('Apellido')">
+        <ion-icon name="sync-outline"></ion-icon>
       </ion-buttons>
     </ion-item>
     <ion-item>
       <ion-label class="textdisable" position="relative">Contraseña:</ion-label>
-      <ion-input disabled></ion-input>
-      <ion-buttons slot="end" color=primary >
-        <ion-icon name="create" color="black "></ion-icon>
+      <ion-input label="Contraseña" disabled></ion-input>
+      <ion-buttons slot="end" color=primary (click)="Irpagepass()">
+        <ion-icon name="sync-outline"></ion-icon>
       </ion-buttons>
     </ion-item>
   </div>
