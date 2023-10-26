@@ -1,8 +1,8 @@
 <ion-content class="fondoM">
   <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-buttons>
-        <ion-icon defaulthref="/prom-notas" (click)="volver" name="chevron-back-outline" class="back-icon"></ion-icon>
+      <ion-buttons (click)="volver()">
+        <ion-icon  name="chevron-back-outline" class="back-icon"></ion-icon>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
@@ -12,11 +12,14 @@
     </ion-text>
   </div>
   <div class="content">
-    <ion-input label="Ingresa promedio esperado" label-placement="start" fill="outline" expand="block"></ion-input>
-    <ion-input label="Ingresa cualquier cosa" label-placement="start" fill="outline" expand="block"></ion-input>
-    <ion-input label="input en progreso xd" label-placement="start" fill="outline" expand="block"></ion-input>
+    <ion-input label="Ingresa promedio esperado" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota1" type="number"></ion-input>
+    <ion-input label="Ingresa cualquier cosa" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota2" type="number"></ion-input>
+    <ion-input label="input en progreso xd" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota3" type="number"></ion-input>
   </div>
   <div>
-    <ion-button class="gen-prom">Generar Promedio esperado</ion-button>
+    <ion-button class="gen-prom" (click)="calcularPromedio()">Generar Promedio esperado</ion-button>
+  </div> 
+  <div>
+    <ion-label class="top-left-text">Su promedio es:{{ promedio }} </ion-label>
   </div>
 </ion-content>
