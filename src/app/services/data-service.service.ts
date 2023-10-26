@@ -19,7 +19,7 @@ export class DataServiceService {
 
   createFirebaseUser(id: any, apellido: any,  nombre: any, tipo: any) {
     const usuario = collection(this.firestore, 'Usuarios');
-    return setDoc(doc(usuario, id), { nombre: nombre, apellido: apellido, tipo: tipo })
+    return setDoc(doc(usuario, id), { nombre: nombre, apellido: apellido, tipo: tipo });
   }
 
   getUsuarios(id:any) {
@@ -27,12 +27,13 @@ export class DataServiceService {
     return docData(usuarios);
   }
   getAllUsers(){
-    const usu = collection(this.firestore, `Usuarios`);
+    const usu = collection(this.firestore, `Usuarios/`);
     return collectionData(usu);
   }
+
   CrearCurso(idCurso: any, idProfe: any, Establecimiento: any, RamoCurso: any, SiglaCurso: any){
     const cursos = collection(this.firestore, 'Cursos');
-    return setDoc(doc(cursos, idCurso), {idCurso, establecimiento: Establecimiento, ramoCurso: RamoCurso, siglaCurso: SiglaCurso, idProfe: idProfe})
+    return setDoc(doc(cursos, idCurso), {idCurso, establecimiento: Establecimiento, ramoCurso: RamoCurso, siglaCurso: SiglaCurso, idProfe: idProfe});
   }
 
   getCursoDetails(idCurso: any){
@@ -46,15 +47,15 @@ export class DataServiceService {
 
   getCurso(){
     this.cargarId();
-    const curso = collection(this.firestore, `Cursos`)
-    const q = query(curso, where('idProfe', '==' , this.uiid))
+    const curso = collection(this.firestore, `Cursos`);
+    const q = query(curso, where('idProfe', '==' , this.uiid));
     return collectionData(q);
   }
 
   GetCursoMarks(){
     this.cargarId();
-    const curs = collection(this.firestore, `Cursos`)
-    const qa = query(curs, where('idAlumno', '==', this.uiid))
+    const curs = collection(this.firestore, `Cursos`);
+    const qa = query(curs, where('idAlumno', '==', this.uiid));
     return collectionData(qa);
   }
 
@@ -62,7 +63,7 @@ export class DataServiceService {
     const usuario = doc(this.firestore, 'Usuarios', id)
     await updateDoc(usuario,{
       [campo]:valor
-    })
+    });
   }
 
 }

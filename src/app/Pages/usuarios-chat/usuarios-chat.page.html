@@ -2,13 +2,13 @@
   <ion-header class="ion-no-border">
     <ion-toolbar>
       <ion-buttons slot="start" style="color:var(--azul)">
-        <ion-back-button defaultHref="/perfil-profe"></ion-back-button>
+        <ion-back-button defaultHref="/chats"></ion-back-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <ion-list class="list-card" *ngFor="let items of uid">
-    <ion-item detail>
-      <ion-label>
+  <ion-list class="list-card">
+    <ion-item detail *ngFor="let items of uid" (click)="abrirChat(items.uid)">
+      <ion-label >
           <ion-text>{{items.tipo}} {{items.nombre}} {{items.apellido}}</ion-text>
       </ion-label>
     </ion-item>

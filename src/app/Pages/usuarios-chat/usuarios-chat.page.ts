@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class UsuariosChatPage implements OnInit {
   
-  id: any;
+  idUsuario2: any;
 
   uid: any;
 
@@ -22,5 +22,9 @@ export class UsuariosChatPage implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  abrirChat(usuarioId2: string){
+    this.uid = usuarioId2;
+    console.log(this.uid);
+  }
 }

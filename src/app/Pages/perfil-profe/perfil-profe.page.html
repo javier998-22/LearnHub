@@ -1,10 +1,9 @@
 <ion-content [fullscreen]="true" class="fondo">
   <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-text class="Title-card">{{uid.nombre}} {{uid.apellido}}</ion-text>
     </ion-toolbar>
   </ion-header>
-
+  <ion-text class="Title-card">{{uid.nombre}} {{uid.apellido}}</ion-text>
   <ion-card class="Card-list">
     <ion-list class="list-card" lines="none">
       <ion-item>
@@ -30,6 +29,7 @@
     </ion-list>
   </ion-card>
 </ion-content>
+
 <ion-footer class="ion-no-border">
   <ion-toolbar>
     <ion-segment scrollable="true" >     
@@ -41,11 +41,6 @@
       <ion-segment-button value="Cursos" (click)="IraCursos()">
         <ion-icon name="briefcase-outline"></ion-icon>
         <ion-label>Cursos</ion-label>
-      </ion-segment-button>
-
-      <ion-segment-button value="Perfil">
-        <ion-icon name="person-circle-outline"></ion-icon>
-        <ion-label>Perfil</ion-label>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
