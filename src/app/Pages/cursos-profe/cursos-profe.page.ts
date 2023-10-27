@@ -34,6 +34,20 @@ export class CursosProfePage implements OnInit {
     });
     await modal.present();
   }
+
+
+  async abrirModalInfoCurso(Value:any) {
+    const modal = await this.modalController.create({
+      component: ModalCursoPage,
+      cssClass: 'myclass',
+      componentProps:{
+        modalInfo: Value
+      }
+    });
+    await modal.present();
+  }
+
+
   IraPerfil(){
     this.router.navigate(['/perfil-profe']);
   }
