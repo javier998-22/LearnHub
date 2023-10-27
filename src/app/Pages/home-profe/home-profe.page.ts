@@ -26,4 +26,6 @@ export class HomeProfePage implements OnInit {
   IraChat(){
     this.router.navigate(['/chats']);
   }
+
+
 }
