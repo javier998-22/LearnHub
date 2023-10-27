@@ -5,12 +5,12 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Observable } from 'rxjs';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { Cursos } from './modelos.service';
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataServiceService {
   idProfe: any;
-  uid = 'any';
   uiid: any;
   idCurso: any;
   
