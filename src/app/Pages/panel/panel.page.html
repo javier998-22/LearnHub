@@ -1,13 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Panel</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content class="fondo" [fullscreen]="true">
+  <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-title size="large">Panel</ion-title>
     </ion-toolbar>
   </ion-header>
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-segment>
+      <ion-segment-button value="Perfil" (click)="IraPerfil()">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>
