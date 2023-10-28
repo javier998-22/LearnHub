@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
-import { HomeProfePageRoutingModule } from './home-profe-routing.module';
-import { HomeProfePage } from './home-profe.page';
 
+import { IonicModule } from '@ionic/angular';
+
+import { PanelPageRoutingModule } from './panel-routing.module';
+
+import { PanelPage } from './panel.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomeProfePageRoutingModule,
-
+    PanelPageRoutingModule
   ],
-  declarations: [HomeProfePage],
+  declarations: [PanelPage]
 })
-export class HomeProfePageModule {}
+export class PanelPageModule {}

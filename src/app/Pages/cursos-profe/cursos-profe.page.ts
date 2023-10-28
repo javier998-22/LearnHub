@@ -54,8 +54,15 @@ export class CursosProfePage implements OnInit {
   IraCursos(){
     this.router.navigate(['/cursos-profe']);
   }
+<<<<<<< HEAD
   IraHome(){
     this.router.navigate(['/home-profe'])
   }
 
+=======
+  abrirCurso(){
+    this.router.navigate(['/modal-curso/this.Listacursos.idCurso'])
+    console.log(this.Listacursos.idCurso);
+  }
+>>>>>>> dcf25bf3fc12d6a613e85f443031ea3144c11bc8
 }

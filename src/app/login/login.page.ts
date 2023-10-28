@@ -41,7 +41,7 @@ export class LoginPage implements OnInit {
       if (this.uid.tipo == 1) {
         this.router.navigate(['/home-admin']);        
       }else if (this.uid.tipo == 2) {      
-        this.router.navigate(['/home-profe']);
+        this.router.navigate(['/cursos-profe']);
       }else{ 
         this.router.navigate(['/home']);
       }
