@@ -11,35 +11,57 @@
             color: var(--azul);
         }
 
-    }   
-    .Title-card{
-        color: var(--azul);
-        text-align: center;
-        font-family: 'Ysabeau Office', sans-serif;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        font-weight: bold;
-        font-size: 30px;
-        margin-top: 10%;
-        margin-left: 20%;
-        text-align: center;
     }
+    .Card-top{
+        margin-top: 0%;
+        --background: var(--azul);
+        height: 20%;
+    }
+    ion-avatar{
+         margin-top: 5%;
+         margin-left: 42%;
+    }
+    .Card-in{
+        margin-top: 0%;
+        --background: var(--MasPlomo);
+        height: 7%;
+        width: 70%;
+        position: float;
+        bottom: 5%;
+        left: 12%;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        align-items: center;
+
+        .Title-card{
+            color: var(--azul);
+            text-align: center;
+            font-family: 'Ysabeau Office', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            font-size: 200%;
+            margin-top: 10%;
+            text-align: center;
+            margin-left: 18%;
+        }
+    }
+
    
     .Card-list{
-        margin-top:40%;
+        margin-top:10%;
         .list-card{
             padding-top: 0px;
             padding-bottom: 0px;
             --background: var(--blanco);
             ion-item{
-                --background: var(--blanco);
+                --background: var(--azul);
                 ion-icon{
-                    color: var(--azul);
+                    color: var(--blanco);
                 }
                 ion-label{
                     font-family: 'Ysabeau Office', sans-serif;
                     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
                     font-weight: bold;
-                    color: var(--azul);
+                    color: var(--blanco);
                 }
             }
         }
@@ -51,7 +73,6 @@ ion-footer{
     --background: transparent;
     --ion-color-base: transparent !important;
     ion-toolbar{
-        padding-top: 20px;
         --background: transparent;
         --ion-color-base: transparent !important;
       ion-icon{
