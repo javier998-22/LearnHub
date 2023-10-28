@@ -29,16 +29,10 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'home-profe',
-    canActivate : [AuthGuard],
-    data: {AuthGuardPipe : redirectUnauthorizedToLogin },
-    loadChildren: () => import('./Pages/home-profe/home-profe.module').then( m => m.HomeProfePageModule)
-  },
-  {
     path: 'home-admin',
     canActivate : [AuthGuard],
     data: {AuthGuardPipe : redirectUnauthorizedToLogin },
-    loadChildren: () => import('./Pages/home-admin/home-admin.module').then( m => m.HomeAdminPageModule)
+    loadChildren: () => import('./Pages/panel/panel.module').then( m => m.PanelPageModule)
   },
   {
     path: 'perfil-profe',
@@ -87,9 +81,14 @@ const routes: Routes = [
   {
     path: 'notas-usuario',
     loadChildren: () => import('./Pages/notas-usuario/notas-usuario.module').then( m => m.NotasUsuarioPageModule)
-  },  {
+  },
+  {
     path: 'prom-notas',
     loadChildren: () => import('./Pages/prom-notas/prom-notas.module').then( m => m.PromNotasPageModule)
+  },
+  {
+    path: 'panel',
+    loadChildren: () => import('./Pages/panel/panel.module').then( m => m.PanelPageModule)
   },
 
 
