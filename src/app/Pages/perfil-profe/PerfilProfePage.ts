@@ -14,9 +14,11 @@ export class PerfilProfePage implements OnInit {
   uid: any;
   constructor(private dtS: DataServiceService, private atS: AuthService,  private router: Router) {
     this.dtS.getUsuarios(this.atS.getUid()).subscribe(res => {
-      this.uid = res;
-      this.id = this.atS.getUid();
-      this.uid.email = this.atS.getEmail();
+      if(res){
+        this.uid = res;
+       this.id = this.atS.getUid();
+        this.uid.email = this.atS.getEmail();
+      }
     });
   }
 

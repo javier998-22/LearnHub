@@ -17,15 +17,18 @@ export class ModalCursoPage implements OnInit {
     siglaCurso: ''
   }]
 
+  modalInfo:any;
+
   //@Input() Cursos: any;
 
   constructor( private dataS: DataServiceService, private atS: AuthService, private router: Router) {
    }
 
   async ngOnInit() {
-    this.dataS.getCursoDetails(this.Listacursos.idCurso).subscribe(res => {
-      this.Listacursos = res;
-      console.log(this.Listacursos.idCurso)
-    })
+    console.log(this.modalInfo)
+    // this.dataS.getCursoDetails(this.modalInfo).subscribe(res => {
+    //   this.Listacursos = res;
+    //   console.log(this.Listacursos.idCurso)
+    // })
   }
 }

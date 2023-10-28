@@ -3,9 +3,9 @@
     <ion-toolbar>
     </ion-toolbar>
   </ion-header>
-  <ion-text class="Title-card">{{uid.nombre}} {{uid.apellido}}</ion-text>
-  <ion-card class="Card-list">
-    <ion-list class="list-card" lines="none">
+  <ion-text class="Title-card">{{uid?.nombre}} {{uid?.apellido}}</ion-text>
+  <ion-card class="Card-list" >
+    <ion-list class="list-card" lines="none" style="background-color: green;">
       <ion-item>
         <ion-label>Calendario de Clases</ion-label>
         <ion-icon (click)="IraCaCla()" name="calendar-outline"></ion-icon>
