@@ -3,6 +3,8 @@ import { DataServiceService } from '../../services/data-service.service';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { ModalNAPage } from '../modal-na/modal-na.page'
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-curso',
@@ -21,7 +23,7 @@ export class ModalCursoPage implements OnInit {
 
   //@Input() Cursos: any;
 
-  constructor( private dataS: DataServiceService, private atS: AuthService, private router: Router) {
+  constructor( private dataS: DataServiceService, private atS: AuthService, private router: Router, private modalController: ModalController) {
    }
 
   async ngOnInit() {
@@ -30,5 +32,16 @@ export class ModalCursoPage implements OnInit {
     //   this.Listacursos = res;
     //   console.log(this.Listacursos.idCurso)
     // })
+  }
+
+  async abrirModalInfoCurso(Value:any) {
+    const modal = await this.modalController.create({
+      component: ModalNAPage,
+      cssClass: 'myclass',
+      componentProps:{
+        modalInfo: Value
+      }
+    });
+    await modal.present();
   }
 }

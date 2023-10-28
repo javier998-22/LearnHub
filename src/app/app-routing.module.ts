@@ -91,6 +91,10 @@ const routes: Routes = [
     path: 'prom-notas',
     loadChildren: () => import('./Pages/prom-notas/prom-notas.module').then( m => m.PromNotasPageModule)
   },
+  {
+    path: 'modal-na',
+    loadChildren: () => import('./Pages/modal-na/modal-na.module').then( m => m.ModalNAPageModule)
+  },
 
 
 

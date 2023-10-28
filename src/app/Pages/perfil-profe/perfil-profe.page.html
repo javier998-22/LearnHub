@@ -5,9 +5,7 @@
   </ion-header>
   
   <ion-card class="Card-top" >
-    <ion-avatar>
-      <img alt="Silhouette of a person's head"  src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-    </ion-avatar>
+
     <div *ngIf="uid?.tipo === 1"> <!-- Administrador -->
       <p>¡Bienvenido Administrador!</p>
     </div>
@@ -23,7 +21,7 @@
   <ion-card class="Card-in">
     <ion-text class="Title-card">{{uid?.nombre}} {{uid?.apellido}}</ion-text>
   </ion-card>
-  <ion-card class="Card-list" >
+  <ion-card class="Card-list">
     <ion-list class="list-card" lines="none">
       <ion-item>
         <ion-label>Calendario de Clases</ion-label>
