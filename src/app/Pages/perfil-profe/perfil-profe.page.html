@@ -3,9 +3,28 @@
     <ion-toolbar>
     </ion-toolbar>
   </ion-header>
-  <ion-text class="Title-card">{{uid?.nombre}} {{uid?.apellido}}</ion-text>
+  
+  <ion-card class="Card-top" >
+    <ion-avatar>
+      <img alt="Silhouette of a person's head"  src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <div *ngIf="uid?.tipo === 1"> <!-- Administrador -->
+      <p>¡Bienvenido Administrador!</p>
+    </div>
+    
+    <div *ngIf="uid?.tipo === 2"> <!-- Profesor -->
+      <p>¡Bienvenido Profesor!</p>
+    </div>
+    
+    <div *ngIf="uid?.tipo === 3"> <!-- Alumno -->
+      <p>¡Bienvenido Alumno!</p>
+    </div>
+  </ion-card>
+  <ion-card class="Card-in">
+    <ion-text class="Title-card">{{uid?.nombre}} {{uid?.apellido}}</ion-text>
+  </ion-card>
   <ion-card class="Card-list" >
-    <ion-list class="list-card" lines="none" style="background-color: green;">
+    <ion-list class="list-card" lines="none">
       <ion-item>
         <ion-label>Calendario de Clases</ion-label>
         <ion-icon (click)="IraCaCla()" name="calendar-outline"></ion-icon>

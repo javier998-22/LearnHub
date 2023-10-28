@@ -16,7 +16,7 @@ export class PerfilProfePage implements OnInit {
     this.dtS.getUsuarios(this.atS.getUid()).subscribe(res => {
       if(res){
         this.uid = res;
-       this.id = this.atS.getUid();
+        this.id = this.atS.getUid();
         this.uid.email = this.atS.getEmail();
       }
     });
