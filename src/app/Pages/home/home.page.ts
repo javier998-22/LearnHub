@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
  IraPerfil(){
-  this.navCtrl.navigateForward(['/perfil-profe']);
+  this.navCtrl.navigateForward(['/perfil-alumno']);
  }
   IraCursos(){
     this.router.navigate(['cursos-a']);
