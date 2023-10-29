@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
+
+.fondo {
+    --background: var(--blanco);
+    ion-toolbar{
+      --background: var(--blanco);
+      .back-icon{
+        height: 30px;
+        width: 30px;
+        margin-bottom: 20px;
+        color: var(--azul);
+    }
+    }
+
+    .cardna{
+      margin-top: 30px;
+      height: 7%;     
+      --background: var(--azul);
+      ion-text{ 
+        text-align: center;
+        margin-top: 10px;
+        font-family: 'Ysabeau Office', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+        color: var(--blanco);
+      }
+    }
+  }

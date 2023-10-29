@@ -23,7 +23,7 @@ export class ModalCursoPage implements OnInit {
 
   //@Input() Cursos: any;
 
-  constructor( private dataS: DataServiceService, private atS: AuthService, private router: Router, private modalController: ModalController) {
+  constructor( private dataS: DataServiceService,private modalCtrl: ModalController, private atS: AuthService, private router: Router, private modalController: ModalController) {
    }
 
   async ngOnInit() {
@@ -43,5 +43,9 @@ export class ModalCursoPage implements OnInit {
       }
     });
     await modal.present();
+  }
+  async volver(){
+    this.router.navigate(['/cursos-profe']);
+    await this.modalCtrl.dismiss();
   }
 }

@@ -52,6 +52,10 @@ export class DataServiceService {
     return collectionData(q);
   }
 
+  agregarAlumno(uid: any ,idCurso : any){
+    const alumno = collection(this.firestore, 'AlumnosCurso');
+    return setDoc(doc(alumno), {idAlumnos : uid, idCurso: idCurso})
+  }
 
   async Updateuser(campo: any, valor: any, id: any){
     const usuario = doc(this.firestore, 'Usuarios', id)

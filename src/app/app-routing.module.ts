@@ -87,14 +87,14 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/prom-notas/prom-notas.module').then( m => m.PromNotasPageModule)
   },
   {
-<<<<<<< HEAD
     path: 'modal-na',
     loadChildren: () => import('./Pages/modal-na/modal-na.module').then( m => m.ModalNAPageModule)
-=======
+
+  },
+  {
     path: 'panel',
     loadChildren: () => import('./Pages/panel/panel.module').then( m => m.PanelPageModule)
->>>>>>> dcf25bf3fc12d6a613e85f443031ea3144c11bc8
-  },
+  }
 
 
 

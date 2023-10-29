@@ -1,15 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title></ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-title size="large" style="color: #fff;">{{modalInfo.siglaCurso}}</ion-title>
+      <ion-buttons slot="end">
+        <ion-icon defaultHref="/cursos-profe" (click)="volver()" name="chevron-down-outline" class="back-icon"></ion-icon>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-
-  <ion-text style="color: #fff;" (click)="abrirModalInfoCurso(modalInfo)">{{modalInfo.siglaCurso}}</ion-text> 
+  <ion-card class="cardna">
+    <ion-text style="color: #fff;" (click)="abrirModalInfoCurso(modalInfo)">Agregar Alumnos al curso : {{modalInfo.siglaCurso}}</ion-text> 
+  </ion-card>
 </ion-content>
