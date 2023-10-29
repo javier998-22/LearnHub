@@ -1,13 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Perfil-Admin</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-title size="large">Perfil-Admin</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <ion-card class="Card-top" >
+
+    <div *ngIf="uid?.tipo === 1"> <!-- Administrador -->
+      <p>¡Bienvenido Administrador!</p>
+    </div>
+    
+    <div *ngIf="uid?.tipo === 2"> <!-- Profesor -->
+      <p>¡Bienvenido Profesor!</p>
+    </div>
+    
+    <div *ngIf="uid?.tipo === 3"> <!-- Alumno -->
+      <p>¡Bienvenido Alumno!</p>
+    </div>
+  </ion-card>
+  <ion-card class="Card-in">
+    <ion-text class="Title-card">{{uid?.nombre}} {{uid?.apellido}}</ion-text>
+  </ion-card>
+  <ion-card class="Card-list">
+    <ion-list class="list-card" lines="none">
+      <ion-item>
+        <ion-label>Modificar Perfil</ion-label>
+        <ion-icon (click)="IraMod()" name="pencil-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cerrar Sesion</ion-label>
+        <ion-icon (click)="logout()" name="power-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-segment scrollable="true" >     
+      <ion-segment-button value="Cursos" (click)="IraPanel()">
+        <ion-icon name="briefcase-outline"></ion-icon>
+        <ion-label>Principal</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>
