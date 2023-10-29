@@ -31,20 +31,11 @@ export class PerfilProfePage implements OnInit {
   }
   IraCursos(){
     this.router.navigate(['/cursos-profe']);
-  }IraCalev(){
-    this.router.navigate(['/horario-ev']);
-  }
-  IraCaCla(){
-    this.router.navigate(['/horario-clases']);
   }
   IraMod(){
     this.router.navigate(['/mod-perfil']);
   }
-  IraHome(){
-    this.router.navigate(['/home-profe']);
-  }
-  IraMisNotas(){
-    this.router.navigate(['/notas-usuario']);
-  }
+
+  
 }
 
