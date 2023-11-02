@@ -4,11 +4,11 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-perfil-profe',
-  templateUrl: './perfil-profe.page.html',
-  styleUrls: ['./perfil-profe.page.scss'],
+  selector: 'app-perfil-admin',
+  templateUrl: './perfil-admin.page.html',
+  styleUrls: ['./perfil-admin.page.scss'],
 })
-export class PerfilProfePage implements OnInit {
+export class PerfilAdminPage implements OnInit {
   id: any;
 
   uid: any;
@@ -29,8 +29,8 @@ export class PerfilProfePage implements OnInit {
     this.atS.logout();
     this.router.navigate(['/welcome']);
   }
-  IraCursos(){
-    this.router.navigate(['/cursos-profe']);
+  IraPanel(){
+    this.router.navigate(['/panel']);
   }
   IraMod(){
     this.router.navigate(['/mod-perfil']);

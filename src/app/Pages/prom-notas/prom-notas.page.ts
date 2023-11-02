@@ -15,6 +15,7 @@ export class PromNotasPage implements OnInit {
     nota1:'',
     nota2: '',
     nota3: '',
+    nota4: '',
   }]
   
   promedio: number = 0; // Variable para almacenar el resultado del promedio

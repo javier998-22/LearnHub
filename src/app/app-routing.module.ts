@@ -94,7 +94,15 @@ const routes: Routes = [
   {
     path: 'panel',
     loadChildren: () => import('./Pages/panel/panel.module').then( m => m.PanelPageModule)
+  },  {
+    path: 'perfil-alumno',
+    loadChildren: () => import('./Pages/perfil-alumno/perfil-alumno.module').then( m => m.PerfilAlumnoPageModule)
+  },
+  {
+    path: 'perfil-admin',
+    loadChildren: () => import('./Pages/perfil-admin/perfil-admin.module').then( m => m.PerfilAdminPageModule)
   }
+
 
 
 

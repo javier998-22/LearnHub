@@ -12,14 +12,15 @@
     </ion-text>
   </div>
   <div class="content">
-    <ion-input label="Ingresa promedio esperado" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota1" type="number"></ion-input>
-    <ion-input label="Ingresa cualquier cosa" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota2" type="number"></ion-input>
-    <ion-input label="input en progreso xd" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota3" type="number"></ion-input>
+    <ion-input label="Ingresa nota1" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota1" type="number"></ion-input>
+    <ion-input label="Ingresa nota2" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota2" type="number"></ion-input>
+    <ion-input label="Ingresa nota3" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota3" type="number"></ion-input>
+    <ion-input label="Ingresa nota4" label-placement="start" fill="outline" expand="block" [(ngModel)]="notas.nota4" type="number"></ion-input>
   </div>
   <div>
     <ion-button class="gen-prom" (click)="calcularPromedio()">Generar Promedio esperado</ion-button>
   </div> 
   <div>
-    <ion-label class="top-left-text">Su promedio es:{{ promedio }} </ion-label>
+    <ion-label class="prom-nota-text">Su promedio es:{{ promedio }} </ion-label>
   </div>
 </ion-content>

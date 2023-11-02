@@ -4,11 +4,12 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-perfil-profe',
-  templateUrl: './perfil-profe.page.html',
-  styleUrls: ['./perfil-profe.page.scss'],
+  selector: 'app-perfil-alumno',
+  templateUrl: './perfil-alumno.page.html',
+  styleUrls: ['./perfil-alumno.page.scss'],
 })
-export class PerfilProfePage implements OnInit {
+export class PerfilAlumnoPage implements OnInit {
+
   id: any;
 
   uid: any;
@@ -22,20 +23,27 @@ export class PerfilProfePage implements OnInit {
     });
   }
 
+
   ngOnInit() {
   }
 
-  logout(){
-    this.atS.logout();
-    this.router.navigate(['/welcome']);
-  }
-  IraCursos(){
-    this.router.navigate(['/cursos-profe']);
-  }
-  IraMod(){
-    this.router.navigate(['/mod-perfil']);
-  }
-
-  
+logout(){
+  this.atS.logout();
+  this.router.navigate(['/welcome']);
 }
-
+IraCalev(){
+  this.router.navigate(['/horario-ev']);
+}
+IraCaCla(){
+  this.router.navigate(['/horario-clases']);
+}
+IraMod(){
+  this.router.navigate(['/mod-perfil']);
+}
+IraHome(){
+  this.router.navigate(['/home']);
+}
+IraMisNotas(){
+  this.router.navigate(['/notas-usuario']);
+}
+}

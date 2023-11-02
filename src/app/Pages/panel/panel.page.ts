@@ -25,6 +25,6 @@ export class PanelPage implements OnInit {
   ngOnInit() {
   }
   IraPerfil(){
-    this.router.navigate(['/perfil-profe']);
+    this.router.navigate(['/perfil-admin']);
   }
 }
