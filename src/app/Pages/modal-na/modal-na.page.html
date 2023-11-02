@@ -3,17 +3,15 @@
     <ion-toolbar>
     </ion-toolbar>
   </ion-header>
-  <ion-card class="Card-list" >
-    <ion-list class="list-card">
-      <ion-item *ngFor="let items of alumnos">
-        <ion-avatar>
-          <img alt="Silhouette of a person's head"  src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-        </ion-avatar>
-        <ion-label >
-          <ion-text> {{items.nombre}} {{items.apellido}}</ion-text>
-        </ion-label>
-        <ion-icon name="add-circle-outline" (click)="agregarAlumno(items, modalInfo)" ></ion-icon>
-      </ion-item>
-    </ion-list>
+  <ng-container *ngFor="let items of alumnos">
+  <ion-card class="Card-list" *ngIf="items.tipo == '3' ">
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>
+        <ion-text> {{items.nombre}} {{items.apellido}}</ion-text>
+      </ion-label>
+      <ion-icon name="add-circle-outline" (click)="agregarAlumno(items, modalInfo)"></ion-icon>
   </ion-card>
+  </ng-container>
 </ion-content>

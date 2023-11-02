@@ -101,6 +101,10 @@ const routes: Routes = [
   {
     path: 'perfil-admin',
     loadChildren: () => import('./Pages/perfil-admin/perfil-admin.module').then( m => m.PerfilAdminPageModule)
+  },
+  {
+    path: 'modal-grades',
+    loadChildren: () => import('./Pages/modal-grades/modal-grades.module').then( m => m.ModalGradesPageModule)
   }
 
 

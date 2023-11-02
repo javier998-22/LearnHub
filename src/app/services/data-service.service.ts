@@ -13,8 +13,6 @@ export class DataServiceService {
   idProfe: any;
   uiid: any;
   idCurso: any;
-  tipo: any;
-  tipo3 = 3;
   constructor(private firestore: Firestore,private atS: AuthService) { }
 
   createFirebaseUser(id: any, apellido: any,  nombre: any, tipo: any) {
@@ -54,7 +52,12 @@ export class DataServiceService {
   
   agregarAlumno(uid: any ,idCurso : any){
     const alumno = collection(this.firestore, 'AlumnosCurso');
-    return setDoc(doc(alumno), {idAlumnos : uid, idCurso: idCurso})
+    return setDoc(doc(alumno), {Alumnos : uid, Curso: idCurso})
+  }
+
+  CargarNota(uid: any, idCurso: any){
+    const nota = collection(this.firestore, 'notasAC');
+    return setDoc(doc(nota), {Alumnos: uid, Curso:idCurso})
   }
 
   async Updateuser(campo: any, valor: any, id: any){

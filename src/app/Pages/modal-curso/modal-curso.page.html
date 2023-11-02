@@ -6,7 +6,10 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <ion-card class="cardna">
-    <ion-text style="color: #fff;" (click)="abrirModalInfoCurso(modalInfo)">Agregar Alumnos al curso : {{modalInfo.siglaCurso}}</ion-text> 
-  </ion-card>
+  <ion-card class="cardna" (click)="abrirModalInfoCurso(modalInfo)">
+    <ion-text style="color: #fff;" >Agregar Alumnos al curso : {{modalInfo.siglaCurso}}</ion-text> 
+  </ion-card>''
+  <ion-card class="cardna" (click)="abrirModalgradesCurso(modalInfo)">
+    <ion-text style="color: #fff;" >Evaluar Alumnos del curso : {{modalInfo.siglaCurso}}</ion-text> 
+  </ion-card>''
 </ion-content>
