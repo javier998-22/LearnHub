@@ -13,8 +13,8 @@ export class DataServiceService {
   idProfe: any;
   uiid: any;
   idCurso: any;
-  
-  
+  tipo: any;
+  tipo3 = 3;
   constructor(private firestore: Firestore,private atS: AuthService) { }
 
   createFirebaseUser(id: any, apellido: any,  nombre: any, tipo: any) {
@@ -51,7 +51,7 @@ export class DataServiceService {
     const q = query(curso, where('idProfe', '==' , this.uiid));
     return collectionData(q);
   }
-
+  
   agregarAlumno(uid: any ,idCurso : any){
     const alumno = collection(this.firestore, 'AlumnosCurso');
     return setDoc(doc(alumno), {idAlumnos : uid, idCurso: idCurso})
