@@ -1,17 +1,33 @@
 <ion-content class="fondo" [fullscreen]="true">
   <ion-header class="ion-no-border">
     <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-icon defaultHref="/cursos-profe" (click)="volver()" name="chevron-down-outline"
+          class="back-icon"></ion-icon>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <ng-container *ngFor="let items of alumnos">
-  <ion-card class="Card-list" *ngIf="items.tipo == '3' ">
-      <ion-avatar>
-        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-      </ion-avatar>
-      <ion-label>
-        <ion-text> {{items.nombre}} {{items.apellido}}</ion-text>
-      </ion-label>
-      <ion-icon name="add-circle-outline" (click)="agregarAlumno(items, modalInfo)"></ion-icon>
-  </ion-card>
+    <ion-card class="Card-list" *ngIf="items.tipo == '3' ">
+      <ion-grid>
+        <ion-row>
+          <ion-col> 
+            <ion-avatar>
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar></ion-col>
+          <ion-col>   
+            <ion-label class="texto">
+              <ion-text> {{items.nombre}} {{items.apellido}}</ion-text>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-icon class="icono" name="add-circle-outline" (click)="agregarAlumno(items, modalInfo)"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+
+    </ion-card>
   </ng-container>
 </ion-content>

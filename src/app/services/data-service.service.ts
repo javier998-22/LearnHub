@@ -17,7 +17,7 @@ export class DataServiceService {
 
   createFirebaseUser(id: any, apellido: any,  nombre: any, tipo: any) {
     const usuario = collection(this.firestore, 'Usuarios');
-    return setDoc(doc(usuario, id), { nombre: nombre, apellido: apellido, tipo: tipo });
+    return setDoc(doc(usuario, id), {id, nombre: nombre, apellido: apellido, tipo: tipo });
   }
 
   getUsuarios(id:any) {
