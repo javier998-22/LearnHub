@@ -2,8 +2,8 @@
 .fondo {
     --background: var(--blanco);
     ion-toolbar{
-      --background: var(--blanco);
-      .back-icon{
+        --background: var(--blanco);
+        .back-icon{
           height: 30px;
           width: 30px;
           margin-bottom: 20px;
@@ -12,23 +12,29 @@
     }
     .Card-list{
         margin-top:10%;
-        .list-card{
-            padding-top: 0px;
-            padding-bottom: 0px;
+        --background: var(--azul);
+        .texto{
+            margin-top: 20%;
+            font-family: 'Ysabeau Office', sans-serif;
+            color: var(--blanco);
+            font-size: 20px;
+        }
+        ion-input{
+            font-family: 'Ysabeau Office', sans-serif;
+            font-weight: bold;
+            color: var(--blanco);
+            --highlight-color-valid: var(--blanco);
+         
+        }
+        .bottom-button{
             --background: var(--blanco);
-            ion-item{
-                --background: var(--azul);
-                ion-icon{
-                    color: var(--blanco);
-                }
-                ion-label{
-                    margin-left: 10px;
-                    font-family: 'Ysabeau Office', sans-serif;
-                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                    font-weight: bold;
-                    color: var(--blanco);
-                }
-            }
+            font-family: 'Ysabeau Office', sans-serif;
+            font-weight: bold;
+            color: var(--azul);
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content: center;
         }
     }
 

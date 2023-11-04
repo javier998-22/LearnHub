@@ -9,6 +9,9 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./modal-grades.page.scss'],
 })
 export class ModalGradesPage implements OnInit {
+  notaForm :any;
+  modalInfo:any;
+  alumnos: any;
 
   constructor(private dtS: DataServiceService, private alertController: AlertController) {
     this.dtS.getAllUsers().subscribe(res => {
@@ -16,18 +19,15 @@ export class ModalGradesPage implements OnInit {
   })
    }
 
-  modalInfo:any;
-  alumnos: any;
-
   ngOnInit() {
   }
 
   async agregarAlumno(uid: any, idCurso: any){
-    await this.dtS.agregarAlumno(uid, idCurso);
-    await this.presentAlert();
+      await this.dtS.CargarNota(uid, idCurso, this.notaForm);
+      await this.presentAlert();
   }
 
-  async presentAlert() {
+  async presentAlert() { 
     const alert = await this.alertController.create({
       header: 'Alerta',
       subHeader: '',

@@ -55,9 +55,9 @@ export class DataServiceService {
     return setDoc(doc(alumno), {Alumnos : uid, Curso: idCurso})
   }
 
-  CargarNota(uid: any, idCurso: any){
+  CargarNota(uid: any, idCurso: any, notaa: any){
     const nota = collection(this.firestore, 'notasAC');
-    return setDoc(doc(nota), {Alumnos: uid, Curso:idCurso})
+    return setDoc(doc(nota), {Alumnos: uid, Curso:idCurso, nota: notaa})
   }
 
   async Updateuser(campo: any, valor: any, id: any){
