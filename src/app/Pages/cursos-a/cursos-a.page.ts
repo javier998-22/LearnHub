@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-cursos-a',
   templateUrl: './cursos-a.page.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursosAPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController, private router: Router) { }
 
   ngOnInit() {
   }
-
+  async volver(){
+    this.router.navigate(['/home']);
+    await this.modalCtrl.dismiss();
+}
 }
