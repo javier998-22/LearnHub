@@ -19,6 +19,6 @@ export class NotasUsuarioPage implements OnInit {
     this.router.navigate(['/prom-notas']);
 }
   volver(){
-    this.router.navigate(['/perfil-profe'])
+    this.router.navigate(['/perfil-alumno'])
   }
 }
