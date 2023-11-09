@@ -1,0 +1,18 @@
+<ion-content class="fondo" [fullscreen]="true">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-icon defaultHref="/cursos-profe" (click)="volver()" name="chevron-down-outline" class="back-icon"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <div class="div-text">
+    <ion-text class="top-left-text">
+      Ingresa la fecha para agendar una evaluacion.
+    </ion-text>
+  </div>
+  <div class="content">
+    <ion-input label="Fecha de Evaluacion" label-placement="start" fill="outline" [(ngModel)]="fecha"></ion-input>
+    <ion-button class="bottom-button" expand="block" (click)="agregarAlumno(modalInfo)">Crear</ion-button>
+  </div>
+</ion-content>

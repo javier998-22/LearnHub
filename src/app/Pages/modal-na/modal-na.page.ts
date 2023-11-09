@@ -14,7 +14,7 @@ export class ModalNAPage implements OnInit {
   modalInfo:any;
   alumnos: any;
   
-  constructor(private dtS: DataServiceService, private router: Router, private alertController: AlertController,private modalCtrl: ModalController) { 
+  constructor(private dataS: DataServiceService, private dtS: DataServiceService, private router: Router, private alertController: AlertController,private modalCtrl: ModalController) { 
     this.dtS.getAllUsers().subscribe(res => {
         this.alumnos= res;
     })
@@ -23,7 +23,7 @@ export class ModalNAPage implements OnInit {
     console.log(this.modalInfo)
   }
   async agregarAlumno(uid: any, idCurso: any){
-    await this.dtS.agregarAlumno(uid.id, uid.nombre, uid.apellido, idCurso.idCurso);
+    await this.dataS.agregarAlumno(uid.id, uid.nombre, uid.apellido, idCurso.idCurso, idCurso.siglaCurso, idCurso.ramoCurso);
     await this.presentAlert();
   }
 

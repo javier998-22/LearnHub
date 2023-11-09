@@ -109,6 +109,14 @@ const routes: Routes = [
   {
     path: 'misnotas',
     loadChildren: () => import('./Pages/misnotas/misnotas.module').then( m => m.MisnotasPageModule)
+  },
+  {
+    path: 'subirev',
+    loadChildren: () => import('./Pages/subirev/subirev.module').then( m => m.SubirevPageModule)
+  },
+  {
+    path: 'cursosal',
+    loadChildren: () => import('./Pages/cursosal/cursosal.module').then( m => m.CursosalPageModule)
   }
 
 

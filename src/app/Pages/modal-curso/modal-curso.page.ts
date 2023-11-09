@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { ModalNAPage } from '../modal-na/modal-na.page';
 import { ModalController } from '@ionic/angular';
 import { ModalGradesPage } from '../modal-grades/modal-grades.page';
+import { SubirevPage } from '../subirev/subirev.page';
 
 @Component({
   selector: 'app-modal-curso',
@@ -24,7 +25,7 @@ export class ModalCursoPage implements OnInit {
 
   //@Input() Cursos: any;
 
-  constructor( private dataS: DataServiceService,private modalCtrl: ModalController, private atS: AuthService, private router: Router, private modalController: ModalController) {
+  constructor(private dataS: DataServiceService,private modalCtrl: ModalController, private atS: AuthService, private router: Router, private modalController: ModalController) {
    }
 
   async ngOnInit() {
@@ -55,7 +56,16 @@ export class ModalCursoPage implements OnInit {
     });
     await modal.present();
   }
-
+  async abrirModalNE(Value:any) {
+    const modal = await this.modalController.create({
+      component: SubirevPage,
+      cssClass: 'myclass',
+      componentProps:{
+        modalInfo: Value
+      }
+    });
+    await modal.present();
+  }
 
   async volver(){
     this.router.navigate(['/cursos-profe']);

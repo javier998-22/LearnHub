@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { DataServiceService } from '../../services/data-service.service';
+import { CursosalPage } from '../cursosal/cursosal.page';
 @Component({
   selector: 'app-cursos-a',
   templateUrl: './cursos-a.page.html',
@@ -8,12 +10,33 @@ import { ModalController } from '@ionic/angular';
 })
 export class CursosAPage implements OnInit {
 
-  constructor(private modalCtrl: ModalController, private router: Router) { }
+  Listacursos: any;
+
+  constructor(private modalController: ModalController, private router: Router, private dataS: DataServiceService) {
+    this.dataS.getALc().subscribe(res => {
+      this.Listacursos = res;
+    })
+  }
 
   ngOnInit() {
   }
-  async volver(){
+
+  //async abrirModalInfoCurso(Value:any) {
+    //const modal = await this.modalController.create({
+      //component: CursosalPage,
+      //cssClass: 'myclass',
+      //componentProps:{
+       //modalInfo: Value
+      //}
+    //});
+    //await modal.present();
+  //}
+
+  async volver() {
     this.router.navigate(['/home']);
-    await this.modalCtrl.dismiss();
-}
+    await this.modalController.dismiss();
+  }
+  IraPerfil() {
+    this.router.navigate(['/perfil-alumno']);
+  }
 }

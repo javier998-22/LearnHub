@@ -6,10 +6,20 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-    <ion-card class="Title">
+    <ion-card class="Title" *ngFor="let cursos of Listacursos">
       <ion-card-header>
-        <ion-card-title class="Title-Card">dsgagda</ion-card-title>
-        <ion-card-subtitle class="sub">fdsfafsa</ion-card-subtitle>
+        <ion-card-title class="Title-Card">{{cursos.sigla}}</ion-card-title>
+        <ion-card-subtitle class="sub">{{cursos.ramo}}</ion-card-subtitle>
       </ion-card-header>
     </ion-card>
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-segment>
+      <ion-segment-button value="Perfil" (click)="IraPerfil()">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

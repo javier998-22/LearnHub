@@ -45,6 +45,12 @@ export class DataServiceService {
     const cur = collection(this.firestore, `AlumnCur`);
     return collectionData(cur);
   }
+  getALc(){
+    this.cargarId();
+    const cursillo = collection(this.firestore, `AlumnCur`);
+    const cons = query(cursillo, where('Alumno', '==' , this.uiid));
+    return collectionData(cons);
+  }
 
   getCurso(){
     this.cargarId();
@@ -59,16 +65,32 @@ export class DataServiceService {
     return collectionData(q);
   }
 
-  agregarAlumno(uid: any , nombre: any,apellido: any , idCurso : any){
+  agregarAlumno(uid: any , nombre: any,apellido: any , idCurso : any, sigla: any, ramo:any){
     const alumno = collection(this.firestore, 'AlumnCur');
-    return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , Curso: idCurso});
+    return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , Curso: idCurso, sigla: sigla, ramo: ramo});
   }
 
   CargarNota(uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
     const nota = collection(this.firestore, 'notasAC');
-    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , Curso:idCurso,sigla: sigla, ramo: ramo ,  nota: notaa})
+    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , Curso:idCurso, sigla: sigla, ramo: ramo, nota: notaa})
   } 
 
+  agregarEv(Curso: any,ramo: any, sigla: any, fecha: any){
+    const ev = collection(this.firestore, 'Evaluaciones');
+    return setDoc(doc(ev), { curso: Curso,ramo: ramo, sigla: sigla, fecha: fecha})
+  }
+
+  getev(){
+    this.cargarId();
+    const ev = collection(this.firestore, 'AlumnCur');
+    const q = query(ev, where('Alumno', '==' , this.uiid));
+    return collectionData(q);
+  }
+
+  getTableEv(){
+    const eva = collection(this.firestore, 'Evaluaciones');
+    return collectionData(eva);
+  }
 
   async Updateuser(campo: any, valor: any, id: any){
     const usuario = doc(this.firestore, 'Usuarios', id)
