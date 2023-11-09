@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { deleteDoc, getDoc, setDoc, updateDoc, where, query, addDoc } from 'firebase/firestore';
+import { deleteDoc, getDoc, setDoc, updateDoc, where, query, addDoc , getDocs} from 'firebase/firestore';
 import { Firestore, collectionData, collection, doc, docData, documentId} from '@angular/fire/firestore';
 import { AuthService } from 'src/app/services/auth.service';
 import { Observable } from 'rxjs';
@@ -13,7 +13,10 @@ export class DataServiceService {
   idProfe: any;
   uiid: any;
   idCurso: any;
-  constructor(private firestore: Firestore,private atS: AuthService) { }
+
+  constructor(private firestore: Firestore,private atS: AuthService) { 
+
+  }
 
   createFirebaseUser(id: any, apellido: any,  nombre: any, tipo: any) {
     const usuario = collection(this.firestore, 'Usuarios');
@@ -34,13 +37,13 @@ export class DataServiceService {
     return setDoc(doc(cursos, idCurso), {idCurso, establecimiento: Establecimiento, ramoCurso: RamoCurso, siglaCurso: SiglaCurso, idProfe: idProfe});
   }
 
-  getCursoDetails(idCurso: any){
-    const cursos = collection(this.firestore, `Cursos/${idCurso}`);
-    return collectionData(cursos);
-  }
-
   cargarId() {
     this.uiid = this.atS.getUid();
+  }
+
+  getAlumnosC(){
+    const cur = collection(this.firestore, `AlumnCur`);
+    return collectionData(cur);
   }
 
   getCurso(){
@@ -49,16 +52,17 @@ export class DataServiceService {
     const q = query(curso, where('idProfe', '==' , this.uiid));
     return collectionData(q);
   }
-  
-  agregarAlumno(uid: any ,idCurso : any){
-    const alumno = collection(this.firestore, 'AlumnosCurso');
-    return setDoc(doc(alumno), {Alumnos : uid, Curso: idCurso})
+
+  agregarAlumno(uid: any , nombre: any,apellido: any , idCurso : any){
+    const alumno = collection(this.firestore, 'AlumnCur');
+    return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , Curso: idCurso});
   }
 
-  CargarNota(uid: any, idCurso: any, notaa: any){
-    const nota = collection(this.firestore, 'notasAC');
-    return setDoc(doc(nota), {Alumnos: uid, Curso:idCurso, nota: notaa})
-  }
+  //CargarNota(uid: any, idCurso: any, notaa: any){
+    //const nota = collection(this.firestore, 'notasAC');
+    //return setDoc(doc(nota), {Alumnos: uid, Curso:idCurso, nota: notaa})
+  //}
+
 
   async Updateuser(campo: any, valor: any, id: any){
     const usuario = doc(this.firestore, 'Usuarios', id)
