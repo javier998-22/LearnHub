@@ -2,13 +2,12 @@
   <ion-header class="ion-no-border">
     <ion-toolbar>
       <ion-buttons slot="end">
-        <ion-icon defaultHref="/cursos-profe" (click)="volver()" name="chevron-down-outline"
-          class="back-icon"></ion-icon>
+        <ion-icon defaultHref="/cursos-profe" (click)="volver()" name="chevron-down-outline" class="back-icon"></ion-icon>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <ng-container *ngFor="let items of alumnos">
-    <ion-card class="Card-list" *ngIf="items.tipo == '3' ">
+    <ion-card class="Card-list" *ngIf="items.tipo == '3'">
       <ion-grid>
         <ion-row>
           <ion-col> 

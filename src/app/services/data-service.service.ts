@@ -58,10 +58,10 @@ export class DataServiceService {
     return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , Curso: idCurso});
   }
 
-  //CargarNota(uid: any, idCurso: any, notaa: any){
-    //const nota = collection(this.firestore, 'notasAC');
-    //return setDoc(doc(nota), {Alumnos: uid, Curso:idCurso, nota: notaa})
-  //}
+  CargarNota(uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
+    const nota = collection(this.firestore, 'notasAC');
+    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , Curso:idCurso ,sigla: sigla, ramo: ramo ,  nota: notaa})
+  } 
 
 
   async Updateuser(campo: any, valor: any, id: any){
