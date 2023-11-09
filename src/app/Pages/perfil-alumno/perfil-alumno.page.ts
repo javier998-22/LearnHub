@@ -13,9 +13,9 @@ export class PerfilAlumnoPage implements OnInit {
   id: any;
 
   uid: any;
-  constructor(private dtS: DataServiceService, private atS: AuthService,  private router: Router) {
+  constructor(private dtS: DataServiceService, private atS: AuthService, private router: Router) {
     this.dtS.getUsuarios(this.atS.getUid()).subscribe(res => {
-      if(res){
+      if (res) {
         this.uid = res;
         this.id = this.atS.getUid();
         this.uid.email = this.atS.getEmail();
@@ -27,23 +27,23 @@ export class PerfilAlumnoPage implements OnInit {
   ngOnInit() {
   }
 
-logout(){
-  this.atS.logout();
-  this.router.navigate(['/welcome']);
-}
-IraCalev(){
-  this.router.navigate(['/horario-ev']);
-}
-IraCaCla(){
-  this.router.navigate(['/horario-clases']);
-}
-IraMod(){
-  this.router.navigate(['/mod-perfil']);
-}
-IraHome(){
-  this.router.navigate(['/home']);
-}
-IraMisNotas(){
-  this.router.navigate(['/notas-usuario']);
-}
+  logout() {
+    this.atS.logout();
+    this.router.navigate(['/welcome']);
+  }
+  IraCalev() {
+    this.router.navigate(['/horario-ev']);
+  }
+  IraCaCla() {
+    this.router.navigate(['/horario-clases']);
+  }
+  IraMod() {
+    this.router.navigate(['/mod-perfil']);
+  }
+  IraHome() {
+    this.router.navigate(['/home']);
+  }
+  IraMisNotas() {
+    this.router.navigate(['/misnotas']);
+  }
 }

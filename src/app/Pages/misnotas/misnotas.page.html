@@ -1,0 +1,14 @@
+<ion-content class="fondo" [fullscreen]="true">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  <ng-container *ngFor="let items of notas">
+    <ion-card class="Card-Profile" *ngIf="items.ramo == 'Matematicas'">
+      <ion-card-header>
+        <ion-card-title class="Title">{{items.ramo}}</ion-card-title>
+        <ion-card-subtitle class="sub">{{items.sigla}} {{items.nota}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </ng-container>
+</ion-content>

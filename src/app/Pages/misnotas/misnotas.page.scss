@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@200&display=swap');
+
+/*Empieza el contenido principal de la pagina*/
+.fondo {
+  --background: var(--blanco);
+  ion-toolbar{
+    --background: var(--blanco);
+    .back-icon{
+        height: 30px;
+        width: 30px;
+        margin-bottom: 20px;
+        color: var(--azul);
+    }
+  }
+  .curso-button {
+    --background: var(--azul);
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: bold;
+    color: var(--blanco);
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  ion-card{
+    --background: var(--azul);
+    ion-card-header{
+      .Title,.sub{
+        font-family: 'Ysabeau Office', sans-serif;
+        font-weight: bold;
+        color: var(--blanco);
+      }
+    }
+
+  }
+}

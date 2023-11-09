@@ -5,18 +5,6 @@
   </ion-header>
   
   <ion-card class="Card-top" >
-
-    <div *ngIf="uid?.tipo === 1"> <!-- Administrador -->
-      <p>¡Bienvenido Administrador!</p>
-    </div>
-    
-    <div *ngIf="uid?.tipo === 2"> <!-- Profesor -->
-      <p>¡Bienvenido Profesor!</p>
-    </div>
-    
-    <div *ngIf="uid?.tipo === 3"> <!-- Alumno -->
-      <p>¡Bienvenido Alumno!</p>
-    </div>
   </ion-card>
   <ion-card class="Card-in">
     <ion-text class="Title-card">{{uid?.nombre}} {{uid?.apellido}}</ion-text>

@@ -52,6 +52,12 @@ export class DataServiceService {
     const q = query(curso, where('idProfe', '==' , this.uiid));
     return collectionData(q);
   }
+  getNota(){
+    this.cargarId();
+    const curso = collection(this.firestore, 'notasAC');
+    const q = query(curso, where('Alumnos', '==' , this.uiid));
+    return collectionData(q);
+  }
 
   agregarAlumno(uid: any , nombre: any,apellido: any , idCurso : any){
     const alumno = collection(this.firestore, 'AlumnCur');

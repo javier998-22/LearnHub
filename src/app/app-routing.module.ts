@@ -105,6 +105,10 @@ const routes: Routes = [
   {
     path: 'modal-grades',
     loadChildren: () => import('./Pages/modal-grades/modal-grades.module').then( m => m.ModalGradesPageModule)
+  },
+  {
+    path: 'misnotas',
+    loadChildren: () => import('./Pages/misnotas/misnotas.module').then( m => m.MisnotasPageModule)
   }
 
 
