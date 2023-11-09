@@ -54,5 +54,8 @@ export class CursosProfePage implements OnInit {
   IraCursos(){
     this.router.navigate(['/cursos-profe']);
   }
+  IraChat(){
+    this.router.navigate(['/chats']);
+  }
 
 }
