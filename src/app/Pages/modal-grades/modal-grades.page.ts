@@ -17,15 +17,17 @@ export class ModalGradesPage implements OnInit {
 
    constructor(private dtS: DataServiceService, private alertController: AlertController, private router: Router, private modalCtrl: ModalController) {
     this.dtS.getAlumnosC().subscribe(res => {
-      this.ac1= res;
-      if(this.ac1.Curso == this.modalInfo.idCurso){
-        this.dtS.getAlumnosC().subscribe(datos => {
-        this.ac1 = datos;
-     });
-    };
-  });
+      this.ac1 = res;
+    });
+
   }
   ngOnInit() {
+    //if(this.modalInfo.idCurso == this.ac1.Curso){
+      //this.dtS.getAlumnosC().subscribe(data => {
+        //this.ac2 = data;
+        //console.log(this.ac2)
+      //})
+    //};
   }
 
   async nota(uid: any, idCurso: any){

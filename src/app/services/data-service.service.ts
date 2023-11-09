@@ -60,7 +60,7 @@ export class DataServiceService {
 
   CargarNota(uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
     const nota = collection(this.firestore, 'notasAC');
-    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , Curso:idCurso ,sigla: sigla, ramo: ramo ,  nota: notaa})
+    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , Curso:idCurso,sigla: sigla, ramo: ramo ,  nota: notaa})
   } 
 
 
