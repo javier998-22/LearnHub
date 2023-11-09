@@ -16,7 +16,7 @@ export class HorarioClasesPage implements OnInit {
   ngOnInit() {
   }
   async volver(){
-    this.router.navigate(['/perfil-profe']);
+    this.router.navigate(['/perfil-alumno']);
     await this.modalCtrl.dismiss();
 }
 }
