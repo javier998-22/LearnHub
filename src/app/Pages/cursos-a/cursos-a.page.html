@@ -1,12 +1,9 @@
 <ion-content [fullscreen]="true" class="fondo">
   <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-buttons>
-        <ion-icon defaultHref="/" (click)="volver()" name="chevron-back-outline" class="back-icon"></ion-icon>
-      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-    <ion-card class="Title" *ngFor="let cursos of Listacursos">
+    <ion-card class="Title" *ngFor="let cursos of Listacursos" (click)="abrirModalInfoCurso(cursos)">
       <ion-card-header>
         <ion-card-title class="Title-Card">{{cursos.sigla}}</ion-card-title>
         <ion-card-subtitle class="sub">{{cursos.ramo}}</ion-card-subtitle>

@@ -117,6 +117,10 @@ const routes: Routes = [
   {
     path: 'cursosal',
     loadChildren: () => import('./Pages/cursosal/cursosal.module').then( m => m.CursosalPageModule)
+  },
+  {
+    path: 'misnotas-modal',
+    loadChildren: () => import('./Pages/misnotas-modal/misnotas-modal.module').then( m => m.MisnotasModalPageModule)
   }
 
 

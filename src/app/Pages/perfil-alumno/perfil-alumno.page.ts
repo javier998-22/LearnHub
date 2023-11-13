@@ -41,7 +41,7 @@ export class PerfilAlumnoPage implements OnInit {
     this.router.navigate(['/mod-perfil']);
   }
   IraHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/cursos-a']);
   }
   IraMisNotas() {
     this.router.navigate(['/misnotas']);

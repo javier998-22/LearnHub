@@ -21,19 +21,19 @@ export class CursosAPage implements OnInit {
   ngOnInit() {
   }
 
-  //async abrirModalInfoCurso(Value:any) {
-    //const modal = await this.modalController.create({
-      //component: CursosalPage,
-      //cssClass: 'myclass',
-      //componentProps:{
-       //modalInfo: Value
-      //}
-    //});
-    //await modal.present();
-  //}
+  async abrirModalInfoCurso(Value:any) {
+    const modal = await this.modalController.create({
+      component: CursosalPage,
+      cssClass: 'myclass',
+      componentProps:{
+       modalInfo: Value
+      }
+    });
+    await modal.present();
+  }
 
   async volver() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/cursos-a']);
     await this.modalController.dismiss();
   }
   IraPerfil() {

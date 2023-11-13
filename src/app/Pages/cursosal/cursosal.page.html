@@ -1,13 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>cursosal</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-title size="large">cursosal</ion-title>
+      <ion-buttons slot="end">
+        <ion-icon defaultHref="/cursos-profe" (click)="volver()" name="chevron-down-outline" class="back-icon"></ion-icon>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
+  
+  <ion-card class="cardna" (click)="abrirModalNE(modalInfo)">
+    <ion-text >Ver mis notas del curso: {{modalInfo.siglaCurso}} de {{modalInfo.ramoCurso}}</ion-text> 
+  </ion-card>
 </ion-content>
