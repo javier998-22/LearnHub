@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { DataServiceService } from '../../services/data-service.service';
 import { ModalController } from '@ionic/angular';
 import { MisnotasModalPage } from '../misnotas-modal/misnotas-modal.page';
+import { VerevPage } from '../verev/verev.page';
 
 @Component({
   selector: 'app-cursosal',
@@ -12,7 +13,9 @@ import { MisnotasModalPage } from '../misnotas-modal/misnotas-modal.page';
 export class CursosalPage implements OnInit {
 
   modalInfo: any;
-  constructor(private dataS: DataServiceService, private modalCtrl: ModalController, private router: Router, private modalController: ModalController) { }
+  constructor(private dataS: DataServiceService, private modalCtrl: ModalController, private router: Router, private modalController: ModalController) {
+    console.log(this.modalInfo)
+   }
 
   ngOnInit() {
   }
@@ -20,6 +23,17 @@ export class CursosalPage implements OnInit {
   async abrirModalNE(Value:any) {
     const modal = await this.modalController.create({
       component: MisnotasModalPage,
+      cssClass: 'myclass',
+      componentProps:{
+        modalInfo: Value
+      }
+    });
+    await modal.present();
+  }
+
+  async abrirModalev(Value:any) {
+    const modal = await this.modalController.create({
+      component: VerevPage,
       cssClass: 'myclass',
       componentProps:{
         modalInfo: Value

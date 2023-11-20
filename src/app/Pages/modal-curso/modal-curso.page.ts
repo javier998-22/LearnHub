@@ -14,26 +14,14 @@ import { SubirevPage } from '../subirev/subirev.page';
   styleUrls: ['./modal-curso.page.scss'],
 })
 export class ModalCursoPage implements OnInit {
-  Listacursos: any = [{
-    idCurso:'',
-    establecimiento: '',
-    ramoCurso: '',
-    siglaCurso: ''
-  }]
 
   modalInfo:any;
 
-  //@Input() Cursos: any;
-
   constructor(private dataS: DataServiceService,private modalCtrl: ModalController, private atS: AuthService, private router: Router, private modalController: ModalController) {
+    console.log(this.modalInfo)
    }
 
   async ngOnInit() {
-    console.log(this.modalInfo)
-    // this.dataS.getCursoDetails(this.modalInfo).subscribe(res => {
-    //   this.Listacursos = res;
-    //   console.log(this.Listacursos.idCurso)
-    // })
   }
 
   async abrirModalInfoCurso(Value:any) {

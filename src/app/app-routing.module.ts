@@ -121,6 +121,10 @@ const routes: Routes = [
   {
     path: 'misnotas-modal',
     loadChildren: () => import('./Pages/misnotas-modal/misnotas-modal.module').then( m => m.MisnotasModalPageModule)
+  },
+  {
+    path: 'verev',
+    loadChildren: () => import('./Pages/verev/verev.module').then( m => m.VerevPageModule)
   }
 
 

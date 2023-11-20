@@ -13,7 +13,6 @@ export class ModalGradesPage implements OnInit {
   notaForm :any;
   modalInfo:any;
   ac1: any;
-  ac2: any;
 
    constructor(private dtS: DataServiceService, private alertController: AlertController, private router: Router, private modalCtrl: ModalController) {
     this.dtS.getAlumnosC().subscribe(res => {

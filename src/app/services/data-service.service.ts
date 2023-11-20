@@ -45,6 +45,11 @@ export class DataServiceService {
     const cur = collection(this.firestore, `AlumnCur`);
     return collectionData(cur);
   }
+  getEv(){
+    const ev = collection(this.firestore, `Evaluaciones`);
+    return collectionData(ev);
+  }
+  
   getALc(){
     this.cargarId();
     const cursillo = collection(this.firestore, `AlumnCur`);

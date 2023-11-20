@@ -10,32 +10,33 @@ import { CursosalPage } from '../cursosal/cursosal.page';
 })
 export class CursosAPage implements OnInit {
 
-  Listacursos: any;
+  listaCursos: any;
 
   constructor(private modalController: ModalController, private router: Router, private dataS: DataServiceService) {
     this.dataS.getALc().subscribe(res => {
-      this.Listacursos = res;
-    })
-  }
+      this.listaCursos = res;
+      console.log(this.listaCursos);
+    });
+  };
 
   ngOnInit() {
   }
 
-  async abrirModalInfoCurso(Value:any) {
+  async abrirModalP(Valor:any) {
     const modal = await this.modalController.create({
       component: CursosalPage,
       cssClass: 'myclass',
       componentProps:{
-       modalInfo: Value
+       modalInfo: Valor
       }
     });
     await modal.present();
-  }
+  };
 
   async volver() {
     this.router.navigate(['/cursos-a']);
     await this.modalController.dismiss();
-  }
+  };
   IraPerfil() {
     this.router.navigate(['/perfil-alumno']);
   }

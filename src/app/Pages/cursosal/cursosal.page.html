@@ -6,8 +6,11 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  
   <ion-card class="cardna" (click)="abrirModalNE(modalInfo)">
-    <ion-text >Ver mis notas del curso: {{modalInfo.siglaCurso}} de {{modalInfo.ramoCurso}}</ion-text> 
+    <ion-text >Ver mis notas del curso: {{modalInfo.sigla}} de {{modalInfo.ramo}}</ion-text> 
+  </ion-card>
+
+  <ion-card class="cardna" (click)="abrirModalev(modalInfo)">
+    <ion-text >Ver Proximas evaluaciones : {{modalInfo.sigla}} de {{modalInfo.ramo}}</ion-text> 
   </ion-card>
 </ion-content>
