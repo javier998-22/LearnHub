@@ -8,7 +8,7 @@
     </ion-toolbar>
   </ion-header>
     <ng-container *ngFor="let items of ev">
-      <ion-card class="cardna" *ngIf="ev.curso == modalInfo.Curso">
+      <ion-card class="cardna" *ngIf="ev.curso == modalInfo.idCurso">
         <ion-text>{{ev.fecha}}</ion-text>
       </ion-card>
     </ng-container>
