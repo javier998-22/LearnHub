@@ -7,6 +7,7 @@ import { ModalNAPage } from '../modal-na/modal-na.page';
 import { ModalController } from '@ionic/angular';
 import { ModalGradesPage } from '../modal-grades/modal-grades.page';
 import { SubirevPage } from '../subirev/subirev.page';
+import { ChatPage } from '../chat/chat.page';
 
 @Component({
   selector: 'app-modal-curso',
@@ -47,6 +48,16 @@ export class ModalCursoPage implements OnInit {
   async abrirModalNE(Value:any) {
     const modal = await this.modalController.create({
       component: SubirevPage,
+      cssClass: 'myclass',
+      componentProps:{
+        modalInfo: Value
+      }
+    });
+    await modal.present();
+  }
+  async abrirchat(Value:any) {
+    const modal = await this.modalController.create({
+      component: ChatPage,
       cssClass: 'myclass',
       componentProps:{
         modalInfo: Value

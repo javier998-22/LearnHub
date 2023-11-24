@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true" class="content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-icon defaultHref="/modal-curso" (click)="volver()" name="chevron-down-outline" class="back-icon"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+<ng-container *ngFor="let items of chat">
+  <ion-card class="cardna" *ngIf="items.idCurso == modalInfo.idCurso">
+    <ion-text >{{items.mensaje}}</ion-text>
+  </ion-card>
+</ng-container>
+<ion-footer class="ion-no-border">
+  <ion-item>
+    <ion-input type="text" placeholder="Mensaje" autocomplete="on" autocorrect="on" [(ngModel)]="mensaje"></ion-input>
+    <ion-button fill="clear" slot="end" (click)="enviar(modalInfo.idCurso)">
+      <ion-icon name="arrow-forward-circle-outline" ></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-footer>

@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
-import { deleteDoc, getDoc, setDoc, updateDoc, where, query, addDoc , getDocs} from 'firebase/firestore';
-import { Firestore, collectionData, collection, doc, docData, documentId} from '@angular/fire/firestore';
+import { deleteDoc, setDoc, updateDoc, where, query} from 'firebase/firestore';
+import { Firestore, collectionData, collection, doc, docData} from '@angular/fire/firestore';
 import { AuthService } from 'src/app/services/auth.service';
-import { Observable } from 'rxjs';
-import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
-import { Cursos } from './modelos.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +26,16 @@ export class DataServiceService {
     return docData(usuarios);
   }
   getAllUsers(){
-    const usu = collection(this.firestore, `Usuarios/`);
+    const usu = collection(this.firestore, `Usuarios`);
     return collectionData(usu);
+  }
+
+  getDUsers(){
+    this.cargarId();
+    const usu = collection(this.firestore, `Usuarios`);
+    const que = query(usu, where('id', '!=', this.uiid));
+    return collectionData(que);
+
   }
 
   CrearCurso(idCurso: any, idProfe: any, Establecimiento: any, RamoCurso: any, SiglaCurso: any){
@@ -97,6 +103,20 @@ export class DataServiceService {
     return collectionData(eva);
   }
 
+  abrirChat(idCurso:any,id: any, nombreEm: any, apellidoEm: any, mensaje:any){
+    const chat = collection(this.firestore, 'Chats');
+    return setDoc(doc(chat), {idCurso, emisor:id, nombreEmisor: nombreEm, apellidoEmisor: apellidoEm, mensaje: mensaje});
+  }
+  getChat(){
+    const chatG = collection(this.firestore, `Chats`);
+    return collectionData(chatG)
+  }
+  getChate(){
+    const chate = collection(this.firestore, `Chats`);
+    const q = query(chate, where('emisor', '==', this.uiid));
+    return collectionData(q);
+  }
+
   async Updateuser(campo: any, valor: any, id: any){
     const usuario = doc(this.firestore, 'Usuarios', id)
     await updateDoc(usuario,{
@@ -107,3 +127,12 @@ export class DataServiceService {
 }
 
 
+/*items$: Observable<any[]>;
+
+  constructor(private firestore: AngularFirestore) {
+    // Obtiene una referencia a la colección 'items' en Firestore
+    const itemsCollection = this.firestore.collection<any>('items');
+
+    // Obtiene un observable de la colección y actualiza en tiempo real
+    this.items$ = itemsCollection.valueChanges();
+  }*/

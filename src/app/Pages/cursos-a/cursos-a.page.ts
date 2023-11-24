@@ -40,4 +40,7 @@ export class CursosAPage implements OnInit {
   IraPerfil() {
     this.router.navigate(['/perfil-alumno']);
   }
+  IraChat() {
+    this.router.navigate(['/usuarios-chat']);
+  }
 }

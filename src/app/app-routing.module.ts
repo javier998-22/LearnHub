@@ -55,24 +55,12 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/cursos-a/cursos-a.module').then( m => m.CursosAPageModule)
   },
   {
-    path: 'horario-clases',
-    loadChildren: () => import('./Pages/horario-clases/horario-clases.module').then( m => m.HorarioClasesPageModule)
-  },
-  {
-    path: 'horario-ev',
-    loadChildren: () => import('./Pages/horario-ev/horario-ev.module').then( m => m.HorarioEvPageModule)
-  },
-  {
     path: 'mod-perfil',
     loadChildren: () => import('./Pages/mod-perfil/mod-perfil.module').then( m => m.ModPerfilPageModule)
   },
   {
     path: 'reset-pass',
     loadChildren: () => import('./Pages/reset-pass/reset-pass.module').then( m => m.ResetPassPageModule)
-  },
-  {
-    path: 'usuarios-chat',
-    loadChildren: () => import('./Pages/usuarios-chat/usuarios-chat.module').then( m => m.UsuariosChatPageModule)
   },
   {
     path: 'modal-curso',
@@ -94,7 +82,8 @@ const routes: Routes = [
   {
     path: 'panel',
     loadChildren: () => import('./Pages/panel/panel.module').then( m => m.PanelPageModule)
-  },  {
+  },
+  {
     path: 'perfil-alumno',
     loadChildren: () => import('./Pages/perfil-alumno/perfil-alumno.module').then( m => m.PerfilAlumnoPageModule)
   },
@@ -105,10 +94,6 @@ const routes: Routes = [
   {
     path: 'modal-grades',
     loadChildren: () => import('./Pages/modal-grades/modal-grades.module').then( m => m.ModalGradesPageModule)
-  },
-  {
-    path: 'misnotas',
-    loadChildren: () => import('./Pages/misnotas/misnotas.module').then( m => m.MisnotasPageModule)
   },
   {
     path: 'subirev',
@@ -125,7 +110,12 @@ const routes: Routes = [
   {
     path: 'verev',
     loadChildren: () => import('./Pages/verev/verev.module').then( m => m.VerevPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./Pages/chat/chat.module').then( m => m.ChatPageModule)
   }
+
 
 
 

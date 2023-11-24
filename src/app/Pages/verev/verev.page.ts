@@ -21,5 +21,9 @@ export class VerevPage implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  async volver(){
+    this.router.navigate(['/cursos-profe']);
+    await this.modalCtrl.dismiss();
+  }
 }
