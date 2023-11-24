@@ -78,7 +78,7 @@ export class DataServiceService {
 
   agregarAlumno(uid: any , nombre: any,apellido: any , idCurso : any, sigla: any, ramo:any){
     const alumno = collection(this.firestore, 'AlumnCur');
-    return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , Curso: idCurso, sigla: sigla, ramo: ramo});
+    return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , idCurso: idCurso, sigla: sigla, ramo: ramo});
   }
 
   CargarNota(uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
