@@ -6,12 +6,19 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
+  <ng-container *ngFor="let items of chat">
+    <ion-card class="cardna" *ngIf="items.idCurso == modalInfo.idCurso && items.emisor != id">
+      <ion-text class="nombres">{{items.nombreEmisor}} {{items.apellidoEmisor}}</ion-text>
+      <div><ion-text >{{items.mensaje}}</ion-text></div>
+
+    </ion-card>
+      <ion-card class="cardn" *ngIf="items.idCurso == modalInfo.idCurso && items.emisor == id">
+        <ion-text >{{items.mensaje}}</ion-text>
+      </ion-card>
+
+  </ng-container>
 </ion-content>
-<ng-container *ngFor="let items of chat">
-  <ion-card class="cardna" *ngIf="items.idCurso == modalInfo.idCurso">
-    <ion-text >{{items.mensaje}}</ion-text>
-  </ion-card>
-</ng-container>
+
 <ion-footer class="ion-no-border">
   <ion-item>
     <ion-input type="text" placeholder="Mensaje" autocomplete="on" autocorrect="on" [(ngModel)]="mensaje"></ion-input>

@@ -12,19 +12,27 @@
     }
     }
 
-    .cardna{
-      margin-top: 30px;
-      height: 10%;     
-      --background: var(--azul);
-      ion-text{ 
-        text-align: center;
-        margin-left: 11%;
-        margin-top: 30px;
-        font-family: 'Ysabeau Office', sans-serif;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        font-size: 15px;
-        font-weight: bold;
-        color: var(--blanco);
+    ion-grid{
+      ion-row{
+        ion-col{
+          margin-top: 30px;
+          .cardna{
+
+            height: 130%;
+            --background: var(--azul);
+            div{
+              margin-left: 90px;
+              ion-icon{
+                margin-top:30px; 
+                height:50px;
+                width: 40px;
+                color: var(--blanco);
+              }
+            }
+
+          }
+        }
       }
+
     }
   }

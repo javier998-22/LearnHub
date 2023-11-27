@@ -39,6 +39,7 @@ export class ChatPage implements OnInit {
 
   enviar(cursoId: any){
     this.dts.abrirChat(cursoId, this.id, this.uid.nombre, this.uid.apellido , this.mensaje);
+    this.mensaje = '';
   }
   async volver(){
     this.router.navigate(['/cursos-profe']);
