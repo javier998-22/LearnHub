@@ -1,11 +1,11 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-icon defaultHref="/modal-curso" (click)="volver()" name="chevron-down-outline" class="back-icon"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true" class="content">
-  <ion-header class="ion-no-border">
-    <ion-toolbar>
-      <ion-buttons slot="end">
-        <ion-icon defaultHref="/modal-curso" (click)="volver()" name="chevron-down-outline" class="back-icon"></ion-icon>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
   <ng-container *ngFor="let items of chat">
     <ion-card class="cardna" *ngIf="items.idCurso == modalInfo.idCurso && items.emisor != id">
       <ion-text class="nombres">{{items.nombreEmisor}} {{items.apellidoEmisor}}</ion-text>
