@@ -6,15 +6,24 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <ion-card class="cardna" (click)="abrirModalNE(modalInfo)">
-    <ion-text >Ver mis notas del curso: {{modalInfo.sigla}} de {{modalInfo.ramo}}</ion-text> 
-  </ion-card>
 
-  <ion-card class="cardna" (click)="abrirModalev(modalInfo)">
-    <ion-text >Ver Proximas evaluaciones : {{modalInfo.sigla}} de {{modalInfo.ramo}}</ion-text> 
-  </ion-card>
-
-  <ion-card class="cardna" (click)="abrirchat(modalInfo)">
-    <ion-text >Ir a chat de curso : {{modalInfo.siglaCurso}} de {{modalInfo.ramoCurso}}</ion-text> 
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-md="4" size-lg="2">        
+        <ion-card class="cardna" (click)="abrirModalNE(modalInfo)" >
+          <div><ion-icon name="stats-chart-outline"></ion-icon></div>
+      </ion-card>
+    </ion-col>
+      <ion-col size="6" size-md="4" size-lg="2">
+        <ion-card class="cardna" (click)="abrirModalev(modalInfo)">
+          <div><ion-icon name="calendar-outline"></ion-icon></div>
+        </ion-card> 
+      </ion-col>
+      <ion-col size="12" size-md="4" size-lg="2">
+        <ion-card class="cardna" (click)="abrirchat(modalInfo)">
+          <div class="divi"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

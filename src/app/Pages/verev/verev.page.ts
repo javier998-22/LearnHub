@@ -16,6 +16,7 @@ export class VerevPage implements OnInit {
   constructor(private dts: DataServiceService, private modalCtrl: ModalController, private router: Router, private modalController: ModalController) { 
     this.dts.getEv().subscribe( res => {
       this.ev = res;
+      console.log(this.ev)
     })
   }
 
