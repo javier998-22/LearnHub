@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { DataServiceService } from '../../services/data-service.service';
 import { CursosalPage } from '../cursosal/cursosal.page';
+import { RecursosPage } from '../recursos/recursos.page';
+
 @Component({
   selector: 'app-cursos-a',
   templateUrl: './cursos-a.page.html',
@@ -32,6 +34,15 @@ export class CursosAPage implements OnInit {
     });
     await modal.present();
   };
+
+  async IraRecursos() {
+    const modal = await this.modalController.create({
+      component: RecursosPage,
+      cssClass: 'myclass',
+    });
+    await modal.present();
+  };
+
 
   async volver() {
     this.router.navigate(['/cursos-a']);

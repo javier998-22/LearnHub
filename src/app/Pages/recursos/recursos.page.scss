@@ -1,9 +1,29 @@
-ion-toolbar{
+.fondo {
     --background: var(--blanco);
-    .back-icon{
-        height: 30px;
-        width: 30px;
-        margin-bottom: 20px;
-        color: var(--azul);
+
+    ion-toolbar {
+        --background: var(--blanco);
+
+        .back-icon {
+            height: 30px;
+            width: 30px;
+            margin-bottom: 20px;
+            color: var(--azul);
+        }
+    }
+
+    ion-card {
+        --background: var(--azul);
+
+        ion-card-header {
+
+            .Title,
+            .sub {
+                font-family: 'Ysabeau Office', sans-serif;
+                font-weight: bold;
+                color: var(--blanco);
+            }
+        }
+
     }
 }

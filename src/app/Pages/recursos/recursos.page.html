@@ -1,6 +1,11 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="fondo">
   <ion-header class="ion-no-border">
     <ion-toolbar>
     </ion-toolbar>
   </ion-header>
+  <ng-container *ngFor="let items of recursos">
+    <ion-card *ngIf="items.nota == modalInfo.nota && items.ramo == modalInfo.ramo && items.curso == modalInfo.sigla">
+        {{items.texto}}
+    </ion-card>
+  </ng-container>
 </ion-content>

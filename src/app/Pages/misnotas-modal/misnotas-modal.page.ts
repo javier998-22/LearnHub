@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataServiceService } from '../../services/data-service.service';
 import { ModalController } from '@ionic/angular';
+import { RecursosPage } from '../recursos/recursos.page';
 
 
 
@@ -27,4 +28,16 @@ export class MisnotasModalPage implements OnInit {
     this.router.navigate(['/cursos-a']);
     await this.modalCtrl.dismiss();
   }
+
+  async IraRecursos(Valor:any) {
+    const modal = await this.modalController.create({
+      component: RecursosPage,
+      cssClass: 'myclass',
+      componentProps:{
+        modalInfo: Valor
+       }
+    });
+
+    await modal.present();
+  };
 }

@@ -10,6 +10,8 @@
     <ng-container *ngFor="let items of nta">
       <ion-card class="cardna" *ngIf="items.Alumnos == modalInfo.Alumno">
         <ion-text>Nota:{{items.nota}}</ion-text>
+        <ion-button class="bottom-button" expand="block" (click)="IraRecursos(items)">Mejorar mi Nota</ion-button>
       </ion-card>
+
     </ng-container>
 </ion-content>
