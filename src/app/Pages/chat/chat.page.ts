@@ -18,6 +18,7 @@ export class ChatPage implements OnInit {
   id: any;
   uid: any;
   chat: any;
+  fecha : any;
 
   constructor(private dts: DataServiceService, private atS: AuthService,private modalCtrl: ModalController, private router: Router) { 
     this.dts.getUsuarios(this.atS.getUid()).subscribe(res => {
@@ -37,12 +38,20 @@ export class ChatPage implements OnInit {
   ngOnInit() {
   }
 
-  enviar(cursoId: any){
-    this.dts.abrirChat(cursoId, this.id, this.uid.nombre, this.uid.apellido , this.mensaje);
+  enviar(cursoId: any) {
+    // Obtener la fecha y hora actual
+    const fechaHoraActual = new Date();
+  
+    // Convertir la fecha y hora a una cadena legible o en el formato deseado
+    const cadenaFechaHora = fechaHoraActual; // Puedes ajustar el formato según tus necesidades
+
+    this.dts.abrirChat(cursoId, this.id, this.uid.nombre, this.uid.apellido, this.mensaje, cadenaFechaHora);
     this.mensaje = '';
   }
   async volver(){
     this.router.navigate(['/cursos-profe']);
     await this.modalCtrl.dismiss();
   } 
+
+  
 }

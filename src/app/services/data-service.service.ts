@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { deleteDoc, setDoc, updateDoc, where, query} from 'firebase/firestore';
-import { Firestore, collectionData, collection, doc, docData} from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, doc, docData, orderBy} from '@angular/fire/firestore';
 import { AuthService } from 'src/app/services/auth.service';
 
 
@@ -107,13 +107,14 @@ export class DataServiceService {
     return collectionData(eva);
   }
 
-  abrirChat(idCurso:any,id: any, nombreEm: any, apellidoEm: any, mensaje:any){
+  abrirChat(idCurso:any,id: any, nombreEm: any, apellidoEm: any, mensaje:any, fecha: any){
     const chat = collection(this.firestore, 'Chats');
-    return setDoc(doc(chat), {idCurso, emisor:id, nombreEmisor: nombreEm, apellidoEmisor: apellidoEm, mensaje: mensaje});
+    return setDoc(doc(chat), {idCurso, emisor:id, nombreEmisor: nombreEm, apellidoEmisor: apellidoEm, mensaje: mensaje, fecha:fecha});
   }
   getChat(){
     const chatG = collection(this.firestore, `Chats`);
-    return collectionData(chatG)
+    const que = query(chatG, orderBy('fecha'));
+    return collectionData(que)
   }
   getChate(){
     const chate = collection(this.firestore, `Chats`);
