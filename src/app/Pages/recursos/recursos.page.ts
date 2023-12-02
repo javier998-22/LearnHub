@@ -11,7 +11,7 @@ import { DataServiceService } from '../../services/data-service.service';
 export class RecursosPage implements OnInit {
   modalInfo: any;
   recursos: any;
-  constructor(private modalController: ModalController, private router: Router, private dataS: DataServiceService) {
+  constructor(private modalCtrl: ModalController, private router: Router, private dataS: DataServiceService) {
     this.dataS.getRecursos().subscribe( rec => {
       this.recursos = rec;
     });
@@ -19,5 +19,8 @@ export class RecursosPage implements OnInit {
 
   ngOnInit() {
   }
-
+  async volver(){
+    this.router.navigate(['/cursos-a']);
+    await this.modalCtrl.dismiss();
+  }
 }

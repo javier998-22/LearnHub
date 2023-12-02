@@ -15,7 +15,6 @@ export class CursosalPage implements OnInit {
 
   modalInfo: any;
   constructor(private dataS: DataServiceService, private modalCtrl: ModalController, private router: Router, private modalController: ModalController) {
-    console.log(this.modalInfo)
    }
 
   ngOnInit() {

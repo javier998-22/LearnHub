@@ -2,14 +2,21 @@
   <ion-header class="ion-no-border">
     <ion-toolbar>
       <ion-buttons slot="end">
-        <ion-icon defaultHref="/cursos-profe" (click)="volver()" name="chevron-down-outline"
+        <ion-icon defaultHref="/" (click)="volver()" name="chevron-down-outline"
           class="back-icon"></ion-icon>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
     <ng-container *ngFor="let items of nta">
-      <ion-card class="cardna" *ngIf="items.Alumnos == modalInfo.Alumno">
-        <ion-text>Nota:{{items.nota}}</ion-text>
+      <ion-card class="cardna" *ngIf="items.Alumnos == modalInfo.Alumno && items.ramo == modalInfo.ramo">
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col><ion-text>Nota:{{items.nota}}</ion-text></ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+
         <ion-button class="bottom-button" expand="block" (click)="IraRecursos(items)">Mejorar mi Nota</ion-button>
       </ion-card>
     </ng-container>

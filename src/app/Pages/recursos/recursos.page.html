@@ -1,11 +1,23 @@
 <ion-content [fullscreen]="true" class="fondo">
   <ion-header class="ion-no-border">
     <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-icon defaultHref="/" (click)="volver()" name="chevron-down-outline"
+          class="back-icon"></ion-icon>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <ng-container *ngFor="let items of recursos">
-    <ion-card *ngIf="items.nota == modalInfo.nota && items.ramo == modalInfo.ramo && items.curso == modalInfo.sigla">
+    <ion-card class="cardi" *ngIf="items.nota == modalInfo.nota && items.ramo == modalInfo.ramo && items.curso == modalInfo.sigla">
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title class="Title">{{items.titulo}}</ion-card-title>
+        <ion-card-subtitle class="sub">{{items.ramo}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content class="content">
         {{items.texto}}
+      </ion-card-content>
     </ion-card>
   </ng-container>
 </ion-content>

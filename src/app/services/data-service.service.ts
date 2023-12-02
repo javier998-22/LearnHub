@@ -98,7 +98,7 @@ export class DataServiceService {
   getev(){
     this.cargarId();
     const ev = collection(this.firestore, 'AlumnCur');
-    const q = query(ev, where('Alumno', '==' , this.uiid));
+    const q = query(ev, where('Alumno', '==' , this.uiid), orderBy('fecha'));
     return collectionData(q);
   }
 
@@ -118,7 +118,7 @@ export class DataServiceService {
   }
   getChate(){
     const chate = collection(this.firestore, `Chats`);
-    const q = query(chate, where('emisor', '==', this.uiid));
+    const q = query(chate, where('emisor', '==', this.uiid), orderBy('fecha'));
     return collectionData(q);
   }
 
@@ -130,14 +130,3 @@ export class DataServiceService {
   }
 
 }
-
-
-/*items$: Observable<any[]>;
-
-  constructor(private firestore: AngularFirestore) {
-    // Obtiene una referencia a la colección 'items' en Firestore
-    const itemsCollection = this.firestore.collection<any>('items');
-
-    // Obtiene un observable de la colección y actualiza en tiempo real
-    this.items$ = itemsCollection.valueChanges();
-  }*/

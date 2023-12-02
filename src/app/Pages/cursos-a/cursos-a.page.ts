@@ -17,7 +17,6 @@ export class CursosAPage implements OnInit {
   constructor(private modalController: ModalController, private router: Router, private dataS: DataServiceService) {
     this.dataS.getALc().subscribe(res => {
       this.listaCursos = res;
-      console.log(this.listaCursos);
     });
   };
 

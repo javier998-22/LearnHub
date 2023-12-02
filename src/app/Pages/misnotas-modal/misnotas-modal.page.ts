@@ -18,9 +18,11 @@ export class MisnotasModalPage implements OnInit {
   
   constructor( private dts: DataServiceService, private modalCtrl: ModalController, private router: Router, private modalController: ModalController) { 
     this.dts.getNota().subscribe( res => {
-      this.nta = res;
-    })
-  }
+      if(res){
+        this.nta = res;
+      };
+    });
+  };
 
   ngOnInit() {
   }

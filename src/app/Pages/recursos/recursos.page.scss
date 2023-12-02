@@ -12,17 +12,20 @@
         }
     }
 
-    ion-card {
+    .cardi {
         --background: var(--azul);
-
         ion-card-header {
-
             .Title,
             .sub {
                 font-family: 'Ysabeau Office', sans-serif;
                 font-weight: bold;
                 color: var(--blanco);
             }
+        }
+        .content{
+            font-family: 'Ysabeau Office', sans-serif;
+            font-weight: bold;
+            color: var(--blanco);
         }
 
     }

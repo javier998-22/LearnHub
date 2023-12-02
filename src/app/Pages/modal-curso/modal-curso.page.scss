@@ -17,15 +17,50 @@
         ion-col{
           margin-top: 30px;
           .cardna{
-
-            height: 130%;
+            height: 100%;
             --background: var(--azul);
             div{
-              margin-left: 90px;
+              margin-left: 35%;
               ion-icon{
                 margin-top:30px; 
                 height:50px;
                 width: 40px;
+                color: var(--blanco);
+              }
+            }
+            .dival{
+              margin-left: 11%;
+              ion-text{
+                font-size: 15px;
+                font-family: 'Ysabeau Office', sans-serif;
+                font-weight: bold;
+                color: var(--blanco);
+              }
+            }
+            .divte{
+              margin-left: 28%;
+              ion-text{
+                font-size: 15px;
+                font-family: 'Ysabeau Office', sans-serif;
+                font-weight: bold;
+                color: var(--blanco);
+              }
+            }
+            .divtet{
+              margin-left: 22%;
+              ion-text{
+                font-size: 15px;
+                font-family: 'Ysabeau Office', sans-serif;
+                font-weight: bold;
+                color: var(--blanco);
+              }
+            }
+            .divt{
+              margin-left: 22%;
+              ion-text{
+                font-size: 15px;
+                font-family: 'Ysabeau Office', sans-serif;
+                font-weight: bold;
                 color: var(--blanco);
               }
             }
