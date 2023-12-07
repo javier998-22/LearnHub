@@ -114,7 +114,15 @@ const routes: Routes = [
   {
     path: 'chat',
     loadChildren: () => import('./Pages/chat/chat.module').then( m => m.ChatPageModule)
+  },  {
+    path: 'ver-notas',
+    loadChildren: () => import('./Pages/ver-notas/ver-notas.module').then( m => m.VerNotasPageModule)
+  },
+  {
+    path: 'alumnos-n',
+    loadChildren: () => import('./Pages/alumnos-n/alumnos-n.module').then( m => m.AlumnosNPageModule)
   }
+
 
 
 

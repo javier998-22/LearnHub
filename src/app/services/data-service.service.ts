@@ -69,10 +69,15 @@ export class DataServiceService {
     const q = query(curso, where('idProfe', '==' , this.uiid));
     return collectionData(q);
   }
+  GetNotas(){
+    const nota = collection(this.firestore, 'notasAC');
+    const notaq = query(nota, orderBy('fecha'));
+    return collectionData(notaq);
+  }
   getNota(){
     this.cargarId();
     const curso = collection(this.firestore, 'notasAC');
-    const q = query(curso, where('Alumnos', '==' , this.uiid));
+    const q = query(curso, where('Alumnos', '==' , this.uiid), orderBy('fecha'));
     return collectionData(q);
   }
   getRecursos(){
@@ -85,9 +90,9 @@ export class DataServiceService {
     return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , idCurso: idCurso, sigla: sigla, ramo: ramo});
   }
 
-  CargarNota(uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
+  CargarNota(uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any, fecha: any){
     const nota = collection(this.firestore, 'notasAC');
-    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , idCurso:idCurso, sigla: sigla, ramo: ramo, nota: notaa})
+    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , idCurso:idCurso, sigla: sigla, ramo: ramo, nota: notaa, fecha: fecha})
   } 
 
   agregarEv(Curso: any,ramo: any, sigla: any, fecha: any){
@@ -125,6 +130,13 @@ export class DataServiceService {
   async Updateuser(campo: any, valor: any, id: any){
     const usuario = doc(this.firestore, 'Usuarios', id)
     await updateDoc(usuario,{
+      [campo]:valor
+    });
+  }
+
+  async Updatenota(campo: any, valor: any, id: any){
+    const nota = doc(this.firestore, 'notasAC', id)
+    await updateDoc(nota,{
       [campo]:valor
     });
   }

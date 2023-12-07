@@ -8,6 +8,7 @@ import { ModalController } from '@ionic/angular';
 import { ModalGradesPage } from '../modal-grades/modal-grades.page';
 import { SubirevPage } from '../subirev/subirev.page';
 import { ChatPage } from '../chat/chat.page';
+import { AlumnosNPage } from '../alumnos-n/alumnos-n.page';
 
 @Component({
   selector: 'app-modal-curso',
@@ -18,9 +19,7 @@ export class ModalCursoPage implements OnInit {
 
   modalInfo:any;
 
-  constructor(private dataS: DataServiceService,private modalCtrl: ModalController, private atS: AuthService, private router: Router, private modalController: ModalController) {
-    console.log(this.modalInfo)
-   }
+  constructor(private dataS: DataServiceService,private modalCtrl: ModalController, private atS: AuthService, private router: Router, private modalController: ModalController) {}
 
   async ngOnInit() {
   }
@@ -58,6 +57,17 @@ export class ModalCursoPage implements OnInit {
   async abrirchat(Value:any) {
     const modal = await this.modalController.create({
       component: ChatPage,
+      cssClass: 'myclass',
+      componentProps:{
+        modalInfo: Value
+      }
+    });
+    await modal.present();
+  }
+
+  async abrirModalNotas(Value:any) {
+    const modal = await this.modalController.create({
+      component: AlumnosNPage,
       cssClass: 'myclass',
       componentProps:{
         modalInfo: Value

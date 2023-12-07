@@ -1,0 +1,20 @@
+<ion-content class="fondoM">
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-buttons slot="start" style="color:var(--azul)">
+            <ion-icon defaultHref="/cursos-profe"  name="chevron-down-outline" class="back-icon"></ion-icon>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ng-container *ngFor="let items of notas">
+        <ion-card class="cardna" *ngIf="items.Alumnos == modalInfo.Alumno">
+            <ion-grid>
+                <ion-row>
+                  <ion-col></ion-col>
+                  <ion-col><ion-text>Nota:{{items.nota}}</ion-text></ion-col>
+                  <ion-col></ion-col>
+                </ion-row>
+              </ion-grid>
+        </ion-card>
+    </ng-container>
+  </ion-content>

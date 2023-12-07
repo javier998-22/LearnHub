@@ -21,16 +21,13 @@ export class ModalGradesPage implements OnInit {
 
   }
   ngOnInit() {
-    //if(this.modalInfo.idCurso == this.ac1.Curso){
-      //this.dtS.getAlumnosC().subscribe(data => {
-        //this.ac2 = data;
-        //console.log(this.ac2)
-      //})
-    //};
+
   }
 
   async nota(uid: any, idCurso: any){
-    await this.dtS.CargarNota(uid.Alumno, uid.nombre, uid.apellido, idCurso.idCurso, idCurso.siglaCurso, idCurso.ramoCurso, this.notaForm);
+    const fechaHoraActual = new Date();
+    const cadenaFechaHora = fechaHoraActual;
+    await this.dtS.CargarNota(uid.Alumno, uid.nombre, uid.apellido, idCurso.idCurso, idCurso.siglaCurso, idCurso.ramoCurso, this.notaForm, cadenaFechaHora);
     await this.presentAlert();
   }
 
