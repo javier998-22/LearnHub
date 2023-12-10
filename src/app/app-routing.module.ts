@@ -40,6 +40,8 @@ const routes: Routes = [
   },
   {
     path: 'cursos-profe',
+    canActivate : [AuthGuard],
+    data: {AuthGuardPipe : redirectUnauthorizedToLogin },
     loadChildren: () => import('./Pages/cursos-profe/cursos-profe.module').then( m => m.CursosProfePageModule)
   },
   {
@@ -52,6 +54,8 @@ const routes: Routes = [
   },
   {
     path: 'cursos-a',
+    canActivate : [AuthGuard],
+    data: {AuthGuardPipe : redirectUnauthorizedToLogin },
     loadChildren: () => import('./Pages/cursos-a/cursos-a.module').then( m => m.CursosAPageModule)
   },
   {
@@ -64,6 +68,8 @@ const routes: Routes = [
   },
   {
     path: 'modal-curso',
+    canActivate : [AuthGuard],
+    data: {AuthGuardPipe : redirectUnauthorizedToLogin },
     loadChildren: () => import('./Pages/modal-curso/modal-curso.module').then( m => m.ModalCursoPageModule)
   },
   {
@@ -101,6 +107,8 @@ const routes: Routes = [
   },
   {
     path: 'cursosal',
+    canActivate : [AuthGuard],
+    data: {AuthGuardPipe : redirectUnauthorizedToLogin },
     loadChildren: () => import('./Pages/cursosal/cursosal.module').then( m => m.CursosalPageModule)
   },
   {
@@ -114,7 +122,8 @@ const routes: Routes = [
   {
     path: 'chat',
     loadChildren: () => import('./Pages/chat/chat.module').then( m => m.ChatPageModule)
-  },  {
+  },
+  {
     path: 'ver-notas',
     loadChildren: () => import('./Pages/ver-notas/ver-notas.module').then( m => m.VerNotasPageModule)
   },
