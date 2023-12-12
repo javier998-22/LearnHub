@@ -25,9 +25,8 @@ export class ModalGradesPage implements OnInit {
   }
 
   async nota(uid: any, idCurso: any){
-    const fechaHoraActual = new Date();
-    const cadenaFechaHora = fechaHoraActual;
-    await this.dtS.CargarNota(uid.Alumno, uid.nombre, uid.apellido, idCurso.idCurso, idCurso.siglaCurso, idCurso.ramoCurso, this.notaForm, cadenaFechaHora);
+
+    await this.dtS.CargarNota(uid.Alumno, uid.nombre, uid.apellido, idCurso.idCurso, idCurso.siglaCurso, idCurso.ramoCurso, this.notaForm);
     await this.presentAlert();
   }
 

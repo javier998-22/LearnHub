@@ -77,7 +77,7 @@ export class DataServiceService {
   getNota(){
     this.cargarId();
     const curso = collection(this.firestore, 'notasAC');
-    const q = query(curso, where('Alumnos', '==' , this.uiid), orderBy('fecha'));
+    const q = query(curso, where('Alumnos', '==' , this.uiid));
     return collectionData(q);
   }
   getRecursos(){
@@ -90,9 +90,9 @@ export class DataServiceService {
     return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , idCurso: idCurso, sigla: sigla, ramo: ramo});
   }
 
-  CargarNota(uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any, fecha: any){
+  CargarNota(uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
     const nota = collection(this.firestore, 'notasAC');
-    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , idCurso:idCurso, sigla: sigla, ramo: ramo, nota: notaa, fecha: fecha})
+    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , idCurso:idCurso, sigla: sigla, ramo: ramo, nota: notaa})
   } 
 
   agregarEv(Curso: any,ramo: any, sigla: any, fecha: any){
