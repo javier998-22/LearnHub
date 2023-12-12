@@ -23,7 +23,8 @@ export class SubirevPage implements OnInit {
     await this.modalCtrl.dismiss();
   }
   async agregarAlumno(curso: any){
-    await this.dataS.agregarEv(curso.idCurso ,curso.ramoCurso, curso.siglaCurso , this.fecha);
+    await this.dataS.agregarEv(curso.idCurso ,curso.ramoCurso, curso.siglaCurso, this.fecha);
+    await this.presentAlert();
   }
 
   async presentAlert() {

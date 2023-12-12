@@ -42,7 +42,7 @@ export class LoginPage implements OnInit {
         this.router.navigate(['/home-admin']);        
       }else if (this.uid.tipo == 2) {      
         this.router.navigate(['/cursos-profe']);
-      }else{ 
+      }else if (this.uid.tipo == 3){ 
         this.router.navigate(['/cursos-a']);
       }
     }, 2000)
