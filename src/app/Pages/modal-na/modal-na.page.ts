@@ -20,7 +20,6 @@ export class ModalNAPage implements OnInit {
     })
   }
   async ngOnInit() {
-    console.log(this.modalInfo)
   }
   async agregarAlumno(uid: any, idCurso: any){
     await this.dataS.agregarAlumno(uid.id, uid.nombre, uid.apellido, idCurso.idCurso, idCurso.siglaCurso, idCurso.ramoCurso);

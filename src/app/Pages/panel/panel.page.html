@@ -3,17 +3,24 @@
     <ion-toolbar>
     </ion-toolbar>
   </ion-header>
+  <ion-card class="Card-Profile" (click)="iraProfes()">
+    <ion-card-header>
+      <ion-card-title class="Title">Modificar Cursos</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card class="Card-Profile" (click)="iraProfeR()">
+    <ion-card-header>
+      <ion-card-title class="Title">Agregar profesor de remplazo</ion-card-title>
+    </ion-card-header>
+  </ion-card>
 </ion-content>
+
 <ion-footer class="ion-no-border">
   <ion-toolbar>
     <ion-segment>
       <ion-segment-button value="Perfil" (click)="IraPerfil()">
         <ion-icon name="briefcase-outline"></ion-icon>
         <ion-label>Cursos</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Perfil" (click)="IraPerfil()">
-        <ion-icon name="person-circle-outline"></ion-icon>
-        <ion-label>Perfil</ion-label>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>

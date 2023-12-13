@@ -63,6 +63,10 @@ export class DataServiceService {
     return collectionData(cons);
   }
 
+  getCursos(){
+    const cursos = collection(this.firestore, `Cursos`);
+    return collectionData(cursos);
+  }
   getCurso(){
     this.cargarId();
     const curso = collection(this.firestore, `Cursos`);
@@ -71,8 +75,7 @@ export class DataServiceService {
   }
   GetNotas(){
     const nota = collection(this.firestore, 'notasAC');
-    const notaq = query(nota, orderBy('fecha'));
-    return collectionData(notaq);
+    return collectionData(nota);
   }
   getNota(){
     this.cargarId();
@@ -85,14 +88,14 @@ export class DataServiceService {
     return collectionData(recurso);
   }
 
-  agregarAlumno(uid: any , nombre: any,apellido: any , idCurso : any, sigla: any, ramo:any){
+  agregarAlumno(uid: any, nombre: any,apellido: any , idCurso : any, sigla: any, ramo:any){
     const alumno = collection(this.firestore, 'AlumnCur');
     return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , idCurso: idCurso, sigla: sigla, ramo: ramo});
   }
 
-  CargarNota(uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
+  CargarNota( uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
     const nota = collection(this.firestore, 'notasAC');
-    return setDoc(doc(nota), {Alumnos: uid, nombre: nombre, apellido: apellido , idCurso:idCurso, sigla: sigla, ramo: ramo, nota: notaa})
+    return setDoc(doc(nota), { Alumnos: uid, nombre: nombre, apellido: apellido , idCurso:idCurso, sigla: sigla, ramo: ramo, nota: notaa})
   } 
 
   agregarEv(Curso: any,ramo: any, sigla: any, fecha: any){
@@ -133,12 +136,45 @@ export class DataServiceService {
       [campo]:valor
     });
   }
+  async Updatenota(idNota: any, nota: any) {
+    const notas = doc(this.firestore,  'notasAC', idNota)
+    try {
+      await updateDoc(notas, {
+        'nota': nota
+      });
+      console.log('Nota actualizada correctamente');
+    } catch (error) {
+      console.error('Error al actualizar la nota:', error);
+    }
 
-  async Updatenota(campo: any, valor: any, id: any){
-    const nota = doc(this.firestore, 'notasAC', id)
-    await updateDoc(nota,{
-      [campo]:valor
-    });
   }
 
+  async UpdateCursos(idCurso: any, siglaCurso: any) {
+    const cursos = doc(this.firestore,  'Cursos', idCurso)
+      await updateDoc(cursos, {
+        'siglaCurso': siglaCurso,
+      });
+
+  }
+  async UpdateCursor(idCurso: any, ramoCurso: any) {
+    const cursos = doc(this.firestore,  'Cursos', idCurso)
+      await updateDoc(cursos, {
+        'ramoCurso': ramoCurso,
+      });
+
+  }
+  async UpdateCursoe(idCurso: any, establecimiento: any) {
+    const cursos = doc(this.firestore,  'Cursos', idCurso)
+      await updateDoc(cursos, {
+        'establecimiento': establecimiento,
+      });
+
+  }
+  async AgregarRemplazo(idCurso: any, idRemplazo: any) {
+    const cursos = doc(this.firestore,  'Cursos', idCurso)
+      await updateDoc(cursos, {
+        'idRemplazo': idRemplazo,
+      });
+
+  }
 }

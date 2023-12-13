@@ -130,7 +130,27 @@ const routes: Routes = [
   {
     path: 'alumnos-n',
     loadChildren: () => import('./Pages/alumnos-n/alumnos-n.module').then( m => m.AlumnosNPageModule)
+  },  {
+    path: 'mod-cadmin',
+    loadChildren: () => import('./Pages/mod-cadmin/mod-cadmin.module').then( m => m.ModCadminPageModule)
+  },
+  {
+    path: 'modcurso',
+    loadChildren: () => import('./Pages/modcurso/modcurso.module').then( m => m.ModcursoPageModule)
+  },
+  {
+    path: 'lis-cursos',
+    loadChildren: () => import('./Pages/lis-cursos/lis-cursos.module').then( m => m.LisCursosPageModule)
+  },
+  {
+    path: 'listaprofes-r',
+    loadChildren: () => import('./Pages/listaprofes-r/listaprofes-r.module').then( m => m.ListaprofesRPageModule)
+  },
+  {
+    path: 'lista-cursos-r',
+    loadChildren: () => import('./Pages/lista-cursos-r/lista-cursos-r.module').then( m => m.ListaCursosRPageModule)
   }
+
 
 
 

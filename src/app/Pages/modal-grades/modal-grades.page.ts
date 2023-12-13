@@ -44,5 +44,8 @@ export class ModalGradesPage implements OnInit {
     this.router.navigate(['/cursos-profe']);
     await this.modalCtrl.dismiss();
   }
+
+  
+
 }
 

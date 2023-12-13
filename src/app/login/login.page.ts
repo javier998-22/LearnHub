@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
     this.DataS.getUsuarios(this.Auth.getUid()).subscribe(event => this.uid = event);
     let hideFooterTimeout = setTimeout(() => {
       if (this.uid.tipo == 1) {
-        this.router.navigate(['/home-admin']);        
+        this.router.navigate(['/panel']);        
       }else if (this.uid.tipo == 2) {      
         this.router.navigate(['/cursos-profe']);
       }else if (this.uid.tipo == 3){ 

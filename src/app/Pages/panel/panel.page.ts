@@ -5,8 +5,8 @@ import { ModalncPage } from '../modalnc/modalnc.page';
 import { DataServiceService } from '../../services/data-service.service';
 import { AuthService } from '../../services/auth.service';
 import { NavController } from '@ionic/angular';
-import { ModalCursoPage } from '../modal-curso/modal-curso.page';
-import { Cursos } from '../../services/modelos.service';
+import { ModCadminPage } from '../mod-cadmin/mod-cadmin.page';
+import { ListaCursosRPage } from '../lista-cursos-r/lista-cursos-r.page';
 
 @Component({
   selector: 'app-panel',
@@ -23,6 +23,21 @@ export class PanelPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+  async iraProfes() {
+    const modal = await this.modalController.create({
+      component: ModCadminPage,
+      cssClass: 'myclass'
+    });
+    await modal.present();
+  }
+
+  async iraProfeR() {
+    const modal = await this.modalController.create({
+      component: ListaCursosRPage,
+      cssClass: 'myclass'
+    });
+    await modal.present();
   }
   IraPerfil(){
     this.router.navigate(['/perfil-admin']);

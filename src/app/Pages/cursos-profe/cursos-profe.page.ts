@@ -17,11 +17,24 @@ import { Cursos } from '../../services/modelos.service';
 })
 export class CursosProfePage implements OnInit {
   Listacursos: any;
+  cursos:any
+  id: any;
 
+  uid: any;
   constructor(private router: Router, private modalController: ModalController, private dataS: DataServiceService, private atS: AuthService, navCtrl:NavController) {
     this.dataS.getCurso().subscribe(res => { 
       this.Listacursos = res;
     })
+    this.dataS.getCursos().subscribe(data => {
+      this.cursos = data;
+    });
+    this.dataS.getUsuarios(this.atS.getUid()).subscribe(dato => {
+      if(dato){
+        this.uid = dato;
+        this.id = this.atS.getUid();
+        this.uid.email = this.atS.getEmail();
+      }
+    });
   }
 
   ngOnInit() {
