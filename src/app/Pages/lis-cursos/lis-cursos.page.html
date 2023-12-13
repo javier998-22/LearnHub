@@ -7,7 +7,7 @@
     </ion-toolbar>
   </ion-header>
   <ng-container *ngFor="let items of cursos">
-  <ion-card class="Card-Profile"  *ngIf="items.idProfe == modalInfo.id" (click)="abrirMCurso(items)">
+  <ion-card class="Card-Profile"  *ngIf="items.idProfe == modalInfo.id || items.idRemplazo == modalInfo.id" (click)="abrirMCurso(items)">
     <ion-card-header>
       <ion-card-title class="Title">{{items.siglaCurso}}</ion-card-title>
       <ion-card-subtitle class="sub">{{items.ramoCurso}}</ion-card-subtitle>

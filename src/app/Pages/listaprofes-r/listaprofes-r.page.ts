@@ -22,7 +22,7 @@ export class ListaprofesRPage implements OnInit {
 
   Remplazo(id:any, profeid: any){
     this.dtS.AgregarRemplazo(id, profeid);
-    this.presentToast("Modificación Realizada");
+    this.presentToast("Reemplazo agregado");
   }
   ngOnInit() {
   }
