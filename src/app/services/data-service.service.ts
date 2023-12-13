@@ -93,9 +93,9 @@ export class DataServiceService {
     return setDoc(doc(alumno), {Alumno : uid, nombre: nombre, apellido: apellido , idCurso: idCurso, sigla: sigla, ramo: ramo});
   }
 
-  CargarNota( uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
+  CargarNota(idNota: any, uid: any , nombre: any,apellido: any, idCurso: any, sigla: any, ramo: any, notaa: any){
     const nota = collection(this.firestore, 'notasAC');
-    return setDoc(doc(nota), { Alumnos: uid, nombre: nombre, apellido: apellido , idCurso:idCurso, sigla: sigla, ramo: ramo, nota: notaa})
+    return setDoc(doc(nota, idNota), {idNota: idNota, Alumnos: uid, nombre: nombre, apellido: apellido , idCurso:idCurso, sigla: sigla, ramo: ramo, nota: notaa})
   } 
 
   agregarEv(Curso: any,ramo: any, sigla: any, fecha: any){

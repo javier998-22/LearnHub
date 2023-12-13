@@ -31,8 +31,7 @@ export class VerNotasPage implements OnInit {
   }
   modificar(id: any){
     this.dataS.Updatenota(id, this.nuevanota);
-
-    this.presentToast("Modificación Realizada")
+    this.presentToast("Modificación Realizada");
   }
   async presentToast(message: string, duration?: number) {
     const toast = await this.toastController.create(

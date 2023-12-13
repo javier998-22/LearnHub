@@ -13,12 +13,13 @@ export class ModalGradesPage implements OnInit {
   notaForm :any;
   modalInfo:any;
   ac1: any;
-
+  idNota: string;
+  
    constructor(private dtS: DataServiceService, private alertController: AlertController, private router: Router, private modalCtrl: ModalController) {
     this.dtS.getAlumnosC().subscribe(res => {
       this.ac1 = res;
     });
-
+    this.idNota = this.generarIdAleatorio();
   }
   ngOnInit() {
 
@@ -26,7 +27,7 @@ export class ModalGradesPage implements OnInit {
 
   async nota(uid: any, idCurso: any){
 
-    await this.dtS.CargarNota(uid.Alumno, uid.nombre, uid.apellido, idCurso.idCurso, idCurso.siglaCurso, idCurso.ramoCurso, this.notaForm);
+    await this.dtS.CargarNota(this.idNota, uid.Alumno, uid.nombre, uid.apellido, idCurso.idCurso, idCurso.siglaCurso, idCurso.ramoCurso, this.notaForm);
     await this.presentAlert();
   }
 
@@ -44,7 +45,12 @@ export class ModalGradesPage implements OnInit {
     this.router.navigate(['/cursos-profe']);
     await this.modalCtrl.dismiss();
   }
-
+  generarIdAleatorio(): string {
+    // Genera un ID aleatorio utilizando un valor de tiempo actual y un valor aleatorio
+    const timestamp = new Date().getTime();
+    const randomValue = Math.floor(Math.random() * 1000); // Puedes ajustar el rango según tus necesidades
+    return `id-${timestamp}-${randomValue}`;
+  }
   
 
 }
